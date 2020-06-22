@@ -1,0 +1,41 @@
+
+.footer {
+    background-color: #EFFAFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width:1600px;
+    padding: 0px 50px;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+
+  }
+  .footer-links a {
+    color: black;
+   margin-left: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+    opacity: 0.8;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  .footer-copyright{
+      margin-left: 50px;
+      color: #222831;
+  }
+  .footer-copyright p{
+      
+    color: #393E46;
+  }
+  .footer-copyright h4{
+    font-size: 20px;
+    color: #393E46;
+  }
