@@ -1,0 +1,49 @@
+Liste des produits
+
+<li>Menu déroulant marque
+<li>Menu déroulant catégories
+<li>Menu déroulant magasin
+<li>Melou dérouant recherche
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class = "containerd">
+<div class ="formulaire-booking">
+<% @products.each do |product|%>
+ <div class = "formulaire-separation" >
+  <p>Nom du produit°<%= product.name %></p>
+  <%end%>
+<li> Faire une card 
+<li>Nom du produits : products.name
+<li>Description du produit : products.description
+<li> Prix : products.price
+<li> Image :
+<li> Button paylert
+
+
+<li> Repeat pour chaque produit
+
+
+
+<div class ="containerd">
+<div class ="formulaire-booking">
+
+ <% @bookings.each do |booking| %>
+ <div class = "formulaire-separation" >
+ <h2>Réservation de client N° <%= booking.user_id %></h2>
+  <p>Chien réservé N°<%= booking.dog_id %></p>
+  <p>Date de réservation : <%= booking.booking_date %> </p>
+  <p>Date de début de location : <%= booking.check_in_date %> </p>
+  <p>Date de fin de location : <%= booking.check_out_date %> </p>
+  <%= link_to 'Laisser un avis', new_review_path(booking.id), class:"generique" %></td>
+  <%# <%= link_to 'Modifier la réservation', edit_booking_path(booking.id) %>
+  <%= link_to 'Annuler la réservation', delete_booking_path(booking.id), method: :delete, class:"generique" %></i>
+  <%= link_to("Faire une nouvelle réservation", dogs_path, class:"generique") %>
+  <%= link_to "Revenir à l'accueil", root_url ,class:"generique" %>
+  </div>
+  <% end %>

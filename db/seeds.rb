@@ -5,3 +5,63 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+require 'json'
+
+Payalert.destroy_all
+Shop.destroy_all
+Product.destroy_all
+User.destroy_all
+
+
+User.create!(
+    email: "blaba@gmail.com",            
+    password: "123456"
+)
+
+User.create!(
+    email: "tuttu@gmail.com",            
+    password: "1234567"
+)
+
+Product.create!(
+    name: "Tondeuse",
+    brand: "Bosch",
+    price: 100,
+    category_name: "Jardin",
+    sub_category_name: "Appareils electriques",
+    description: "Tondeuse 200W pour jardin"
+)
+
+Product.create!(
+    name: "Ponceuse",
+    brand: "BLack & Decker",
+    price: 50,
+    category_name: "Maison",
+    sub_category_name: "Appareils electriques",
+    description: "Ponceuse filiaire"
+)
+
+Shop.create!(
+    name: "Amazon",
+    user_id: User.first.id,
+)
+
+
+Shop.create!(
+    name: "Cdiscount",
+    user_id: User.second.id,
+)
+
+Payalert.create!(
+    user_id: User.first.id,
+    bidding_price: 90
+)
+
+Payalert.create!(
+    user_id: User.second.id,
+    bidding_price: 30
+)
+
