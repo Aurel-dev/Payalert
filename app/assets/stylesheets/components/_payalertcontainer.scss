@@ -1,0 +1,20 @@
+.current_payalert{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1326px;
+    height: 530px;
+    background-color: white;
+}
+
+
+.products_details{
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}

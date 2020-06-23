@@ -1,0 +1,17 @@
+
+<div class="main_container2">
+    <div class="current_payalert2">
+        <div class="imgproduct2">
+            <%= image_tag "computer.svg" %>
+        </div>
+        <div class="products_details">
+            <% @paylerts.each do |paylert| %>
+                <h4>Payalert du client N° <%= paylert.user_id %></h4>
+                <br>
+                <h4>Produit N° <%= paylert.product_id %></h4>
+                <br>
+                <h4>Prix proposé <%= paylert.bidding_price %></h4>
+                <% end %>
+        </div>
+    </div>
+</div>
