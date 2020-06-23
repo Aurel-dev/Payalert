@@ -1,2 +1,0 @@
-class PayalertsController < ApplicationController
-end

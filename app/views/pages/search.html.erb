@@ -1,0 +1,53 @@
+
+
+Selectionner une marque
+
+<div class = "search">
+
+
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search-form-control",
+    placeholder: "Marques"
+  %>
+  <%= submit_tag "Rechercher", class: "generique" %>
+<% end %>
+    </button>
+  </div>
+</form>
+
+Selectionner une catégorie 
+<div class = "search">
+
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search-form-control",
+    placeholder: "Catégories"
+  %>
+  <%= submit_tag "Rechercher", class: "generique" %>
+<% end %>
+    </button>
+  </div>
+</form>
+
+Selectionner un commerçant
+
+<div class = "search">
+
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search-form-control",
+    placeholder: "Magasin"
+  %>
+  <%= submit_tag "Rechercher", class: "generique" %>
+<% end %>
+    </button>
+  </div>
+</form>
+
+
+<strong> >To do :  Implémenter le path </strong>
+

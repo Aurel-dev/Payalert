@@ -1,0 +1,2 @@
+class PaylertsController < ApplicationController
+end
