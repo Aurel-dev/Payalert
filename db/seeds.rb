@@ -10,11 +10,7 @@
 
 require 'json'
 
-Payalert.destroy_all
-Shop.destroy_all
-Product.destroy_all
 User.destroy_all
-
 
 User.create!(
     email: "blaba@gmail.com",            
@@ -22,14 +18,31 @@ User.create!(
 )
 
 User.create!(
+    email: "demo@gmail.com",            
+    password: "azerty"
+)
+
+User.create!(
     email: "tuttu@gmail.com",            
     password: "1234567"
 )
 
+puts "creating shop"
+amazon = Shop.create!(
+    name: "Amazon",
+    user_id: User.first.id,
+)
+
+
+cdiscount = Shop.create!(
+    name: "Cdiscount",
+    user_id: User.second.id,
+)
 Product.create!(
     name: "Tondeuse",
     brand: "Bosch",
     price: 100,
+    shop: amazon,
     category_name: "Jardin",
     sub_category_name: "Appareils electriques",
     description: "Tondeuse 200W pour jardin"
@@ -39,29 +52,24 @@ Product.create!(
     name: "Ponceuse",
     brand: "BLack & Decker",
     price: 50,
+    shop: cdiscount,
     category_name: "Maison",
     sub_category_name: "Appareils electriques",
     description: "Ponceuse filiaire"
 )
 
-Shop.create!(
-    name: "Amazon",
+
+
+puts "creating paylert"
+Paylert.create!(
     user_id: User.first.id,
-)
-
-
-Shop.create!(
-    name: "Cdiscount",
-    user_id: User.second.id,
-)
-
-Payalert.create!(
-    user_id: User.first.id,
+    product_id: Product.first.id,
     bidding_price: 90
 )
 
-Payalert.create!(
+Paylert.create!(
     user_id: User.second.id,
+    product_id: Product.first.id,
     bidding_price: 30
 )
 
