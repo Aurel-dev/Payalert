@@ -10,7 +10,7 @@ Rails.application.routes.draw do
  # url "payalert/search"
   get "/search", to: "pages#search"
   # url "payalert/products" controller pages
-  get "/products", to: "products#new"
+  get "/products", to: "products#index"
 
 resources :users do 
   resources :profile
