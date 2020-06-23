@@ -7,5 +7,5 @@
 ### Sign In
 
 - [Link](https://payalert.herokuapp.com/users/sign_in)
-- `toto@mgail.com`
+- `demo@gmail.com`
 - `azerty`
