@@ -1,21 +1,32 @@
 class ProductsController < ApplicationController
+    skip_before_action :authenticate_user!, only: [ :home ]
+
 def index 
+  if params[:query].present?
+    @products = Product.where('name ILIKE? ', "%#{params[:query]}%")
+  elsif params[:product_filter].present?
+    @shop = Shop.find_by(name:params[:product_filter][:Commerçant])
+    @products = Product.where(category_name:params[:product_filter][:Catégorie]).where(brand:params[:product_filter][:Marque]).where(shop_id:@shop.id)
+  else
     @products = Product.all
+  end
 end
 
+
+
 def new
-    @product = Product.new
+  @product = Product.new
 end
 def show 
   @product = Product.find(params[:id])
   @paylert = Paylert.new
 end
 def create
-    @product = Product.new(product_params)
+  @product = Product.new(product_params)
     if @product.save
-        redirect to @product
+      redirect to @product
     else
-        render :new
+      render :new
     end
 end
 

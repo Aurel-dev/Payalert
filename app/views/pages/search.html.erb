@@ -1,46 +1,35 @@
 
+<div class="flexinputs">
+  <div class = "search">
+
+    <%= form_tag products_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-form-control",
+        placeholder: "Que cherchez vous ?"
+      %>
+        <input class="btn btn-primary" type="submit" value="Rechercher">
+    <% end %>
+        </button>
+      </div>
+      </div>
+    </form>
+
+<br>
+<br>
+<br>
+
+<div class="flexinputs">
+  <div class = "search">
 
 
-<div class = "search">
-
-
-<%= form_tag products_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "search-form-control",
-    placeholder: "Rechercher votre produit"
-  %>
-  <%= submit_tag "Rechercher", class: "generique" %>
-<% end %>
-    </button>
+  <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
+    <%= f.input :Commerçant, collection: Shop::SHOPS %>
+    <%= f.input :Catégorie, collection: Product::CATEGORIES %>
+     <%= f.input :Marque, collection: Product::BRANDS %>
+    <%= f.submit "Rechercher", class: "btn btn-primary" %>
+  <% end %>
   </div>
-</form>
-
-
-<div class="d-flex">
-  <div class="dropdown mr-1">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-      Commerçant
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-      <a class="dropdown-item" href="#">Amazon</a>
-      <a class="dropdown-item" href="#">Boulanger</a>
-      <a class="dropdown-item" href="#">Cdiscount</a>
-    </div>
   </div>
-  <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Catégorie</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-      <span class="sr-only">Catégorie</span>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-      <a class="dropdown-item" href="#">Jardinage</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Electro ménager</a>
-    </div>
-  </div>
-</div>
-
-<input class="btn btn-primary" type="submit" value="Submit">
-<strong> >To do :  Implémenter le path </strong>
+  </form>
 
