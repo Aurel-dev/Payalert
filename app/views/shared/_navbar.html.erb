@@ -9,12 +9,18 @@
         <span class="navbar-text">
           <a class="btn btn-outline-primary" href="search">Rechercher</a>
           </span>
-    <span class="navbar-text">
-     <%# <%=  link_to 'Créer une annonce', new_dog_path, method: :get,  class: "generique" %>
-      <a href="profile"> <%= image_tag "avatar.svg" ,class:"avatar" %>
-      </a>
-
-    </span>
+  
+  
+          <li class="nav-item avatar dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="https://d3v4jsc54141g1.cloudfront.net/uploads/project_image/image/507032/Hargne-1523884217.png" class="md-avatar rounded-circle" alt="avatar image">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
+            <a class="dropdown-item" href="profile">Profile</a>
+            <a class="dropdown-item" href="exit">Log out</a>
+          </div>
+        </li>
   </div>
 </nav>
 
