@@ -55,10 +55,9 @@
 <p>Description  : <%= product.description %></p>
 <p>Prix : <%= product.price %> €</p>
 <p>(Image)</p>
-<%= link_to("Paylert", root_path, class:"generique") %>
+<%= link_to "Paylert", product_path(product), class:"generique" %>
 </div>
 <%end%>
-
 
 <li> Todo : Faire le lien du bouton Paylert
 <li> Todo : Ajouter le footer 
