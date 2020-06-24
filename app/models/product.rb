@@ -1,6 +1,17 @@
 class Product < ApplicationRecord
   belongs_to :shop
   has_many :paylerts, dependent: :destroy
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  CATEGORIES = ["Jardin", "Maison", "Garage"]
+  BRANDS = ["Bosch", "Black & Decker", "Willi Waller"]
+=======
+  
+  CATEGORIES = ["Jardin", "Maison", "Garage"]
+  BRANDS = ["Bosch", "Black & Decker", "Willi Waller"]
+>>>>>>> 7a5ad8bd60ea6c02f31758a98c05125563a5dcbc
 
   # l'action doit se faire après l'update du prix du produit dans l'admin (OK)
   after_update_commit  :check_price_paylerts 
@@ -31,4 +42,8 @@ class Product < ApplicationRecord
       paylert.save
     end
   end
+<<<<<<< HEAD
+=======
+>>>>>>> 1b0f5b4bd0c85725ebd3517a794a9aa2af5d0fb4
+>>>>>>> 7a5ad8bd60ea6c02f31758a98c05125563a5dcbc
 end
