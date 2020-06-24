@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 require 'json'
 
 User.destroy_all
@@ -22,8 +21,9 @@ User.create!(
 )
 
 User.create!(
-    email: "tuttu@gmail.com",            
-    password: "1234567"
+    email: "tuttu@gmail.com",           
+    password: "1234567",
+    admin: true
 )
 
 amazon = Shop.create!(
@@ -42,7 +42,6 @@ boulanger = Shop.create!(
     user_id: User.third.id,
 )
 
-)
 Product.create!(
     name: "Tondeuse Thermique FLYMO",
     brand: "Bosch",
@@ -77,7 +76,7 @@ Product.create!(
     name: "Willi Waller Two Thousand Six",
     brand: "Willi Waller",
     price: 29.99,
-    shop: cidscount,
+    shop: cdiscount,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
     description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
@@ -89,14 +88,14 @@ Product.create!(
 Paylert.create!(
     user_id: User.first.id,
     product_id: Product.first.id,
-    bidding_price: 90
+    bidding_price: 90,
     status: "pending"
 )
 
 Paylert.create!(
     user_id: User.second.id,
     product_id: Product.first.id,
-    bidding_price: 30
+    bidding_price: 30,
     status: "pending"
 )
 
