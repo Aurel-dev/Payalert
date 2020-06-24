@@ -42,7 +42,6 @@ boulanger = Shop.create!(
     user_id: User.third.id,
 )
 
-)
 Product.create!(
     name: "Tondeuse Thermique FLYMO",
     brand: "Bosch",
