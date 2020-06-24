@@ -41,7 +41,7 @@
           <p><strong>Description : </strong> <%= product.description %></p>
           <p><strong>Prix :</strong> <%= product.price %> €</p>
           <p>(Image)</p>
-          <%= link_to("Paylert", root_path, class:"generique") %>
+          <%= link_to("Paylert", product_path(product), class:"generique") %>
         </div>
       <%end%>
     </div>

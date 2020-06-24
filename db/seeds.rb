@@ -21,7 +21,7 @@ User.create!(
 )
 
 User.create!(
-    email: "tuttu@gmail.com",           
+    email: "tuttu@gmail.com",            
     password: "1234567",
     admin: true
 )
