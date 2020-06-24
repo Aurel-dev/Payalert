@@ -1,5 +1,4 @@
 
-
 <div class="flexinputs">
   <div class = "search">
 
@@ -44,3 +43,72 @@
   <input class="btn btn-primary" type="submit" value="Submit">
   <strong> >To do :  Implémenter le path </strong>
 </div>
+=======
+<div class = "search">
+
+
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "search-form-control",
+    placeholder: "Rechercher votre produit ici"
+  %>
+  <%= submit_tag "Rechercher", class: "generique" %>
+<% end %>
+    </button>
+  </div>
+</form>
+
+
+
+
+
+<form class="needs-validation" novalidate>
+  <select class="mdb-select validate md-form" searchable="Search here..">
+    <option value="" disabled selected>Commerçant</option>
+    <option value="1">Amazon</option>
+    <option value="2">Cdiscount</option>
+    <option value="3">Darty</option>
+  </select>
+   <select class="mdb-select validate md-form" searchable="Search here..">
+    <option value="" disabled selected>Catégorie</option>
+    <option value="1">Jardinage</option>
+    <option value="2">Outils</option>
+    <option value="3">Electroménager</option>
+  </select>
+  <button class="btn btn-default btn-sm">Submit</button>
+</form>
+
+
+
+
+
+<%# 
+<script type="text/javascript">
+  $(document).ready(function() {
+  $('.mdb-select.validate').materialSelect({
+    validate: true,
+    labels: {
+      validFeedback: 'Correct choice',
+      invalidFeedback: 'Wrong choice'
+    }
+  });
+  function validateSelect(e) {
+    e.preventDefault();
+    $('.needs-validation').addClass('was-validated');
+    if ($('.needs-validation select').val() === null) {
+      $('.needs-validation').find('.valid-feedback').hide();
+      $('.needs-validation').find('.invalid-feedback').show();
+      $('.needs-validation').find('.select-dropdown').val('').prop('placeholder', 'No countries selected')
+    } else {
+      $('.needs-validation').find('.valid-feedback').show();
+      $('.needs-validation').find('.invalid-feedback').hide();
+    }
+  }
+  $('.needs-validation select').on('change', e => validateSelect(e))
+  $('.needs-validation').on('submit', e => validateSelect(e))
+});
+</script> %>
+
+
+  <script type="text/javascript" src="search.js"></script>
