@@ -46,6 +46,12 @@
 </div>
 
 
+  <% if @products.length == 0 %>
+        <center> <h2>Aucun produit trouvé !</h2>
+        
+        <% end %>
+        
+
 <div class = "containerd">
 <div class ="formulaire-booking">
 <% @products.each do |product| %>
