@@ -2,113 +2,34 @@
 <div class="flexinputs">
   <div class = "search">
 
+    <%= form_tag products_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-form-control",
+        placeholder: "Que cherchez vous ?"
+      %>
+        <input class="btn btn-primary" type="submit" value="Rechercher">
+    <% end %>
+        </button>
+      </div>
+      </div>
+    </form>
 
-  <%= form_tag products_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "search-form-control",
-      placeholder: "Rechercher votre produit"
-    %>
+<br>
+<br>
+<br>
+
+<div class="flexinputs">
+  <div class = "search">
+
+
+  <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
+    <%= f.input :Commerçant, collection: Shop::SHOPS %>
+    <%= f.input :Catégorie, collection: Product::CATEGORIES %>
+     <%= f.input :Marque, collection: Product::BRANDS %>
+    <%= f.submit "Rechercher", class: "btn btn-primary" %>
   <% end %>
-      </button>
-    </div>
+  </div>
+  </div>
   </form>
 
-
-  <div class="flex2">
-    <div class="dropdown mr-1">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-        Commerçant
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-        <a class="dropdown-item" href="#">Amazon</a>
-        <a class="dropdown-item" href="#">Boulanger</a>
-        <a class="dropdown-item" href="#">Cdiscount</a>
-      </div>
-    </div>
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-        Category
-      </button>
-        <span class="sr-only">Catégorie</span>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-        <a class="dropdown-item" href="#">Jardinage</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Electro ménager</a>
-      </div>
-    </div>
-  </div>
-
-  <input class="btn btn-primary" type="submit" value="Submit">
-  <strong> >To do :  Implémenter le path </strong>
-</div>
-=======
-<div class = "search">
-
-
-<%= form_tag products_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "search-form-control",
-    placeholder: "Rechercher votre produit ici"
-  %>
-  <%= submit_tag "Rechercher", class: "generique" %>
-<% end %>
-    </button>
-  </div>
-</form>
-
-
-
-
-
-<form class="needs-validation" novalidate>
-  <select class="mdb-select validate md-form" searchable="Search here..">
-    <option value="" disabled selected>Commerçant</option>
-    <option value="1">Amazon</option>
-    <option value="2">Cdiscount</option>
-    <option value="3">Darty</option>
-  </select>
-   <select class="mdb-select validate md-form" searchable="Search here..">
-    <option value="" disabled selected>Catégorie</option>
-    <option value="1">Jardinage</option>
-    <option value="2">Outils</option>
-    <option value="3">Electroménager</option>
-  </select>
-  <button class="btn btn-default btn-sm">Submit</button>
-</form>
-
-
-
-
-
-<%# 
-<script type="text/javascript">
-  $(document).ready(function() {
-  $('.mdb-select.validate').materialSelect({
-    validate: true,
-    labels: {
-      validFeedback: 'Correct choice',
-      invalidFeedback: 'Wrong choice'
-    }
-  });
-  function validateSelect(e) {
-    e.preventDefault();
-    $('.needs-validation').addClass('was-validated');
-    if ($('.needs-validation select').val() === null) {
-      $('.needs-validation').find('.valid-feedback').hide();
-      $('.needs-validation').find('.invalid-feedback').show();
-      $('.needs-validation').find('.select-dropdown').val('').prop('placeholder', 'No countries selected')
-    } else {
-      $('.needs-validation').find('.valid-feedback').show();
-      $('.needs-validation').find('.invalid-feedback').hide();
-    }
-  }
-  $('.needs-validation select').on('change', e => validateSelect(e))
-  $('.needs-validation').on('submit', e => validateSelect(e))
-});
-</script> %>
-
-
-  <script type="text/javascript" src="search.js"></script>

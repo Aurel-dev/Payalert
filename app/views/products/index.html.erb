@@ -1,73 +1,60 @@
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Marque
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Bosch</a>
-    <a class="dropdown-item" href="#">Black & Decker</a>
-    <a class="dropdown-item" href="#">Essentiel B</a>
+<div class="flexinputs">
+  <div class = "search">
+    <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
+      <%= f.input :Commerçant, collection: Shop::SHOPS %>
+      <%= f.input :Catégorie, collection: Product::CATEGORIES %>
+      <%= f.input :Marque, collection: Product::BRANDS %>
+      <%= f.submit "Rechercher", class: "btn btn-primary" %>
+    <% end %>
   </div>
-</div>
+ </div>
 
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Catégorie
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Jardinage</a>
-    <a class="dropdown-item" href="#">Electro-ménager</a>
-    <a class="dropdown-item" href="#">Bricolage</a>
+<% if @products.length == 0 %>
+  <h2>Aucun produit trouvé !</h2>
+
+<% elsif params[:product_filter].present? %>
+  <h2 class="text-center">Résultat de votre recherche</h2>
+  <div class ="formulaire-booking">
+    <% @products.each do |product| %>
+      <div class = "formulaire-separation" >
+        <p><strong>Nom :</strong> <%= product.name %></p>
+        <p><strong>Description : </strong> <%= product.description %></p>
+        <p><strong>Prix :</strong> <%= product.price %> €</p>
+        <p><strong>Catégorie :</strong> <%= product.category_name %> </p>
+        <p><strong>Prix :</strong> <%= product.price %> €</p>
+        <p><strong>Commerçant :</strong> <%= product.shop.name %> </p>
+        <p>(Image)</p>
+        <%= link_to("Paylert", root_path, class:"generique") %>
+      </div>
+    <%end%>
   </div>
-</div>
 
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Marchand
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Amazon</a>
-    <a class="dropdown-item" href="#">Cdiscount</a>
-    <a class="dropdown-item" href="#">Boulanger</a>
-    <a class="dropdown-item" href="#">Darty</a>
+<% else %>
+  <h2 class="text-center">Résultat de votre recherche</h2>
+  <div class = "containerd">
+    <div class ="formulaire-booking">
+      <% @products.each do |product| %>
+        <div class = "formulaire-separation" >
+          <p><strong>Nom :</strong> <%= product.name %></p>
+          <p><strong>Description : </strong> <%= product.description %></p>
+          <p><strong>Prix :</strong> <%= product.price %> €</p>
+          <p>(Image)</p>
+          <%= link_to("Paylert", root_path, class:"generique") %>
+        </div>
+      <%end%>
+    </div>
   </div>
-</div>
+<% end %>
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Rechercher
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Mettre un filtre/recherche</a>
-  
-  </div>
-</div>
-
-
-  <% if @products.length == 0 %>
-        <center> <h2>Aucun produit trouvé !</h2>
-        
-        <% end %>
-        
-
-<div class = "containerd">
-<div class ="formulaire-booking">
-<% @products.each do |product| %>
-
-<div class = "formulaire-separation" >
-<p>Nom : <%= product.name %></p>
-<p>Description  : <%= product.description %></p>
-<p>Prix : <%= product.price %> €</p>
-<p>(Image)</p>
-<%= link_to("Paylert", root_path, class:"generique") %>
-</div>
-<%end%>
 
 
 <li> Todo : Faire le lien du bouton Paylert
-<li> Todo : Ajouter le footer 
-<li> Todo : Dropdown toggle
+<li> Todo : Faire UN LIEN Clickable vers le produit
 
 
+
+
+
+<%= render 'shared/footer' %>

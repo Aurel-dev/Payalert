@@ -26,7 +26,6 @@ User.create!(
     password: "1234567"
 )
 
-puts "creating shop"
 amazon = Shop.create!(
     name: "Amazon",
     user_id: User.first.id,
@@ -37,38 +36,67 @@ cdiscount = Shop.create!(
     name: "Cdiscount",
     user_id: User.second.id,
 )
+
+boulanger = Shop.create!(
+    name: "Boulanger",
+    user_id: User.third.id,
+)
+
+)
 Product.create!(
-    name: "Tondeuse",
+    name: "Tondeuse Thermique FLYMO",
     brand: "Bosch",
-    price: 100,
+    price: 150,
     shop: amazon,
     category_name: "Jardin",
-    sub_category_name: "Appareils electriques",
-    description: "Tondeuse 200W pour jardin"
+    sub_category_name: "Tondeuse",
+    description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
 )
 
 Product.create!(
-    name: "Ponceuse",
-    brand: "BLack & Decker",
+    name: "Ponceuse rotative TACKLIFE",
+    brand: "Black & Decker",
     price: 50,
     shop: cdiscount,
+    category_name: "Garage",
+    sub_category_name: "Bricolage",
+    description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
+)
+
+Product.create!(
+    name: "Réfrigérateur combiné Bosch KGV58VL31S",
+    brand: "Bosch",
+    price: 399,
+    shop: boulanger,
     category_name: "Maison",
-    sub_category_name: "Appareils electriques",
-    description: "Ponceuse filiaire"
+    sub_category_name: "Electro-ménager",
+    description: "Composé d'une partie réfrigérateur qui peut conserver les fruits et légumes frais plus longtemps et d'une partie congélateur."
+)
+
+Product.create!(
+    name: "Willi Waller Two Thousand Six",
+    brand: "Willi Waller",
+    price: 29.99,
+    shop: cidscount,
+    category_name: "Maison",
+    sub_category_name: "Electro-ménager",
+    description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
+    Ni quat' fois moins de temps à éplucher des patates...
+    Non ! Avec le Willi Waller Two Thousand Six là, ça va te prendre DEUX fois moins de temps pour éplucher des patates."
 )
 
 
-
-puts "creating paylert"
 Paylert.create!(
     user_id: User.first.id,
     product_id: Product.first.id,
     bidding_price: 90
+    status: "pending"
 )
 
 Paylert.create!(
     user_id: User.second.id,
     product_id: Product.first.id,
     bidding_price: 30
+    status: "pending"
 )
 
