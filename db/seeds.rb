@@ -42,6 +42,12 @@ boulanger = Shop.create!(
     user_id: User.third.id,
 )
 
+decathlon = Shop.create!(
+    name: "Decathlon",
+    user_id: User.third.id,
+)
+
+
 Product.create!(
     name: "Tondeuse Thermique FLYMO",
     brand: "Bosch",
@@ -82,6 +88,17 @@ Product.create!(
     description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
     Ni quat' fois moins de temps à éplucher des patates...
     Non ! Avec le Willi Waller Two Thousand Six là, ça va te prendre DEUX fois moins de temps pour éplucher des patates."
+)
+
+Product.create!(
+    name: "Clubs de golf Limited edition",
+    brand: "©Pfeiffer.inc",
+    price: 4500.69,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
+    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."  "
 )
 
 

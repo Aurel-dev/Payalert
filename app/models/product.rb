@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
   belongs_to :shop
   has_many :paylerts, dependent: :destroy
-  CATEGORIES = ["Jardin", "Maison", "Garage"]
-  BRANDS = ["Bosch", "Black & Decker", "Willi Waller"]
+  CATEGORIES = ["Jardin", "Maison", "Garage", "Loisirs et détente"]
+  BRANDS = ["Bosch", "Black & Decker", "©Pfeiffer.inc", "Willi Waller"]
 
   after_update_commit  :check_price_paylerts 
 

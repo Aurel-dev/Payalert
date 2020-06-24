@@ -11,6 +11,7 @@ end
 
  # url "payalert/search"
   get "/search", to: "pages#search"
+  get "/profile", to: "profile#show"
   # url "payalert/products" controller pages
   
 
