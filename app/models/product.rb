@@ -1,6 +1,11 @@
 class Product < ApplicationRecord
   belongs_to :shop
   has_many :paylerts, dependent: :destroy
+<<<<<<< HEAD
+
+  CATEGORIES = ["Jardin", "Maison", "Garage"]
+  BRANDS = ["Bosch", "Black & Decker", "Willi Waller"]
+=======
   
   CATEGORIES = ["Jardin", "Maison", "Garage"]
   BRANDS = ["Bosch", "Black & Decker", "Willi Waller"]
@@ -34,4 +39,5 @@ class Product < ApplicationRecord
       paylert.save
     end
   end
+>>>>>>> 1b0f5b4bd0c85725ebd3517a794a9aa2af5d0fb4
 end
