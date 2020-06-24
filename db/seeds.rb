@@ -23,7 +23,8 @@ User.create!(
 
 User.create!(
     email: "tuttu@gmail.com",            
-    password: "1234567"
+    password: "1234567",
+    admin: true
 )
 
 puts "creating shop"
