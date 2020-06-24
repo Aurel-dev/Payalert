@@ -1,0 +1,59 @@
+
+<div class ="container">
+<h2>Votre Payalert</h2>
+<div class = whiteform>
+<h1> <%= @product.name %></h1>
+ <div class = "productlert">
+
+ 
+
+        <div class = "showproducts">
+            <div class="row">
+               
+                        <div class="col">
+                        <h3>PayAlert</h3>
+                            <p> <%= @product.name %></p>
+                            <p> <%= @product.brand %></p>
+                            <p> <%= @product.price %> euros</p>
+                            <p> <%= @product.category_name %></p>
+                        
+                            <p> <%= @product.sub_category_name %></p>
+                            <p> <%= @product.description %></p>
+                        </div>
+                        <div class="col">
+                            <%= simple_form_for [@product,@paylert] do |f| %>
+                                <div class="d-flex flex-row">
+                                    <div class="col">
+                                        <h3>PayAlert</h3>
+                                        <%= f.input :bidding_price , input_html:{min: '0'} %>
+                                        <%= f.button :submit, class: "btn btn-primary "%>
+                                    </div>
+                                <% end %>
+                                </div>   
+                        </div>
+            </div>
+
+            <div class="col">
+            <h3>adresse de livraison</h3>
+                <p> <%= @product.name %></p>
+                <p> adresse</p>
+                <p> apt 210</p>
+                <p> <%= @product.name %></p>
+            </div>
+  
+ </div>
+ <div>
+     <%= image_tag "casquette.png" %>
+ 
+ </div>
+ <div>
+ 
+  </div>
+    </div>
+    <div class ="endflex">
+     <%= link_to 'Confirmer', root_path, class: "btn btn-primary " %>
+     </div>
+</div>
+</div>
+<%# mettre la quantité dans la seed 
+mettre les courdonnée vendeurs dans la seed %>
