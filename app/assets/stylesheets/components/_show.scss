@@ -1,4 +1,4 @@
-.form-control{
+.form-controlers{
 width: 300px;
 height: 100px;
 font-size: 50px;
@@ -10,17 +10,21 @@ padding-left: 50px;
 
 .showproducts{
     border: 1px solid #5878DB;
-    padding: 20px;
     height: 600px;
     width: 650px;
 }
-.formulaire-prod{
-
-    
+.bellformalert{
+    margin-top : 2em;
+    font-size: 50px;
+    width: 1100px;
 }
-
+.bellformalert h2{
+    color: #222831;
+    font-weight: bold;
+    margin-top: 20px;
+}
 .productlert{
- 
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +32,7 @@ padding-left: 50px;
 }
     
 .whiteform{
-    
+    padding-left: 50px;
 margin-bottom: 50px;
     height: 850px;
     background-color: white;
@@ -46,4 +50,34 @@ margin-bottom: 50px;
 .endflex{
     margin-left: 900px;
 
+}
+
+.adresse-form{
+    padding: 20px;
+
+    border-top: 1px solid;
+    border-color: #5879dbb0;
+}
+
+.adresse-info2{
+
+    margin-left: 230px;
+}
+.adresse-info1{
+
+    
+}
+.containerd-info{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.margin-product{
+padding-left: 50px;
+padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
