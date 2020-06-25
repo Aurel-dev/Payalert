@@ -27,23 +27,25 @@
   .card-product img , .card-index img {
     margin-left: 100px;
     margin-right: 100px;
-    height: 50%;
-    width: 15%;
+    max-height: 70%;
+    max-width: 70%;
     
   }
   
   .card-product h2 , .card-index h2{
     font-size: 16px;
     font-weight: bold;
-   
+  
   }
   
   .card-product p, .card-index p {
-    font-size: 12px;
+
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
+    width: 30em;
+    font-size: 0.75em;
   }
   
   .card-product .card-product-infos .card-index {
@@ -55,4 +57,9 @@
     width: 980px;
     text-align: center;
 
+  }
+  .cardprice{
+
+
+    margin-left: 100px;
   }

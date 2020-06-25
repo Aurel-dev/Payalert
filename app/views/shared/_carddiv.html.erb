@@ -1,14 +1,15 @@
 
 <div class="carde">
 <div class="card-product">
-<%= image_tag "casquette.png" %>
+ <%=  image_tag @product.photo  %>
+
  
   <div class="card-product-infos">
   <h2><%= @product.name %></h2>
         <p><%= @product.description %></p>
   </div>
   <div class="card-product-infos">
-  <h2><%= @product.price %> euros</h2>
+  <h2 class ="cardprice"><%= @product.price %> euros</h2>
   </div>
 </div>
 </div>
