@@ -1,4 +1,6 @@
-var stripe = Stripe('pk_test_51GxrUBDNX4MweYnnW4sgkFwEsEIdOay5pDEHxdeI6H6vbTepbYnsXgb0fbsikaHYnnJdSxMBR2MZgG5PNZc6Unkt00qIn76yZU');
+const clientSecretElement = document.querySelector("#client_secret");
+if (clientSecretElement){
+  var stripe = Stripe('pk_test_51GxrUBDNX4MweYnnW4sgkFwEsEIdOay5pDEHxdeI6H6vbTepbYnsXgb0fbsikaHYnnJdSxMBR2MZgG5PNZc6Unkt00qIn76yZU');
 var elements = stripe.elements();
 
 var style = {
@@ -22,9 +24,10 @@ card.mount("#card-element");
       displayError.textContent = '';
     }
   });
-
-// Etape 5 :  Submit the payment to Stripe
-  const clientSecret = document.querySelector("#client_secret").dataset.clientSecret;
+  const button = document.getElementById("submit");
+  button.addEventListener("click", (event) => {
+    // Do something (callback)
+    const clientSecret = document.querySelector("#client_secret").dataset.clientSecret;
   stripe.confirmCardPayment(clientSecret, {
     payment_method: {
       card: card,
@@ -43,10 +46,10 @@ card.mount("#card-element");
         // There's a risk of the customer closing the window before callback execution
         // Set up a webhook or plugin to listen for the payment_intent.succeeded event
         // to save the card to a Customer
-        console.log("youpi");
-  
+        window.location.href = "/profile/card_added";
         // The PaymentMethod ID can be found on result.paymentIntent.payment_method
       }
     }
   });
-
+});
+}

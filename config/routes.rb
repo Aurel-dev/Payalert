@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/profile", to: "profile#show"
   get "/profile/add_credit_card", to: "profile#add_credit_card"
-  
+  get "profile/card_added", to: "profile#card_added"
 resources :products do
 resources :paylerts ,only: [:create , :new]
 # resources :users, only: []
