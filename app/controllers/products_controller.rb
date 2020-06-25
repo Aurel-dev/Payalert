@@ -31,7 +31,7 @@ def edit
 end
 
 def destroy
-@product.destroy
+  @product.destroy
 end
 
 private
