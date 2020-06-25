@@ -4,3 +4,9 @@ Rails.configuration.stripe = {
 }
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
+signing_secret:  ENV['STRIPE_WEBHOOK_SECRET_KEY']
+StripeEvent.signing_secret = Rails.configuration.stripe[:signing_secret]
+
+StripeEvent.configure do |events|
+  events.subscribe 'payment_intent.succeeded', StripePaymentIntentService.new
+end
