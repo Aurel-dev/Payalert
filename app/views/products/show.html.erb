@@ -1,26 +1,22 @@
 
 <div class ="container">
-<div class ="bellformalert">
-
-<div class="d-flex bd-highlight mb-3">
-  <div class="d-flex justify-content-start"><h2>Votre PayAlert</h2></div>
-
-  <div class="ml-auto p-2 "> <%= image_tag "BellAlert.svg" %></div>
-</div>
-
- </div>
-
-<div class = whiteform>
-<h1> <%= @product.name %></h1>
-
- <div class = "productlert">
-
-
-        <div class = "showproducts">
-    
-            <div class="row margin-product">
+    <div class ="bellformalert">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="d-flex justify-content-start">
+                <h2>Votre PayAlert</h2>
+            </div>
+            <div class="ml-auto p-2 "> 
+                <%= image_tag "BellAlert.svg" %>
+            </div>
+        </div>
+    </div>
+    <div class = whiteform>
+        <h1> <%= @product.name %></h1>
+            <div class = "productlert">
+                <div class = "showproducts">
+                    <div class="row margin-product">
                         <div class="col">
-                        <h3>PayAlert</h3>
+                            <h3>PayAlert</h3>
                             <p> <%= @product.name %></p>
                             <p> marque: <%= @product.brand %></p>
                             <p>prix: <%= @product.price %> euros</p>
@@ -29,45 +25,41 @@
                         </div>
                         <div class="col">
                             <%= simple_form_for [@product,@paylert] do |f| %>
-                                <div class="d-flex flex-row">
-                                    <div class="col">
-                                        <h3>PayAlert</h3>
+                            <div class="d-flex flex-row">
+                                <div class="col">
+                                    <h3>PayAlert</h3>
                                         <%= f.input :bidding_price , input_html:{min: '0'},class: "form-controlers" %>
                                         <%= f.button :submit, class: "btn btn-primary "%>
-                                    </div>
+                                </div>
                                 <% end %>
-                                </div>   
+                            </div>   
                         </div>
-            </div>
+                    </div>
 
             <div class="col">
-            <div class ="adresse-form">
-              <h3>adresse de livraison</h3>
-              <div class = "containerd-info">
-            <div class = "adresse-info1">
-             
-                <p> 136 rue du Parc</p>
-                <p> apt 210</p>
+                <div class ="adresse-form">
+                <h3>adresse de livraison</h3>
+                    <div class = "containerd-info">
+                        <div class = "adresse-info1">
+                            <p> 136 rue du Parc</p>
+                            <p> apt 210</p>
+                        </div>
+                        <div class = "adresse-info2">
+                            <p> France</p>
+                            <p> 03 20 17 84 15</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-             <div class = "adresse-info2">
-                <p> France</p>
-                <p> 03 20 17 84 15</p>
-            </div>
-            </div>
-            </div>
-   </div>
- </div>
- <div class ="photo-show">
-     <p><%= image_tag @product.photo %></p>
- 
- </div>
- <div>
- 
-  </div>
+    </div>
+    <div class ="photo-show">
+        <p><%= image_tag @product.photo %></p>
+    </div>
     </div>
     <div class ="endflex">
      <%= link_to 'Retour', root_path, class: "btn btn-primary " %>
      </div>
+
 </div>
 <h2> Offre du Vendeur</h2>
 </div>

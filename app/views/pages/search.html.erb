@@ -1,35 +1,52 @@
 
-<div class="flexinputs">
-  <div class = "search">
 
-    <%= form_tag products_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "search-form-control",
-        placeholder: "Que cherchez vous ?"
-      %>
-        <input class="btn btn-primary" type="submit" value="Rechercher">
-    <% end %>
-        </button>
+<div class = "searchzone">
+    <div class = "searchzonevisible">
+      <div class="flexinputs">
+        <div class = "containerd">
+         <%= image_tag "vue.svg" %>
+          <h3>Rechercher</h3>
+        </div>
+        <div class = "search">
+          <%= form_tag products_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "search-form-control",
+              placeholder: "Que cherchez vous ?"
+            %>
+              <input class="btn btn-primary" type="submit" value="Rechercher">
+            <% end %>
+              </button>
+            </div>
+            </div>
+          </form>
       </div>
-      </div>
-    </form>
 
-<br>
-<br>
-<br>
+      <div class = "searchzoneinvisible">
+        <div class="flexinputs">
+         <div class = "containerd">
+            <%= image_tag "vuehide.svg" %>
+            <h3>recherches avancées</h3>
+        </div>
+          <div class = "search">
+            <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
+            <div  class= "espacesearch">
+              <%= f.input :Commerçant, collection: Shop::SHOPS %>
+            </div>
+            <div  class= "espacesearch">
+              <%= f.input :Catégorie, collection: Product::CATEGORIES %>
+            </div>
+            <div  class= "espacesearch">
+              <%= f.input :Marque, collection: Product::BRANDS %>
+            </div>
+            <div  class= "espacesearchbtn">
+              <%= f.submit "Rechercher", class: "btn btn-primary" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </form>
+    </div>
 
-<div class="flexinputs">
-  <div class = "search">
-
-
-  <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
-    <%= f.input :Commerçant, collection: Shop::SHOPS %>
-    <%= f.input :Catégorie, collection: Product::CATEGORIES %>
-     <%= f.input :Marque, collection: Product::BRANDS %>
-    <%= f.submit "Rechercher", class: "btn btn-primary" %>
-  <% end %>
   </div>
-  </div>
-  </form>
-
+</div>
