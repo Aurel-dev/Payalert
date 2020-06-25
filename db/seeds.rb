@@ -55,6 +55,7 @@ Product.create!(
     shop: amazon,
     category_name: "Jardin",
     sub_category_name: "Tondeuse",
+    photo: "Tondeuse",
     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
 )
 
@@ -65,6 +66,7 @@ Product.create!(
     shop: cdiscount,
     category_name: "Garage",
     sub_category_name: "Bricolage",
+    photo: "Ponceuse",
     description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
 )
 
@@ -75,6 +77,7 @@ Product.create!(
     shop: boulanger,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
+    photo: "Frigo",
     description: "Composé d'une partie réfrigérateur qui peut conserver les fruits et légumes frais plus longtemps et d'une partie congélateur."
 )
 
@@ -85,6 +88,7 @@ Product.create!(
     shop: cdiscount,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
+    photo: "Willywaller",
     description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
     Ni quat' fois moins de temps à éplucher des patates...
     Non ! Avec le Willi Waller Two Thousand Six là, ça va te prendre DEUX fois moins de temps pour éplucher des patates."
@@ -92,13 +96,14 @@ Product.create!(
 
 Product.create!(
     name: "Clubs de golf Limited edition",
-    brand: "©Pfeiffer.inc",
+    brand: "Pfeiffer.inc",
     price: 4500.69,
     shop: decathlon,
     category_name: "Loisirs et détente",
     sub_category_name: "Détente",
+    photo: "Clubs",
     description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
-    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."  "
+    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
 )
 
 

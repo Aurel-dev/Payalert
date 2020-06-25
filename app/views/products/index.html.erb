@@ -21,11 +21,12 @@
       <div class = "formulaire-separation" >
         <p><strong>Nom :</strong> <%= product.name %></p>
         <p><strong>Description : </strong> <%= product.description %></p>
-        <p><strong>Prix :</strong> <%= product.price %> €</p>
+        <p><strong>Marque :</strong> <%= product.brand %></p>
         <p><strong>Catégorie :</strong> <%= product.category_name %> </p>
         <p><strong>Prix :</strong> <%= product.price %> €</p>
         <p><strong>Commerçant :</strong> <%= product.shop.name %> </p>
-        <p>(Image)</p>
+        <p> <%= image_tag product.photo %></p>
+        <br>
         <%= link_to("Paylert", product_path(product), class:"generique") %>
       </div>
     <%end%>
@@ -40,7 +41,9 @@
           <p><strong>Nom :</strong> <%= product.name %></p>
           <p><strong>Description : </strong> <%= product.description %></p>
           <p><strong>Prix :</strong> <%= product.price %> €</p>
-          <p>(Image)</p>
+          <p></strong> <%= image_tag product.photo %></p>
+          <%# <p><strong>Photo :</strong> <%= image_tag asset_path("Tondeuse") %>
+          <br>
           <%= link_to("Paylert", product_path(product), class:"generique") %>
         </div>
       <%end%>
