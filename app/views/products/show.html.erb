@@ -14,7 +14,7 @@
                         <h3>PayAlert</h3>
                             <p> <%= @product.name %></p>
                             <p> <%= @product.brand %></p>
-                            <p> <%= @product.price %> euros</p>
+                            <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
                             <p> <%= @product.category_name %></p>
                         
                             <p> <%= @product.sub_category_name %></p>

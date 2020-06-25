@@ -39,7 +39,7 @@
         <div class = "formulaire-separation" >
           <p><strong>Nom :</strong> <%= product.name %></p>
           <p><strong>Description : </strong> <%= product.description %></p>
-          <p><strong>Prix :</strong> <%= product.price %> €</p>
+          <p><strong>Prix :</strong> <%= humanized_money_with_symbol(product.price) %></p>
           <p>(Image)</p>
           <%= link_to("Paylert", product_path(product), class:"generique") %>
         </div>
