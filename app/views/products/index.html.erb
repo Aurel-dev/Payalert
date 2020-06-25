@@ -1,11 +1,19 @@
 
-<div class="flexinputs">
-  <div class = "search">
+<div class="flexinputs p-3">
+  <div class = "search ">
     <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
-      <%= f.input :Commerçant, collection: Shop::SHOPS %>
-      <%= f.input :Catégorie, collection: Product::CATEGORIES %>
-      <%= f.input :Marque, collection: Product::BRANDS %>
-      <%= f.submit "Rechercher", class: "btn btn-primary" %>
+    <div  class= "espacesearch">
+      <%= f.input :Commerçant,collection: Shop::SHOPS %>
+      </div>
+        <div  class= "espacesearch">
+      <%= f.input :Catégorie, class: "espacesearch",collection: Product::CATEGORIES %>
+        </div>
+        <div  class= "espacesearch">
+      <%= f.input :Marque, class: "espacesearch",collection: Product::BRANDS %>
+        </div>
+        <div  class= "espacesearchbtn">
+      <%= f.submit "Rechercher", class: "btn btn-outline-primary" %>
+        </div>
     <% end %>
   </div>
  </div>
@@ -16,34 +24,51 @@
 
 <% elsif params[:product_filter].present? %>
   <h2 class="text-center">Résultat de votre recherche</h2>
-  <div class ="formulaire-booking">
+   <div class = "containerd">
+    <div class ="d-flex flex-column bd-highlight mb-3">
     <% @products.each do |product| %>
-      <div class = "formulaire-separation" >
-        <p><strong>Nom :</strong> <%= product.name %></p>
-        <p><strong>Description : </strong> <%= product.description %></p>
-        <p><strong>Prix :</strong> <%= product.price %> €</p>
-        <p><strong>Catégorie :</strong> <%= product.category_name %> </p>
-        <p><strong>Prix :</strong> <%= product.price %> €</p>
-        <p><strong>Commerçant :</strong> <%= product.shop.name %> </p>
-        <p>(Image)</p>
-        <%= link_to("Paylert", root_path, class:"generique") %>
-      </div>
+       <div class="p-2">
+            <div class="carde">
+            <div class="card-index">
+            <%= image_tag "casquette.png" %>
+                    
+              <div class="card-product-infos">
+              <h2><%= product.name %></h2>
+                    <p><%= product.description %></p>
+              </div>
+              <div class="card-product-infos">
+              <h2><%= product.price %> euros</h2>
+               <%= link_to("Paylert", product_path(product), class: "btn btn-primary") %>
+              </div>
+            </div>
+            </div>
+          </div>
     <%end%>
   </div>
-
+</div>
 <% else %>
-  <h2 class="text-center">Résultat de votre recherche</h2>
+
   <div class = "containerd">
-    <div class ="formulaire-booking">
+    <div class ="d-flex flex-column bd-highlight mb-3">
       <% @products.each do |product| %>
-        <div class = "formulaire-separation" >
-          <p><strong>Nom :</strong> <%= product.name %></p>
-          <p><strong>Description : </strong> <%= product.description %></p>
-          <p><strong>Prix :</strong> <%= product.price %> €</p>
-          <p>(Image)</p>
-          <%= link_to("Paylert", product_path(product), class:"generique") %>
-        </div>
+       <div class="p-2">
+            <div class="carde">
+            <div class="card-index">
+            <%= image_tag "casquette.png" %>
+                    
+              <div class="card-product-infos">
+              <h2><%= product.name %></h2>
+                    <p><%= product.description %></p>
+              </div>
+              <div class="card-product-infos">
+              <h2><%= product.price %> euros</h2>
+               <%= link_to("Paylert", product_path(product), class: "btn btn-primary") %>
+              </div>
+            </div>
+            </div>
+          </div>
       <%end%>
+      
     </div>
   </div>
 <% end %>
