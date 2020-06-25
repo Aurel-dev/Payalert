@@ -1,23 +1,30 @@
 
 <div class ="container">
-<h2>Votre Payalert</h2>
+<div class ="bellformalert">
+
+<div class="d-flex bd-highlight mb-3">
+  <div class="d-flex justify-content-start"><h2>Votre PayAlert</h2></div>
+
+  <div class="ml-auto p-2 "> <%= image_tag "BellAlert.svg" %></div>
+</div>
+
+ </div>
+
 <div class = whiteform>
 <h1> <%= @product.name %></h1>
+
  <div class = "productlert">
 
- 
 
         <div class = "showproducts">
-            <div class="row">
-               
+    
+            <div class="row margin-product">
                         <div class="col">
                         <h3>PayAlert</h3>
                             <p> <%= @product.name %></p>
-                            <p> <%= @product.brand %></p>
-                            <p> <%= @product.price %> euros</p>
-                            <p> <%= @product.category_name %></p>
-                        
-                            <p> <%= @product.sub_category_name %></p>
+                            <p> marque: <%= @product.brand %></p>
+                            <p>prix: <%= @product.price %> euros</p>
+                            <h4>description</h4>
                             <p> <%= @product.description %></p>
                         </div>
                         <div class="col">
@@ -25,7 +32,7 @@
                                 <div class="d-flex flex-row">
                                     <div class="col">
                                         <h3>PayAlert</h3>
-                                        <%= f.input :bidding_price , input_html:{min: '0'} %>
+                                        <%= f.input :bidding_price , input_html:{min: '0'},class: "form-controlers" %>
                                         <%= f.button :submit, class: "btn btn-primary "%>
                                     </div>
                                 <% end %>
@@ -34,13 +41,21 @@
             </div>
 
             <div class="col">
-            <h3>adresse de livraison</h3>
+            <div class ="adresse-form">
+              <h3>adresse de livraison</h3>
+              <div class = "containerd-info">
+            <div class = "adresse-info1">
                 <p> <%= @product.name %></p>
-                <p> adresse</p>
+                <p> 136 rue du Parc</p>
                 <p> apt 210</p>
-                <p> <%= @product.name %></p>
             </div>
-  
+             <div class = "adresse-info2">
+                <p> France</p>
+                <p> 03 20 17 84 15</p>
+            </div>
+            </div>
+            </div>
+   </div>
  </div>
  <div>
      <p></strong> <%= image_tag @product.photo %></p>
@@ -51,9 +66,14 @@
   </div>
     </div>
     <div class ="endflex">
-     <%= link_to 'Confirmer', root_path, class: "btn btn-primary " %>
+     <%= link_to 'Retour', root_path, class: "btn btn-primary " %>
      </div>
 </div>
+<h2> Offre du Vendeur</h2>
 </div>
+
+<%= render 'shared/carddiv' %>
+
+<%= render 'shared/footer' %>
 <%# mettre la quantité dans la seed 
 mettre les courdonnée vendeurs dans la seed %>
