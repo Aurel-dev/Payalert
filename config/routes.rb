@@ -4,14 +4,19 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  get "/profile", to: "profile#show"
+resources :products do
+resources :paylerts ,only: [:create , :new]
 
-
+end
 
  # url "payalert/search"
   get "/search", to: "pages#search"
+  get "/profile", to: "profile#show"
   # url "payalert/products" controller pages
-  get "/products", to: "products#index"
+  #routes pour login/log out
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
 resources :users do 
   resources :profile

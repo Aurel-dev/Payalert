@@ -13,11 +13,13 @@ def index
 end
 
 
-
 def new
   @product = Product.new
 end
-
+def show 
+  @product = Product.find(params[:id])
+  @paylert = Paylert.new
+end
 def create
   @product = Product.new(product_params)
     if @product.save
@@ -41,6 +43,6 @@ private
   end
 
   def product_params
-    params.requis(:product).permit(:name, :description)
+    params.requis(:product).permit(:name, :description, :photo)
   end
 end
