@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_25_104432) do
     t.integer "sku"
     t.string "name"
     t.string "brand"
+    t.string "photo"
     t.string "category_name"
     t.string "sub_category_name"
     t.integer "price"

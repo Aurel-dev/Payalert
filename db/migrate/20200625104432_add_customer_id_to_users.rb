@@ -12,5 +12,6 @@ class AddCustomerIdToUsers < ActiveRecord::Migration[6.0]
       amount: 1099,
       currency: 'usd',
       customer: customer['id'],
+    });
   end
 end
