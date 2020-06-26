@@ -15,9 +15,9 @@ class Product < ApplicationRecord
       puts self
     puts "================================================================="
       paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price).first
-    puts "================================================================="
-      puts Paylert.where(product_id: self.id).first.bidding_price
-      puts Paylert.where(product_id: self.id).second.bidding_price
+    # puts "================================================================="
+    #   puts Paylert.where(product_id: self.id).first.bidding_price
+    #   puts Paylert.where(product_id: self.id).second.bidding_price
     puts "================================================================="
     # puts Paylert.where(product_id: self.id).length
     # puts "==============================================================="
