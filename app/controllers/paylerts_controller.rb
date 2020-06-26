@@ -9,7 +9,7 @@ class PaylertsController < ApplicationController
         @paylert.product_id = params[:product_id]
         @paylert.user = current_user
         if @paylert.save
-            redirect_to root_path
+            redirect_to products_path
         else
             raise
             redirect_to products_path
