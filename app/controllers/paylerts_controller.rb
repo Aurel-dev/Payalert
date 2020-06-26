@@ -16,6 +16,10 @@ class PaylertsController < ApplicationController
         end
     end
 
+    def show
+        # @product = Product.where(product_id: product.id)
+    end
+
     def paylert_params
         params.require(:paylert).permit(:bidding_price, :product_id)
       end
