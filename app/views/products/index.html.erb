@@ -31,7 +31,7 @@
        <div class="p-2">
             <div class="carde">
             <div class="card-index">
-            <%= image_tag product.photo %>
+            <%= image_tag asset_path(product.photo) %>
 
                     
               <div class="card-product-infos">
@@ -59,7 +59,7 @@
             <div class="carde">
             <div class="card-index">
 
-               <%= image_tag product.photo %>
+               <%= image_tag asset_path(product.photo) %>
                     
               <div class="card-product-infos">
               <h2><%= product.name %></h2>

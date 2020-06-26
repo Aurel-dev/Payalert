@@ -1,17 +1,14 @@
 .search{
-
-  margin-top: 100px;
-  margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .search-form-control {
    border: 1px solid blue;
    width: 1000px;
-   
   }
 
 .flexinputs{
@@ -32,6 +29,27 @@
   margin-left: 120px;
 }
 .espacesearchbtn{
-margin-top: 30px;
+  margin-top: 30px;
   margin-left: 120px;
+}
+
+.searchzone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.searchzonevisible{
+  margin: 50px;
+}
+
+.searchzoneinvisible{
+}
+
+.search-form-controle{
+  border: 1px solid blue;
+  width: 870px;
+  margin-left: 150px;
 }
