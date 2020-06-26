@@ -6,15 +6,13 @@
         </div>
         <div class="products_details">
             <% @paylerts.each do |paylert| %>
-                Payalert du client N° <%= paylert.user_id %>
-                <br>
-                Produit N° <%= paylert.product_id %>
-                <br>
-                Prix proposé <%= paylert.bidding_price %>
-                <br>
-                Status <%= paylert.status %>
-                 <%# <%= image_tag product.photo %>
+                <% if paylert == @paylerts.last%>
+                    Payalert du client N° <%= paylert.user_id %>
+                    Produit N° <%= paylert.product_id %>
+                    Prix proposé <%= paylert.bidding_price %>
+                    Status <%= paylert.status %>
                 <% end %>
+            <% end %>
         </div>
     </div>
 </div>
