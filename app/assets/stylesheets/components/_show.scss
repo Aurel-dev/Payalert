@@ -10,7 +10,7 @@ padding-left: 50px;
 
 .showproducts{
     border: 1px solid #5878DB;
-    height: 600px;
+    height: 650px;
     width: 650px;
     background-color: white;
 }
@@ -36,7 +36,7 @@ padding-left: 50px;
    
     padding-left: 50px;
     margin-bottom: 50px;
-    height: 850px;
+    height: 900px;
     background-color: white;
     border-radius: 44px;
 }
@@ -118,4 +118,16 @@ padding-right: 50px;
 .integer{
     color: #6784DE;
     font-weight: bolder;
+}
+
+.bravo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+}
+
+.bravo_text{
+    margin-bottom: 50px;
 }

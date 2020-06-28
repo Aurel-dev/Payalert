@@ -7,6 +7,7 @@ RailsAdmin.config do |config|
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
+  config.included_models = [ "Product" ]
 
   config.authorize_with do
     unless current_user.admin?

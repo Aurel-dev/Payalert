@@ -20,10 +20,10 @@
 
 
 <% if @products.length == 0 %>
-  <h2 class="title-center">Aucun produit trouvé !</h2>
+  <h2 class="title-center">Aucun produit correspondant à votre recherche !</h2>
 
 <% elsif params[:product_filter].present? %>
-  <h2 class="title-center">Résultat de votre recherche</h2>
+  <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
    <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
      <% @products.each do |product| %>
@@ -49,7 +49,7 @@
    </div>
    
 <% else %>
- <h2 class="title-center">Résultat de votre recherche</h2>
+ <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
   <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
       <% @products.each do |product| %>
