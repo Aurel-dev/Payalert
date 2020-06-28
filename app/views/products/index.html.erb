@@ -20,39 +20,36 @@
 
 
 <% if @products.length == 0 %>
-  <h2>Aucun produit trouvé !</h2>
+  <h2 class="title-center">Aucun produit trouvé !</h2>
 
 <% elsif params[:product_filter].present? %>
-  <h2 class="text-center">Résultat de votre recherche</h2>
+  <h2 class="title-center">Résultat de votre recherche</h2>
    <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
-    <% @products.each do |product| %>
-
+     <% @products.each do |product| %>
        <div class="p-2">
-
-        <div class="carde">
+          <div class="carde">
             <div class="card-index">
-            <%= image_tag asset_path(product.photo) %>
-            </div>
+              <%= image_tag asset_path(product.photo) %>
                     
             <div class="card-product-infos">
-            <h2><%= product.name %></h2>
-            <p><%= product.description %></p>
+              <h2><%= product.name %></h2>
+              <p><%= product.description %></p>
+              <h2>Prix vendeur : <%= product.price %> euros</h2>
             </div>
 
             <div class="card-product-infos">
-            <h2><%= product.price %>euros</h2>
-            <%= link_to("Paylert", product_path(product), class: "btn btn-primary") %>
+              <%= link_to("Accéder à la fiche produit", product_path(product), class: "btn btn-primary") %>
             </div>
-        </div>
-      </div>
+            </div>
           </div>
-
-    <% end %>
-  </div>
-</div>
+        </div>
+      <% end %>
+    </div>
+   </div>
+   
 <% else %>
-
+ <h2 class="title-center">Résultat de votre recherche</h2>
   <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
       <% @products.each do |product| %>
@@ -74,9 +71,7 @@
             </div>
             </div>
           </div>
-
       <%end%>
-      
     </div>
   </div>
 <% end %>
