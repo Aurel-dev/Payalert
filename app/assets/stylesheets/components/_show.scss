@@ -38,12 +38,13 @@ padding-left: 50px;
     margin-bottom: 50px;
     height: 850px;
     background-color: white;
+    border-radius: 44px;
 }
 
 .whiteform h1{
     padding-top: 50px;
-margin-left: 100px;
-margin-bottom: 50px;
+    margin-left: 160px;
+    margin-bottom: 50px;
 
 
 }
@@ -61,13 +62,13 @@ margin-bottom: 50px;
 }
 
 .adresse-info2{
-
     margin-left: 230px;
 }
-.adresse-info1{
 
-    
+.adresse-info1{
+ 
 }
+
 .containerd-info{
     margin-top: 20px;
     display: flex;
@@ -88,11 +89,33 @@ padding-right: 50px;
     margin-left: 5em;
     max-height: 60%;
     max-width: 60%;
-    
-  }
-  .size-description{
+}
+
+.size-description{
     width: 30em;
     font-size: 0.75em;
+}
 
+.titleshow{
+    color: #6784DE;
+    font-weight: bolder;
+}
 
-  }
+.address_show{
+    color: #6784DE;
+    text-align: center;
+}
+
+.big_product_show{
+    color: #6784DE;
+}
+
+.posting_show{
+    color: #6784DE;
+    font-weight: bolder;
+}
+
+.integer{
+    color: #6784DE;
+    font-weight: bolder;
+}
