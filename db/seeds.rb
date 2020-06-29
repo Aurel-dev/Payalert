@@ -32,6 +32,12 @@ User.create!(
     admin: true
 )
 
+User.create!(
+    email: "m.heyndrickx@hotmail.fr",            
+    password: "1234567",
+    admin: true
+)
+
 
 amazon = Shop.create!(
     name: "Amazon",

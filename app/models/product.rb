@@ -24,7 +24,7 @@ class Product < ApplicationRecord
     if paylert
       paylert.status = "Executée !"
       paylert.save
-      UserMailer.with(paylert: @paylert, user: current_user).execution.deliver_now
+      UserMailer.with(paylert: @paylert, user: paylert.user).execution.deliver_now
     end
   end
 end
