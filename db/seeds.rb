@@ -126,29 +126,26 @@ Product.create!(
 )
 
 Product.create!(
-    name: "Réfrigérateur combiné Bosch KGV58VL31S",
-    brand: "Bosch",
-    price: 399,
+    name: "Computer",
+    brand: "Lenovo",
+    price: 599,
     shop: boulanger,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
-    photo: "Frigo.svg",
-    description: "Composé d'une partie réfrigérateur qui peut conserver les fruits et légumes frais plus longtemps et d'une partie congélateur."
+    photo: "computer.png",
+    description: "Ordinateur Gamer a petit prix"
 )
 
 Product.create!(
-    name: "Willi Waller Two Thousand Six",
-    brand: "Willi Waller",
-    price: 29.99,
-    shop: cdiscount,
+    name: "Iphone X",
+    brand: "Apple",
+    price: 799,
+    shop: boulanger,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
-    photo: "Willywaller.svg",
-    description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
-    Ni quat' fois moins de temps à éplucher des patates...
-    Non ! Avec le Willi Waller Two Thousand Six là, ça va te prendre DEUX fois moins de temps pour éplucher des patates."
+    photo: "iphone.png",
+    description: "Iphone X a prix réduit"
 )
-
 Product.create!(
     name: "Clubs de golf Limited edition",
     brand: "Pfeiffer.inc",
@@ -185,6 +182,16 @@ Product.create!(
     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
 )
 
+
+    name: "Cafetiere",
+    brand: "Jura",
+    price: 299,
+    shop: boulanger,
+    category_name: "Maison",
+    sub_category_name: "Electro-ménager",
+    photo: "cafee.png",
+    description: "Cafetiere moderne "
+)
 
 Paylert.create!(
     user_id: User.first.id,

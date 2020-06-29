@@ -17,6 +17,19 @@
     display: flex;
     align-items: center;
 }
+.carddde{
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 30px;
+    border-color: white;
+    border-radius: 44px;
+    width: 1600px;
+    height: 650px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+
 
 
 .txt{
@@ -27,6 +40,21 @@
 
 }
 
+
+.txtde{
+    padding-top: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+
+
+.txtde h3{
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
 .txt h4{
     font-size: 36px;
     margin-bottom: 20px;
@@ -34,4 +62,12 @@
 
 .txt p{
     color: #393E46;
+}
+
+
+.searche{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
