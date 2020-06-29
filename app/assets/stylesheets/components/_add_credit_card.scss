@@ -1,0 +1,25 @@
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#card-element{
+    border: 1px solid black;
+    background-color: white;
+    width: 500px;
+    height: 40px;
+    font-size: large;
+}
+
+.form_card{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#submit{
+    width: 80px;
+    height: 40px;
+}
