@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :shop
   has_many :paylerts, dependent: :destroy
+  monetize :price_cents
   CATEGORIES = ["Jardin", "Maison", "Garage", "Loisirs et détente"]
   BRANDS = ["Bosch", "Black & Decker", "Pfeiffer.inc", "Willi Waller"]
 
@@ -14,7 +15,7 @@ class Product < ApplicationRecord
     puts "================================================================="
       puts self
     puts "================================================================="
-    paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price).first
+    paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
     puts "================================================================="
     # puts Paylert.where(product_id: self.id).first.bidding_price
     # puts Paylert.where(product_id: self.id).second.bidding_price
@@ -25,7 +26,7 @@ class Product < ApplicationRecord
       user = paylert.user
       if (user.stripe_customer_id && user.credit_card_id)
         intent = Stripe::PaymentIntent.create({
-        amount: paylert.product.price,
+        amount: paylert.product.price_cents,
         currency: 'eur',
         customer: user.stripe_customer_id,
         payment_method: user.credit_card_id,
@@ -33,7 +34,7 @@ class Product < ApplicationRecord
         confirm: true,
       })
       paylert.status = "executed"
-      paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price).first
+      paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
     # puts "================================================================="
     #   puts Paylert.where(product_id: self.id).first.bidding_price
     #   puts Paylert.where(product_id: self.id).second.bidding_price
