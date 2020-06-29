@@ -15,7 +15,7 @@ class Product < ApplicationRecord
     puts "================================================================="
       puts self
     puts "================================================================="
-    paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
+      paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
     puts "================================================================="
     # puts Paylert.where(product_id: self.id).first.bidding_price
     # puts Paylert.where(product_id: self.id).second.bidding_price
@@ -31,10 +31,10 @@ class Product < ApplicationRecord
         customer: user.stripe_customer_id,
         payment_method: user.credit_card_id,
         off_session: true,
-        confirm: true,
+        confirm: true
       })
-      paylert.status = "executed"
-      paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
+      # paylert.status = "executed"
+      # paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
     # puts "================================================================="
     #   puts Paylert.where(product_id: self.id).first.bidding_price
     #   puts Paylert.where(product_id: self.id).second.bidding_price
@@ -44,7 +44,7 @@ class Product < ApplicationRecord
     if paylert
       paylert.status = "Executée !"
       paylert.save
-      end
+    end
     end
   end
 end
