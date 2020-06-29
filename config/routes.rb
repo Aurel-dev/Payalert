@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 resources :products do
-resources :paylerts ,only: [:create , :new]
+resources :paylerts ,only: [:create , :new, :delete]
 
 end
 
@@ -18,6 +18,7 @@ end
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  delete "/paylert/:id", to: "paylerts#destroy",  as: :delete_paylert
 
 resources :users do 
   resources :profile

@@ -1,30 +1,34 @@
-
 <div class ="container">
     <div class ="bellformalert">
         <div class="d-flex bd-highlight mb-3">
             <div class="d-flex justify-content-start">
-                <h2> PayAlert précédente</h2>
+                <h2> Vos Paylerts en cours</h2>
             </div>
             <div class="ml-auto p-2 "> 
                 <%= image_tag "bellhide.svg" %>
             </div>
-
         </div>
-        </div>
+    </div>
 </div>
     <% @paylerts.each do |paylert| %>
-            <div class="carde">
-                <div class="card-index">
-                    <%=  image_tag paylert.product.photo %>
-                    <div class="card-product-infos">
-                        <h2><%= paylert.product.name %></h2>
-                        <p><%= paylert.product.description %></p>
-                        <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
-                        <h2 class ="cardprice">Prix proposé à <%= paylert.bidding_price %> euros</h2>
-                    </div>
-                    </div>
+    <% if paylert.status == "En attente d'execution" %>
+        <div class="carde">
+            <div class="card-index">
+                <%=  image_tag paylert.product.photo %>
+                <div class="card-product-infos">
+                    <h2><%= paylert.product.name %></h2>
+                    <p><%= paylert.product.description %></p>
+                    <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
+                    <h2 class ="cardprice">Prix proposé à <%= paylert.bidding_price %> euros</h2>
+                </div>
+                <div class="card-product-infos">
+                  <div class ="m-4">
+                    <%= link_to 'Annuler ma paylerte', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"generique" %></i>
+                  </div>
                 </div>
             </div>
+        </div>
+    </div>
     <% end %>
+<% end %>
 
-</div>

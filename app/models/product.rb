@@ -2,9 +2,9 @@ class Product < ApplicationRecord
   belongs_to :shop
   has_many :paylerts, dependent: :destroy
   CATEGORIES = ["Jardin", "Maison", "Garage", "Loisirs et détente"]
-  BRANDS = ["Bosch", "Black & Decker", "Pfeiffer.inc", "Willi Waller"]
+  BRANDS = ["Bosch", "Black & Decker", "Inesis", "Pfeiffer.inc", "Willi Waller", "Wilson"]
 
-  after_update_commit  :check_price_paylerts 
+  after_update_commit  :check_price_paylerts
 
   private
 
@@ -24,7 +24,9 @@ class Product < ApplicationRecord
     if paylert
       paylert.status = "Executée !"
       paylert.save
+      UserMailer.with(paylert: @paylert, user: current_user).execution.deliver_now
     end
   end
 end
+
 
