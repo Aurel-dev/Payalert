@@ -22,8 +22,19 @@ class Product < ApplicationRecord
     # puts Paylert.where(product_id: self.id).length
     # puts "==============================================================="
     if paylert
+      user = paylert.user
+      if (user.stripe_customer_id && user.credit_card_id)
+        intent = Stripe::PaymentIntent.create({
+        amount: paylert.product.price,
+        currency: 'eur',
+        customer: user.stripe_customer_id,
+        payment_method: user.credit_card_id,
+        off_session: true,
+        confirm: true,
+      })
       paylert.status = "executed"
       paylert.save
+      end
     end
   end
 end

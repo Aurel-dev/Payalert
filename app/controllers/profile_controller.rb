@@ -7,6 +7,7 @@ class ProfileController < ApplicationController
     
     def add_credit_card
         customer = Stripe::Customer.create
+        current_user.update(stripe_customer_id: customer["id"])
         payment_intent = Stripe::PaymentIntent.create({
             amount: 1099,
             currency: 'usd',

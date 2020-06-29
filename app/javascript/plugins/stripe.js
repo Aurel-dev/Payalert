@@ -46,8 +46,9 @@ card.mount("#card-element");
         // There's a risk of the customer closing the window before callback execution
         // Set up a webhook or plugin to listen for the payment_intent.succeeded event
         // to save the card to a Customer
-        window.location.href = "/profile/card_added";
+        // window.location.href = "/profile/card_added";
         // The PaymentMethod ID can be found on result.paymentIntent.payment_method
+        console.log("réussi");
       }
     }
   });
