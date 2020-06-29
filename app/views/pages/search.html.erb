@@ -1,54 +1,181 @@
-<div class="searchzonemax">
-  <div class="searchimgflex">
-  <%= image_tag "computer.svg" ,class: "computersearch"%>
-  </div>
-<div class = "searchzone">
-    <div class = "searchzonevisible">
-      <div class="flexinputs_search">
-          <h3><%= image_tag "vue.svg" %> Rechercher</h3>
-        <div class = "search">
-          <%= form_tag products_path, method: :get do %>
+
+
+<div >
+<div class ="containers">
+    <div class="carddde">
+    <div class="containerd">  
+    <%= image_tag "SearchDrow.svg" %>
+    
+    </div>
+    <div class="txtde">
+          <h3>Rechercher votre produit</h3>
+       <div class = "searche">
+          <%= form_tag products_path, class: "form-inline",method: :get do %>
             <%= text_field_tag :query,
               params[:query],
-              class: "search-form-controle",
+              class: "form-control mr-sm-2",
               placeholder: "Que recherchez-vous ?"
             %>
-              <input class="btn btn-primary" type="submit" value="C'est parti !">
+              <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="C'est parti !">
             <% end %>
               </button>
             </div>
-            </div>
-          </form>
-      </div>
+    </div>
+    
+</div>
+</div>
+<div class ="container">
+    <div class ="carous-h3">
+      <h3>Categories</h3>
+    </div>
+</div>
+ <div class ="carou">
+            <div class="d-flex flex-row">
+              <div class="margincate" >
+                <div class="col-md-4">
+                  <div class = "categories">    
+                  <div class = "categoriesdiv" >
+                  
+                         <%= image_tag "garden.svg"%>
+                           <p>Garden</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
 
-      <div class = "searchzoneinvisible">
-        <div class="flexinputs_search">
-         <div class = "containerd">
-            <h3><%= image_tag "vuehide.svg" %> Recherche avancée </h3>
-        </div>
-          <div class = "search">
-            <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
-            <div class= "espacesearch">
-              <%= f.input :Commerçant, collection: Shop::SHOPS %>
-            </div>
-            <div class= "espacesearch">
-              <%= f.input :Catégorie, collection: Product::CATEGORIES %>
-            </div>
-            <div class= "espacesearch">
-              <%= f.input :Marque, collection: Product::BRANDS %>
-            </div>
-            <div class= "espacesearchbtn">
-              <%= f.submit "C'est parti !", class: "btn btn-primary" %>
-            </div>
-            <% end %>
+                      <div class="margincate" >
+                <div class="col-md-4">
+                  <div class = "categories">    
+                  <div class = "categoriesdiv" >
+                  
+                         <%= image_tag "garden.svg"%>
+                           <p>Garden</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+
+                        <div class="margincate" >
+                <div class="col-md-4">
+                  <div class = "categories">    
+                  <div class = "categoriesdiv" >
+                  
+                         <%= image_tag "garden.svg"%>
+                           <p>Garden</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+
+                      <div class="margincate" >
+                <div class="col-md-4">
+                  <div class = "categories">    
+                  <div class = "categoriesdiv" >
+                  
+                         <%= image_tag "garden.svg"%>
+                           <p>Garden</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+
+                      <div class="margincate" >
+                <div class="col-md-4">
+                  <div class = "categories">    
+                  <div class = "categoriesdiv" >
+                  
+                         <%= image_tag "garden.svg"%>
+                           <p>Garden</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+          
           </div>
-        </div>
-      </form>
-    </div>
-    </div>
   </div>
+
+
+<div class ="container">
+    <div class ="carous-h3">
+      <h3>Les favories des utilsateurs</h3>
+    </div>
+</div>
+<div class ="carou">
+
+            <div class="d-flex flex-row">
+              <div class="margincater" >
+                <div class="col-md-4">
+                  <div class = "NotreAvis">    
+                  <div class = "categoriesdiv" >
+                             <div class = "NotreAvisimg" >
+                                <%= image_tag "cafee.png"%>
+                             
+                             </div>
+                            <!-- Add icon library -->
+                      <%= render 'shared/star' %>
+                           <p>machine a cafée</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+                <div class="d-flex flex-row">
+              <div class="margincater" >
+                <div class="col-md-4">
+                  <div class = "NotreAvis">    
+                  <div class = "categoriesdiv" >
+                             <div class = "NotreAvisimg" >
+                                <%= image_tag "computer.png"%>
+                             </div>
+                          <%= render 'shared/star' %>
+                           <p>Ordinateur </p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+
+     <div class="d-flex flex-row">
+              <div class="margincater" >
+                <div class="col-md-4">
+                  <div class = "NotreAvis">    
+                  <div class = "categoriesdiv" >
+                             <div class = "NotreAvisimg" >
+                                <%= image_tag "iphone.png"%>
+                             </div>
+                          <%= render 'shared/star' %>
+                         <p>Iphone X</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+
+               <div class="d-flex flex-row">
+              <div class="margincater" >
+                <div class="col-md-4">
+                  <div class = "NotreAvis">    
+                  <div class = "categoriesdiv" >
+                             <div class = "NotreAvisimg" >
+                                <%= image_tag "cap.png"%>
+                             </div>
+                          <%= render 'shared/star' %>
+                           <p>Casquette</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+              </div>
+
+    </div>          
 </div>
 
-<br>
-<br>
+
+
+</div>
+  </div>
+
+
+
+
+
+
 <%= render 'shared/footer' %>
+
