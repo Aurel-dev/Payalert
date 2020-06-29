@@ -77,4 +77,3 @@ private
   def paylert_params
     params.require(:paylert).permit(:bidding_price)
   end
-end
