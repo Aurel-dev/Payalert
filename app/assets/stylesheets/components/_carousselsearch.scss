@@ -1,0 +1,56 @@
+.amazon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-color: #E2E5E6;
+    height: 170px;
+    width: 250px;
+}
+
+.boulanger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-color: #E2E5E6;
+    height: 170px;
+    width: 250px;
+}
+.boulanger img{
+    height: 50%;
+    width: 50%;
+}
+
+.background-carou-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carous-h3{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin-left: -170px;
+   
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+
+}
+.carous-h3 h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.carou{
+    margin-left: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
