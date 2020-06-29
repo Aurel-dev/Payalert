@@ -189,6 +189,7 @@ Product.create!(
 )
 
 
+Product.create!(
     name: "Cafetiere",
     brand: "Jura",
     price: 299,
