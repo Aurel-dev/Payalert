@@ -1,23 +1,31 @@
 class PaylertsController < ApplicationController
 
-    def new
-        @paylert = Paylert.new
-    end
+  def new
+    @paylert = Paylert.new
+  end
 
     def create
-        @paylert = Paylert.new(paylert_params)
-        @paylert.product_id = params[:product_id]
-        @paylert.user = current_user
+      @paylert = Paylert.new(paylert_params)
+      @paylert.product_id = params[:product_id]
+      @paylert.user = current_user
         if @paylert.save
-            redirect_to profile_path
+            mail = UserMailer.with(paylert: @paylert, user: current_user).confirmation
+            mail.deliver_now
+         redirect_to profile_path
+
         else
-            raise
-            redirect_to products_path
+          redirect_to products_path
         end
     end
 
     def show
         # @product = Product.where(product_id: product.id)
+    end
+
+    def destroy
+        @paylert = Paylert.find(params[:id])
+        @paylert.destroy
+        redirect_to profile_path
     end
 
     def paylert_params

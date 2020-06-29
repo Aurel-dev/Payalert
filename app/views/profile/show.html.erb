@@ -1,10 +1,41 @@
 <%= render 'shared/navbar' %>
-
-<%= render 'shared/payalertcontainer' %>
-
-<%# <% if paylert.status === "executed" %> 
-
 <%= render 'shared/payalertcontainer2' %>
+
+<div class ="container">
+    <div class ="bellformalert">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="d-flex justify-content-start">
+                <h2>Votre PayAlert terminées</h2>
+            </div>
+            <div class="ml-auto p-2 "> 
+                <%= image_tag "BellAlert.svg" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% @paylerts.each do |paylert| %>
+  <% if paylert.status == "Executée !" %>
+    <div class="carde">
+      <div class="card-product">
+        <%= image_tag paylert.product.photo %>
+          <div class="card-product-infos">
+            <h2 class="profile_title_card"><%= paylert.product.name %></h2>
+            <p><%= paylert.product.description %></p>
+            <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
+            <h2 class ="cardprice">Prix obtenu</h2><p><%= paylert.bidding_price %> euros</p>
+            </div>
+                <div class="card-product-infos">
+                  <div class ="m-4">
+                    <%= link_to 'Archiver', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"generique" %></i>
+                  </div>
+                </div>
+      </div>
+    </div>
+<% end %>
+<% end %>
+
 
 <%= render 'shared/footer' %>
 

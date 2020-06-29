@@ -14,8 +14,9 @@ class PagesController < ApplicationController
   def new
     # @page = Page.new
   end
+
+  def validate
+  end
   
 
-  def search
-  end
 end

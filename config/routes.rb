@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/profile/add_credit_card", to: "profile#add_credit_card"
   get "profile/card_added", to: "profile#card_added"
 resources :products do
-resources :paylerts ,only: [:create , :new]
+resources :paylerts ,only: [:create , :new, :delete]
 # resources :users, only: []
 
 end
@@ -22,6 +22,7 @@ end
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  delete "/paylert/:id", to: "paylerts#destroy",  as: :delete_paylert
 
 resources :users do 
   resources :profile

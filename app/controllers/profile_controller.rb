@@ -1,28 +1,26 @@
 class ProfileController < ApplicationController
 
-
   def index
     # if params[:query].present?
     #   @paylerts = Paylert.where(location :params[:query])
     # else
-      @paylerts = Paylert.all
+    @paylerts = Paylert.all
     # end
   end
     
-     def show
-        @paylerts = Paylert.where(user_id: current_user.id)
-     end
+  def show
+    @paylerts = Paylert.where(user_id: current_user.id)
+  end
     #     @user = current_user
     #     # @paylerts = @user.paylerts
     #     @paylerts = Paylert.all
     #     @paylert = Paylert.find(params[user_id: current_user.id])
     # end
 
-    
 
-    def new
-        @paylert = Paylert.new
-      end
+  def new
+    @paylert = Paylert.new
+  end
     
     def add_credit_card
         customer = Stripe::Customer.create
