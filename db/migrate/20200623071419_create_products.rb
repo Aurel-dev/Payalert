@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :sku
       t.string :name
       t.string :brand
+      t.string :photo
       t.string :category_name
       t.string :sub_category_name
       t.integer :price

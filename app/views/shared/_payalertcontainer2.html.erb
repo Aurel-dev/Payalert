@@ -1,19 +1,30 @@
 
-<div class="main_container2">
-    <div class="current_payalert2">
-        <div class="imgproduct2">
-            <%= image_tag "computer.svg" %>
+<div class ="container">
+    <div class ="bellformalert">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="d-flex justify-content-start">
+                <h2> PayAlert précédente</h2>
+            </div>
+            <div class="ml-auto p-2 "> 
+                <%= image_tag "bellhide.svg" %>
+            </div>
+
         </div>
-        <div class="products_details">
-            <% @paylerts.each do |paylert| %>
-                <h4>Payalert du client N° <%= paylert.user_id %></h4>
-                <br>
-                <h4>Produit N° <%= paylert.product_id %></h4>
-                <br>
-                <h4>Prix proposé <%= paylert.bidding_price %></h4>
-                <br>
-                <h4>Status <%= paylert.status %></h4>
-                <% end %>
         </div>
-    </div>
+</div>
+    <% @paylerts.each do |paylert| %>
+            <div class="carde">
+                <div class="card-index">
+                    <%=  image_tag paylert.product.photo %>
+                    <div class="card-product-infos">
+                        <h2><%= paylert.product.name %></h2>
+                        <p><%= paylert.product.description %></p>
+                        <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
+                        <h2 class ="cardprice">Prix proposé à <%= paylert.bidding_price %> euros</h2>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    <% end %>
+
 </div>

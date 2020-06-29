@@ -6,15 +6,22 @@ class PaylertsController < ApplicationController
 
     def create
         @paylert = Paylert.new(paylert_params)
+        @paylert.product_id = params[:product_id]
+        @paylert.user = current_user
         if @paylert.save
-            redirect to @paylert
+            redirect_to profile_path
         else
+            raise
             redirect_to products_path
         end
     end
 
+    def show
+        # @product = Product.where(product_id: product.id)
+    end
+
     def paylert_params
-        params.require(:paylert).permit(:bidding_price)
+        params.require(:paylert).permit(:bidding_price, :product_id)
       end
 
 

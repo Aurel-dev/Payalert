@@ -15,7 +15,13 @@ end
 
  # url "payalert/search"
   get "/search", to: "pages#search"
+  get "/profile", to: "profile#show"
+  get "/validate", to: "pages#validate"
   # url "payalert/products" controller pages
+  #routes pour login/log out
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
 resources :users do 
   resources :profile

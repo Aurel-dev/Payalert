@@ -1,18 +1,19 @@
 .search{
-  margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.search-form-control {
-   border: 1px solid blue;
-   width: 1000px;
-   
-  }
-
 .flexinputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #6784DE;;
+}
+
+.flexinputs_search{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,54 @@
   margin: 30px;
 }
 
-.flex2{
+.espacesearch{
 
+  margin-left: 120px;
+}
+.espacesearchbtn{
+  margin-top: 30px;
+  margin-left: 120px;
+}
+
+.searchzone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.searchzonevisible{
+  margin: 50px;
+}
+
+.searchzoneinvisible{
+  margin-top: 20px;
+}
+
+.search-form-controle{
+  border: 1px solid #ced4da;
+  width: 400px;
+  margin-right: 100px;
+  margin-left: -225px;
+}
+
+.computersearch{
+  height: 600px;
+}
+
+.searchzonemax{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 60px;
+  width: 1800px;
+  background-color: white;
+  border-radius: 44px;
+}
+
+.simple_form{
+display: flex;
+flex-direction: row;
 }

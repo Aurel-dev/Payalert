@@ -42,6 +42,12 @@ boulanger = Shop.create!(
     user_id: User.third.id,
 )
 
+decathlon = Shop.create!(
+    name: "Decathlon",
+    user_id: User.third.id,
+)
+
+
 Product.create!(
     name: "Tondeuse Thermique FLYMO",
     brand: "Bosch",
@@ -49,6 +55,7 @@ Product.create!(
     shop: amazon,
     category_name: "Jardin",
     sub_category_name: "Tondeuse",
+    photo: "Tondeuse.svg",
     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
 )
 
@@ -59,6 +66,7 @@ Product.create!(
     shop: cdiscount,
     category_name: "Garage",
     sub_category_name: "Bricolage",
+    photo: "Ponceuse.svg",
     description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
 )
 
@@ -69,6 +77,7 @@ Product.create!(
     shop: boulanger,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
+    photo: "Frigo.svg",
     description: "Composé d'une partie réfrigérateur qui peut conserver les fruits et légumes frais plus longtemps et d'une partie congélateur."
 )
 
@@ -79,9 +88,22 @@ Product.create!(
     shop: cdiscount,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
+    photo: "Willywaller.svg",
     description: "Avec le Willi Waller Two Thousand Six là, ça va pas te prendre trois fois moins de temps à éplucher des patates...
     Ni quat' fois moins de temps à éplucher des patates...
     Non ! Avec le Willi Waller Two Thousand Six là, ça va te prendre DEUX fois moins de temps pour éplucher des patates."
+)
+
+Product.create!(
+    name: "Clubs de golf Limited edition",
+    brand: "Pfeiffer.inc",
+    price: 4500.69,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Clubs.svg",
+    description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
+    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
 )
 
 
@@ -89,13 +111,13 @@ Paylert.create!(
     user_id: User.first.id,
     product_id: Product.first.id,
     bidding_price: 90,
-    status: "pending"
+    status: "En attente d'execution"
 )
 
 Paylert.create!(
     user_id: User.second.id,
     product_id: Product.first.id,
     bidding_price: 30,
-    status: "pending"
+    status: "En attente d'execution"
 )
 

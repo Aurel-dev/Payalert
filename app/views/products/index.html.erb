@@ -1,53 +1,81 @@
-
-<div class="flexinputs">
-  <div class = "search">
+<div class="englobe_index">
+<div class="flexinputs p-3">
+  <div class = "search ">
     <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
-      <%= f.input :Commerçant, collection: Shop::SHOPS %>
-      <%= f.input :Catégorie, collection: Product::CATEGORIES %>
-      <%= f.input :Marque, collection: Product::BRANDS %>
-      <%= f.submit "Rechercher", class: "btn btn-primary" %>
+    <div class= "espacesearch">
+      <%= f.input :Commerçant,collection: Shop::SHOPS %>
+      </div>
+        <div  class= "espacesearch">
+      <%= f.input :Catégorie, class: "espacesearch",collection: Product::CATEGORIES %>
+        </div>
+        <div  class= "espacesearch">
+      <%= f.input :Marque, class: "espacesearch",collection: Product::BRANDS %>
+        </div>
+        <div  class= "espacesearchbtn">
+      <%= f.submit "Rechercher", class: "btn btn-outline-primary" %>
+        </div>
     <% end %>
   </div>
  </div>
 
 
 <% if @products.length == 0 %>
-  <h2>Aucun produit trouvé !</h2>
+  <h2 class="title-center">Aucun produit correspondant à votre recherche !</h2>
 
 <% elsif params[:product_filter].present? %>
-  <h2 class="text-center">Résultat de votre recherche</h2>
-  <div class ="formulaire-booking">
-    <% @products.each do |product| %>
-      <div class = "formulaire-separation" >
-        <p><strong>Nom :</strong> <%= product.name %></p>
-        <p><strong>Description : </strong> <%= product.description %></p>
-        <p><strong>Prix :</strong> <%= product.price %> €</p>
-        <p><strong>Catégorie :</strong> <%= product.category_name %> </p>
-        <p><strong>Prix :</strong> <%= product.price %> €</p>
-        <p><strong>Commerçant :</strong> <%= product.shop.name %> </p>
-        <p>(Image)</p>
-        <%= link_to("Paylert", root_path, class:"generique") %>
-      </div>
-    <%end%>
-  </div>
+  <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
+   <div class = "containerd">
+    <div class ="d-flex flex-column bd-highlight mb-3">
+     <% @products.each do |product| %>
+       <div class="p-2">
+          <div class="carde">
+            <div class="card-index">
+              <%= image_tag asset_path(product.photo) %>
+                    
+            <div class="card-product-infos">
+              <h2><%= product.name %></h2>
+              <p><%= product.description %></p>
+              <h2>Prix vendeur : <%= product.price %> euros</h2>
+            </div>
 
-<% else %>
-  <h2 class="text-center">Résultat de votre recherche</h2>
-  <div class = "containerd">
-    <div class ="formulaire-booking">
-      <% @products.each do |product| %>
-        <div class = "formulaire-separation" >
-          <p><strong>Nom :</strong> <%= product.name %></p>
-          <p><strong>Description : </strong> <%= product.description %></p>
-          <p><strong>Prix :</strong> <%= humanized_money_with_symbol(product.price) %></p>
-          <p>(Image)</p>
-          <%= link_to("Paylert", product_path(product), class:"generique") %>
+            <div class="card-product-infos">
+              <%= link_to("Accéder à la fiche produit", product_path(product), class: "btn btn-primary") %>
+            </div>
+            </div>
+          </div>
         </div>
+      <% end %>
+    </div>
+   </div>
+   
+<% else %>
+ <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
+  <div class = "containerd">
+    <div class ="d-flex flex-column bd-highlight mb-3">
+      <% @products.each do |product| %>
+
+       <div class="p-2">
+            <div class="carde">
+            <div class="card-index">
+
+               <%= image_tag asset_path(product.photo) %>
+                    
+              <div class="card-product-infos">
+              <h2><%= product.name %></h2>
+              <p><%= product.description %></p>
+              <h2>Prix vendeur : <%= product.price %> euros</h2>
+              </div>
+              <div class="card-product-infos">
+               <%= link_to("Accéder à la fiche produit", product_path(product), class: "btn btn-primary") %>
+              </div>
+            </div>
+            </div>
+          </div>
       <%end%>
     </div>
   </div>
 <% end %>
-
+</div>
 
 
 <%= render 'shared/footer' %>

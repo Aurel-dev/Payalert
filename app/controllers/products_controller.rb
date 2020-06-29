@@ -13,7 +13,6 @@ def index
 end
 
 
-
 def new
   @product = Product.new
 end
@@ -34,7 +33,7 @@ def edit
 end
 
 def destroy
-@product.destroy
+  @product.destroy
 end
 
 private
@@ -44,6 +43,6 @@ private
   end
 
   def product_params
-    params.requis(:product).permit(:name, :description)
+    params.requis(:product).permit(:name, :description, :photo)
   end
 end
