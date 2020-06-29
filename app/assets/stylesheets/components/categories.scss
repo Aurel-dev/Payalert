@@ -1,0 +1,79 @@
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+text-align: center;
+border-radius: 12px;
+padding-top: 20px;
+    height: 240px;
+    width: 220px;
+    margin-bottom: 100px;
+    margin-left: 35px;
+}
+.categories:hover{
+    transform: scale(1.2);
+}
+.categories img{
+    height: 50%;
+    width: 50%;
+}
+.categoriesdiv p{
+margin-top: 20px;
+
+}
+
+.margincate{
+
+    margin-left: 30px;
+}
+
+
+
+.NotreAvis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    width: 340px;
+    margin-bottom: 100px;
+}
+.NotreAvisimg{
+   background-color: white;
+    
+    border-radius: 12px;
+    padding-top: 20px;
+        height: 200px;
+        width: 340px;
+   
+}
+
+
+.NotreAvisimg:hover{
+
+background-color: #5879db2a;
+
+}
+
+.NotreAvis:hover{
+   
+}
+.NotreAvis img{
+max-height: 80%;
+max-width: 100%;
+}
+.categoriesdiv p{
+margin-top: 20px;
+
+}
+
+.margincater{
+
+    margin-left: 20px;
+}
+
+.checked {
+    margin-top: 10px;
+    color: orange;
+  }

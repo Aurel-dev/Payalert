@@ -23,33 +23,40 @@
   <h2 class="title-center">Aucun produit correspondant à votre recherche !</h2>
 
 <% elsif params[:product_filter].present? %>
-  <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
+
    <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
      <% @products.each do |product| %>
-       <div class="p-2">
+       <div>
           <div class="carde">
             <div class="card-index">
-              <%= image_tag asset_path(product.photo) %>
+              <div class ="pictureindex">
+               <%= image_tag asset_path(product.photo) %>
+                </div>
                     
-            <div class="card-product-infos">
+            <div class="card-product-center">
               <h2><%= product.name %></h2>
               <p><%= product.description %></p>
-              <h2>Prix vendeur : <%= product.price %> euros</h2>
             </div>
 
             <div class="card-product-infos">
-              <%= link_to("Accéder à la fiche produit", product_path(product), class: "btn btn-primary") %>
+              <h2  class ="priceindex"><%= product.price %> euros</h2>
             </div>
+
+            <div class="placement-btn">
+              <%= link_to(" produit", product_path(product), class: "btn btn-primary") %>
             </div>
           </div>
         </div>
-      <% end %>
+       </div>
+     </div>
     </div>
-   </div>
+   <% end %>
+  </div>
+ </div>
    
 <% else %>
- <h2 class="title-center"><i class="far fa-hand-point-down"></i>  Résultat de votre recherche</h2>
+ 
   <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
       <% @products.each do |product| %>
@@ -57,16 +64,18 @@
        <div class="p-2">
             <div class="carde">
             <div class="card-index">
-
+                <div class ="pictureindex">
                <%= image_tag asset_path(product.photo) %>
-                    
-              <div class="card-product-infos">
-              <h2><%= product.name %></h2>
-              <p><%= product.description %></p>
-              <h2>Prix vendeur : <%= product.price %> euros</h2>
+                </div>
+              <div class="card-product-center">
+                <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
               </div>
               <div class="card-product-infos">
-               <%= link_to("Accéder à la fiche produit", product_path(product), class: "btn btn-primary") %>
+               <h2 class ="priceindex"><%= product.price %> euros</h2>
+              </div>
+              <div class="placement-btn ">
+               <%= link_to("PayAlert ", product_path(product), class: "btn btn-primary") %>
               </div>
             </div>
             </div>
@@ -79,3 +88,5 @@
 
 
 <%= render 'shared/footer' %>
+
+
