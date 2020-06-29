@@ -111,13 +111,13 @@ Paylert.create!(
     user_id: User.first.id,
     product_id: Product.first.id,
     bidding_price: 90,
-    status: "pending"
+    status: "En attente d'execution"
 )
 
 Paylert.create!(
     user_id: User.second.id,
     product_id: Product.first.id,
     bidding_price: 30,
-    status: "pending"
+    status: "En attente d'execution"
 )
 

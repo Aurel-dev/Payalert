@@ -22,7 +22,7 @@ class Product < ApplicationRecord
     # puts Paylert.where(product_id: self.id).length
     # puts "==============================================================="
     if paylert
-      paylert.status = "executed"
+      paylert.status = "Executée !"
       paylert.save
     end
   end

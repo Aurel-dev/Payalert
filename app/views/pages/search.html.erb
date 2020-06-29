@@ -1,12 +1,11 @@
-
-
+<div class="searchzonemax">
+  <div class="searchimgflex">
+  <%= image_tag "computer.svg" ,class: "computersearch"%>
+  </div>
 <div class = "searchzone">
     <div class = "searchzonevisible">
-      <div class="flexinputs">
-        <div class = "containerd">
-         <%# <%= image_tag "vue.svg" %>
+      <div class="flexinputs_search">
           <h3><%= image_tag "vue.svg" %> Rechercher</h3>
-        </div>
         <div class = "search">
           <%= form_tag products_path, method: :get do %>
             <%= text_field_tag :query,
@@ -14,7 +13,7 @@
               class: "search-form-controle",
               placeholder: "Que recherchez-vous ?"
             %>
-              <input class="btn btn-primary" type="submit" value="Rechercher">
+              <input class="btn btn-primary" type="submit" value="C'est parti !">
             <% end %>
               </button>
             </div>
@@ -23,9 +22,8 @@
       </div>
 
       <div class = "searchzoneinvisible">
-        <div class="flexinputs">
+        <div class="flexinputs_search">
          <div class = "containerd">
-            <%# <%= image_tag "vuehide.svg" %> 
             <h3><%= image_tag "vuehide.svg" %> Recherche avancée </h3>
         </div>
           <div class = "search">
@@ -40,23 +38,17 @@
               <%= f.input :Marque, collection: Product::BRANDS %>
             </div>
             <div class= "espacesearchbtn">
-              <%= f.submit "Rechercher", class: "btn btn-primary" %>
+              <%= f.submit "C'est parti !", class: "btn btn-primary" %>
             </div>
             <% end %>
           </div>
         </div>
       </form>
     </div>
-
+    </div>
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <%= render 'shared/footer' %>

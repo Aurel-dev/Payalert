@@ -15,18 +15,19 @@
         <% if paylert == @paylerts.last%>
             <div class="carde">
                 <div class="card-product">
-                    <%=  image_tag paylert.product.photo %>
+                    <%= image_tag paylert.product.photo %>
                     <div class="card-product-infos">
-                        <h2><%= paylert.product.name %></h2>
+                        <h2 class="profile_title_card"><%= paylert.product.name %></h2>
                         <p><%= paylert.product.description %></p>
-                        <p><%= paylert.status %></p>
+                        <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
+                        <h2 class ="cardprice">Prix proposé</h2><p><%= paylert.bidding_price %> euros</p>
                     </div>
-                    <div class="card-product-infos">
-                        <h2 class ="cardprice"><%= paylert.bidding_price %> euros</h2>
-                    </div>
+                    <%# <div class="card-product-infos"> %>
+                        <%# <h2 class ="cardprice"><%= paylert.bidding_price euros</h2>  %>
+                    <%# </div> %>
                     <div class="card-product-infos">
                         <div class ="m-4">
-                            <a class="btn btn-outline-primary" href="#">Valider ma Payalert</a>
+                            <a class="btn btn-outline-primary" href="/validate">Valider ma Payalert</a>
                         </div>
                     </div>
                 </div>

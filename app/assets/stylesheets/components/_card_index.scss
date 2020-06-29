@@ -6,61 +6,90 @@
 }
 
 .card-product {
-    overflow: hidden;
-    height: 200px;
-    width: 1110px;
-    background: white;
-  
-   margin-bottom: 200px;
-    display: flex;
-    align-items: center;
+  overflow: hidden;
+  height: 250px;
+  width: 1110px;
+  background: white;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 44px;
   }
+
 .card-index{
   overflow: hidden;
   height: 200px;
   width: 1110px;
   background: white;
-  margin-bottom: 20px;
-    display: flex;
-    align-items: center;
+  border-radius: 44px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
 }
   
-  .card-product img , .card-index img {
-    margin-left: 100px;
-    margin-right: 100px;
-    max-height: 70%;
-    max-width: 70%;
+.card-product img , .card-index img {
+  margin-left: 100px;
+  margin-right: 100px;
+  max-height: 70%;
+  max-width: 70%;
     
   }
   
-  .card-product h2 , .card-index h2{
-    font-size: 16px;
-    font-weight: bold;
-  
-  }
-  
-  .card-product p, .card-index p {
+.card-product h2{
+  font-size: 16px;
+  font-weight: bold;
+  color: #6784DE;
+}
 
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-    margin-top: 8px;
-    width: 30em;
-    font-size: 0.75em;
-  }
+.card-index h2{
+  font-size: 16px;
+  font-weight: bold;
+  color: #6784DE;
+  margin-top: 15px;
+}
   
-  .card-product .card-product-infos .card-index {
+.card-product p, .card-index p {
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  width: 30em;
+  font-size: 0.75em;
+}
   
-    width: 980px;
-    text-align: center;
-  }
-  .card-index .card-product-infos  {
-    width: 980px;
-    text-align: center;
+.card-product .card-product-infos .card-index {
+  width: 980px;
+  text-align: center;
+}
 
-  }
-  .cardprice{
+.card-index .card-product-infos  {
+  width: 980px;
+  margin: 30px;
+}
+  
+.cardprice{
+  margin-top: 15px;
+}
 
+.englobe_index{
+  // margin-left: 120px;
+  // margin-right: 120px;
+  // margin-top: 50px;
+  // margin-bottom: 50px;
+  // border-radius: 44px;
+  // background-image:
+  //  linear-gradient(
+  //    to right,
+  //    #6784DE, white
+  //  );
+}
 
-    margin-left: 100px;
-  }
+.card-index img{
+  max-width: 140px;
+  max-height: 140px;
+}
+
+.title-center{
+  text-align: center;
+  margin-top: 50px;
+}
