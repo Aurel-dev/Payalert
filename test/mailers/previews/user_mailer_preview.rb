@@ -9,9 +9,12 @@ class UserMailerPreview < ActionMailer::Preview
   end
 
   def execution
-    user = User.first
-    product = Product.first
-    UserMailer.with(user: user).execution
+    @user = params[:user]
+    @paylert = params[:paylert]
+    puts "==================="
+
+    p @paylert
+    UserMailer.execution
   end
 
 end
