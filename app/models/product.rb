@@ -10,18 +10,7 @@ class Product < ApplicationRecord
   private
 
   def check_price_paylerts
-    puts "================================================================="
-      puts previous_changes
-    puts "================================================================="
-      puts self
-    puts "================================================================="
     paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
-    puts "================================================================="
-    # puts Paylert.where(product_id: self.id).first.bidding_price
-    # puts Paylert.where(product_id: self.id).second.bidding_price
-    # puts "================================================================="
-    # puts Paylert.where(product_id: self.id).length
-    # puts "==============================================================="
     if paylert
       user = paylert.user
       if (user.stripe_customer_id && user.credit_card_id)
@@ -33,22 +22,10 @@ class Product < ApplicationRecord
         off_session: true,
         confirm: true,
       })
-      paylert.status = "executed"
-      paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
-    # puts "================================================================="
-    #   puts Paylert.where(product_id: self.id).first.bidding_price
-    #   puts Paylert.where(product_id: self.id).second.bidding_price
-    puts "================================================================="
-    # puts Paylert.where(product_id: self.id).length
-    # puts "==============================================================="
-    if paylert
+      end
       paylert.status = "Executée !"
       paylert.save
       UserMailer.with(paylert: @paylert, user: paylert.user).execution.deliver_now
     end
   end
-end
-
-
-end
 end
