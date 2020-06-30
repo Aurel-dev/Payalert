@@ -21,8 +21,4 @@ class ProfileController < ApplicationController
     })
     @client_secret = payment_intent["client_secret"]
   end
-
-  private
-
-
 end
