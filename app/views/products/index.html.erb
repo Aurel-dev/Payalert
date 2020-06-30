@@ -1,18 +1,22 @@
+
 <div class="englobe_index">
 <div class="flexinputs p-3">
   <div class = "search ">
-    <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex"} , method: :get do |f| %>
-    <div class= "espacesearch">
-      <%= f.input :Commerçant,collection: Shop::SHOPS %>
+
+
+    <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex align-items-center"} , method: :get do |f| %>
+    <div class= "espacesearchnormal filter ">
+     <%= f.input :seller, collection: Shop::SHOPS, html: { class: "btn btn-primary dropdown-toggle dropdown-toggle-split" }, prompt: "Vendeur", selected: @seller %>
       </div>
-        <div  class= "espacesearch">
-      <%= f.input :Catégorie, class: "espacesearch",collection: Product::CATEGORIES %>
+        <div  class= "espacesearchnormal filter">
+      <%= f.input :category,collection: Product::CATEGORIES, prompt: "Catégorie",  selected: @category %>
         </div>
-        <div  class= "espacesearch">
-      <%= f.input :Marque, class: "espacesearch",collection: Product::BRANDS %>
+        <div  class= "espacesearchnormal filter">
+      <%= f.input :brand, class: "espacesearch", collection: Product::BRANDS, selected: @brand, include_blank: "marque" %>
+      
         </div>
-        <div  class= "espacesearchbtn">
-      <%= f.submit "Rechercher", class: "btn btn-outline-primary" %>
+        <div class= "espacesearchbouton">
+      <%= f.submit "Rechercher", class: "recherchesbtn"%>
         </div>
     <% end %>
   </div>
@@ -76,7 +80,7 @@
 	  <h2><%= product.name %></h2>
                 <p><%= product.description %></p>
                   <h2 class ="priceindex"><%= product.price %> euros</h2>
-			<button class="btntest">Continue</button>
+		
           <%= link_to("PayAlert ", product_path(product), class: "btntest") %>
              
 		</div>
