@@ -13,7 +13,6 @@ class UserMailer < ApplicationMailer
   end
 
   def execution
-
     @user = params[:user]
     @paylert = params[:paylert]
     mail(to: @user.email, subject: "Votre PayAlert a été exécutée")

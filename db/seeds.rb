@@ -154,17 +154,55 @@ Product.create!(
 # )
 
 
-# Product.create!(
-#     name: "Kit de Golf 7 Clubs Adulte ",
-#     brand: "Inesis",
-#     price: 170,
-#     shop: decathlon,
-#     category_name: "Loisirs et détente",
-#     sub_category_name: "Détente",
-#     photo: "Club2.svg",
-#     description: "Le kit de golf idéal ! Vous pourrez couvrir toutes les distances du départ jusqu'au green. 7 clubs pour APPRENDRE et PROGRESSER !"
-# )
 
+Product.create!(
+    name: "Kit de Golf 7 Clubs Adulte ",
+    brand: "Inesis",
+    price: 170,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "clubdegolf.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+Product.create!(
+    name: "Converse bleu ciel ",
+    brand: "Converse",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Converse.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+
+
+Product.create!(
+    name: "casquette de baseball",
+    brand: "discount",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "baseball-cap.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+
+
+Product.create!(
+
+    name: "Machine a lavée",
+    brand: "Jura",
+    price: 299,
+    shop: boulanger,
+    category_name: "Maison",
+    sub_category_name: "Electro-ménager",
+    photo: "cafee.png",
+    description: "Machine a lavée"
+)
 
 # Product.create!(
 #     name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
