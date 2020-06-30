@@ -5,30 +5,30 @@
                 <h2> Votre PayAlerts en cours</h2>
             </div>
             <div class="ml-auto p-2 "> 
-                <%= image_tag "bellhide.svg" %>
+                 <%= image_tag "BellAlert.svg" %>
             </div>
         </div>
     </div>
 </div>
+<div class ="container">
     <% @paylerts.each do |paylert| %>
     <% if paylert.status == "En attente d'execution" %>
-        <div class="carde">
-            <div class="card-index">
-                <%=  image_tag paylert.product.photo %>
-                <div class="card-product-infos">
-                    <h2><%= paylert.product.name %></h2>
-                    <p><%= paylert.product.description %></p>
-                    <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
-                    <h2 class ="cardprice">Prix proposé à <%= paylert.bidding_price %> euros</h2>
-                </div>
-                <div class="card-product-infos">
-                  <div class ="m-4">
-                    <%= link_to 'Annuler ma paylerte', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"generique" %></i>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="courses-container">
+<div class="offre">
+		<div class="offre-preview">
+      <div class ="pictureindex">
+        <%= image_tag paylert.product.photo %>
+      </div>
+		</div>
+		<div class="course-info">
+	  <h2><%= paylert.product.name %></h2>
+          <p><%= paylert.product.description %></p>
+          <h2 class ="priceindex"><%= paylert.bidding_price  %> euros</h2>
+            <%= link_to 'Suprimer', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"btntest" %></i>
+		</div>
+</div>
+
     <% end %>
 <% end %>
 
+</div>
