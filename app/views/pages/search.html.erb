@@ -10,6 +10,8 @@
       <div class="txtde">
           <h3>Rechercher votre produit</h3>
         <div class = "searche">
+
+
           <%= form_tag products_path, class: "form-inline",method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -23,6 +25,10 @@
       </div>
     </div>
   </div>
+
+
+
+
 
 
 <div class ="container">
