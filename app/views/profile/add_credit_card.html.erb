@@ -1,16 +1,15 @@
-<%= render 'shared/navbar' %>
+<div class="container container-stripe">
+  <div class="row justify-content-center align-items-center h-100">
 
-<h2>Add Credit Card</h2>
-<div id="client_secret" data-client-secret="<%= @client_secret %>">
-    
-</div>
-<div class="form_card">
-  <div id="card-element">
-    <!-- Elements will create input elements here -->
+    <% if current_user.credit_card_verified? %>
+      <%= render 'shared/stripe_already_verified' %>
+    <% else %>
+      <div class="card-stripe">
+        <%= render 'shared/stripe_payment_intent_form' %>
+        <%= render 'shared/stripe_awaiting_intent' %>
+        <%= render 'shared/stripe_intent_confirmed' %>
+      </div>
+    <% end %>
   </div>
-
-    <!-- We'll put the error messages in this element -->
-  <div id="card-errors" role="alert"></div>
-
-  <button id="submit">Pay</button>
 </div>
+
