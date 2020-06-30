@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/profile", to: "profile#show"
-  get "/profile/add_credit_card", to: "profile#add_credit_card"
+  get "products/profile/add_credit_card", to: "profile#add_credit_card"
+
 
   resources :products do
     resources :paylerts ,only: [:create , :new, :delete]
