@@ -9,7 +9,6 @@ class PaylertsController < ApplicationController
       @paylert.product_id = params[:product_id]
       @paylert.user = current_user
         if @paylert.save
-          puts "======================="
             UserMailer.with(paylert: @paylert, user: current_user).confirmation.deliver_now
          redirect_to profile_path
         else
@@ -18,7 +17,6 @@ class PaylertsController < ApplicationController
     end
 
     def show
-        # @product = Product.where(product_id: product.id)
     end
 
     def destroy
