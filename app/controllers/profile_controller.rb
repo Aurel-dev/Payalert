@@ -13,13 +13,16 @@ class ProfileController < ApplicationController
   end
 
   def add_credit_card
-    customer = Stripe::Customer.create
-    current_user.update(stripe_customer_id: customer["id"])
+    current_user.create_stripe_customer_id!
     payment_intent = Stripe::PaymentIntent.create({
         amount: 1099,
         currency: 'usd',
-        customer: customer['id'],
+        customer: current_user.stripe_customer_id,
     })
     @client_secret = payment_intent["client_secret"]
   end
+
+  private
+
+
 end
