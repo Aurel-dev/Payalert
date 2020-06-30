@@ -1,15 +1,18 @@
-<div class="courses-container">
-	<div class="course">
-		<div class="course-preview">
+
+<div class="container">
+	<div class="offre">
+		<div class="offre-preview">
 		
-               <%= image_tag asset_path(product.photo) %>
+              <div class ="pictureindex">
+               <%= image_tag asset_path(@product.photo) %>
+                </div>
 		
 		</div>
-		<div class="course-info">
-		
-			<h2>Callbacks & Closures</h2>
-			<button class="btntest">Continue</button>
+		<div class="offre-info">
+	  		<h2><%= @product.name %></h2>
+            <p><%= @product.description %></p>
+           
 		</div>
+		 <h3 class ="endpricecardt"><%= @product.price %> euros</h3>
 	</div>
 </div>
-
