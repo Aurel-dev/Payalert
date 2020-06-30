@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
   def confirmation
     @user = params[:user]
     puts "=========== confirmation ==========="
-    mail(to: @user.email, subject: "Votre Paylert a été enregistrée ")
+    mail(to: @user.email, subject: "Votre PayAlert a été enregistrée ")
     puts "=========== email sent ==========="
   end
 
@@ -16,7 +16,7 @@ class UserMailer < ApplicationMailer
 
     @user = params[:user]
     @paylert = params[:paylert]
-    mail(to: @user.email, subject: "Votre Paylert a été exécutée")
+    mail(to: @user.email, subject: "Votre PayAlert a été exécutée")
   end
 
 end
