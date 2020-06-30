@@ -33,7 +33,7 @@
                                  <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
                                 <% end %>
                                  <%= f.button :submit, class: "btn btn-primary" %>
-                                    <% if !current_user.credit_card_verified?%>
+                                    <% if !current_user.credit_card_verified? %>
                                       <a class="btn btn-primary" href="profile/add_credit_card">Ajouter votre CB</a>
                                     <% end %>
                                 </div>
