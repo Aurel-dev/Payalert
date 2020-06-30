@@ -1,6 +1,5 @@
-
 ActionMailer::Base.smtp_settings = {
-  domain: ENV["DOMAIN"],
+  domain: 'http://localhost:3000',
   address:        "smtp.sendgrid.net",
   port:            587,
   authentication: :plain,
