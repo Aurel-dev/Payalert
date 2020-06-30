@@ -10,7 +10,7 @@ class Product < ApplicationRecord
   private
 
   def check_price_paylerts
-    paylert = Paylert.where(product_id: self.id).where("bidding_price >= ?", self.price_cents).first
+    paylert = Paylert.where(product_id: self.id, status: "en cours d'execution").where("bidding_price >= ?", self.price_cents).first
     if paylert
       user = paylert.user
       if (user.stripe_customer_id && user.credit_card_id)
