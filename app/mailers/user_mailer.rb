@@ -6,8 +6,10 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.confirmation.subject
   #
   def confirmation
+    puts " ============confirmation================="
     @user = params[:user]
     mail(to: @user.email, subject: "Votre Paylert a été enregistrée ")
+    puts " ============mail sent================="
     # @greeting = "Hi"
 
     # mail to: "to@example.org"
