@@ -17,7 +17,6 @@ class PaylertsController < ApplicationController
     end
 
     def show
-        # @product = Product.where(product_id: product.id)
     end
 
     def destroy

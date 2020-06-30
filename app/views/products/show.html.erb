@@ -1,4 +1,3 @@
-<%= render 'shared/navbar' %>
 <div class ="container">
     <div class ="bellformalert">
         <div class="d-flex bd-highlight mb-3">
@@ -10,6 +9,8 @@
             </div>
         </div>
     </div>
+
+    
     <div class = whiteform>
         <h1 class="big_product_show"> Fiche produit de l'annonce sélectionnée</h1>
             <div class = "productlert">
@@ -26,7 +27,7 @@
                             <%= simple_form_for [@product,@paylert] do |f| %>
                             <div class="d-flex flex-row">
                                 <div class="col">
-                                    <%= f.input :bidding_price, input_html:{min: '0'}, class: "form-controlers" %>
+                                    <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{min: '0'}, class: "form-controlers" %>
                                     <%= f.button :submit, class: "btn btn-primary"%>
                                 </div>
                                 <% end %>

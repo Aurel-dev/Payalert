@@ -61,75 +61,64 @@ decathlon = Shop.create!(
 )
 
 
-# Product.create!(
-#     name: "Tondeuse Thermique FLYMO",
-#     brand: "Bosch",
-#     price: 150,
-#     shop: amazon,
-#     category_name: "Jardin",
-#     sub_category_name: "Tondeuse",
-#     photo: "Tondeuse.svg",
-#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
-# )
+Product.create!(
+    name: "Tondeuse Thermique FLYMO",
+    brand: "Bosch",
+    price: 150,
+    shop: amazon,
+    category_name: "Jardin",
+    sub_category_name: "Tondeuse",
+    photo: "Tondeuse.svg",
+    description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+)
 
-# Product.create!(
-#     name: "Tondeuse filaire BEM351",
-#     brand: "Black & Decker",
-#     price: 89,
-#     shop: amazon,
-#     category_name: "Jardin",
-#     sub_category_name: "Tondeuse",
-#     photo: "Tondeuse2.svg",
-#     description: "3 hauteurs de coupe ajustables par essieux avant et arrière : 20, 40 et 60mm."
-# )
-
-
-# Product.create!(
-#     name: "Tondeuse à gazon sans fil Bosch - AdvancedRotak",
-#     brand: "Bosch",
-#     price: 399,
-#     shop: amazon,
-#     category_name: "Jardin",
-#     sub_category_name: "Tondeuse",
-#     photo: "Tondeuse3.svg",
-#     description: "Tonte silencieuse : travail de jardin agréable avec la tondeuse électrique grâce à une réduction du bruit jusqu'à 30 % et une acoustique équilibrée grâce à la technologie ProSilence."
-# )
+Product.create!(
+    name: "Tondeuse filaire BEM351",
+    brand: "Black & Decker",
+    price: 89,
+    shop: amazon,
+    category_name: "Jardin",
+    sub_category_name: "Tondeuse",
+    photo: "Tondeuse2.svg",
+    description: "3 hauteurs de coupe ajustables par essieux avant et arrière : 20, 40 et 60mm."
+)
 
 
-# Product.create!(
-#     name: "Tondeuse robot intelligente Bosch - Indego 350",
-#     brand: "Bosch",
-#     price: 888.99,
-#     shop: boulanger,
-#     category_name: "Jardin",
-#     sub_category_name: "Tondeuse",
-#     photo: "Tondeuse4.svg",
-#     description: "Efficace et compacte : Permet de tondre jusqu’à trois aires de pelouse différentes d’une superficie totale de maximum 350 m² grâce à la fonction MultiArea."
-# )
+
+Product.create!(
+    name: "Tondeuse robot intelligente Bosch - Indego 350",
+    brand: "Bosch",
+    price: 888.99,
+    shop: boulanger,
+    category_name: "Jardin",
+    sub_category_name: "Tondeuse",
+    photo: "Tondeuse4.svg",
+    description: "Efficace et compacte : Permet de tondre jusqu’à trois aires de pelouse différentes d’une superficie totale de maximum 350 m² grâce à la fonction MultiArea."
+)
 
 
-# Product.create!(
-#     name: "Tondeuse Thermique FLYMO",
-#     brand: "Bosch",
-#     price: 140,
-#     shop: boulanger,
-#     category_name: "Jardin",
-#     sub_category_name: "Tondeuse",
-#     photo: "Tondeuse.svg",
-#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
-# )
+Product.create!(
+    name: "Tondeuse Thermique FLYMO",
+    brand: "Bosch",
+    price: 140,
+    shop: boulanger,
+    category_name: "Jardin",
+    sub_category_name: "Tondeuse",
+    photo: "Tondeuse.svg",
+    description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+)
 
 
-# Product.create!(
-#     name: "Ponceuse rotative TACKLIFE",
-#     brand: "Black & Decker",
-#     price: 50,
-#     shop: cdiscount,
-#     category_name: "Garage",
-#     sub_category_name: "Bricolage",
-#     photo: "Ponceuse.svg",
-#     description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
-# )
+Product.create!(
+    name: "Ponceuse rotative TACKLIFE",
+    brand: "Black & Decker",
+    price: 50,
+    shop: cdiscount,
+    category_name: "Garage",
+    sub_category_name: "Bricolage",
+    photo: "Ponceuse.svg",
+    description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
+)
 
 Product.create!(
     name: "Computer",
@@ -165,17 +154,55 @@ Product.create!(
 # )
 
 
-# Product.create!(
-#     name: "Kit de Golf 7 Clubs Adulte ",
-#     brand: "Inesis",
-#     price: 170,
-#     shop: decathlon,
-#     category_name: "Loisirs et détente",
-#     sub_category_name: "Détente",
-#     photo: "Club2.svg",
-#     description: "Le kit de golf idéal ! Vous pourrez couvrir toutes les distances du départ jusqu'au green. 7 clubs pour APPRENDRE et PROGRESSER !"
-# )
 
+Product.create!(
+    name: "Kit de Golf 7 Clubs Adulte ",
+    brand: "Inesis",
+    price: 170,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "clubdegolf.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+Product.create!(
+    name: "Converse bleu ciel ",
+    brand: "Converse",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Converse.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+
+
+Product.create!(
+    name: "casquette de baseball",
+    brand: "discount",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "baseball-cap.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+
+
+Product.create!(
+
+    name: "Machine a lavée",
+    brand: "Jura",
+    price: 299,
+    shop: boulanger,
+    category_name: "Maison",
+    sub_category_name: "Electro-ménager",
+    photo: "cafee.png",
+    description: "Machine a lavée"
+)
 
 # Product.create!(
 #     name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
