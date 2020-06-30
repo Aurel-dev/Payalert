@@ -9,6 +9,7 @@ class PaylertsController < ApplicationController
       @paylert.product_id = params[:product_id]
       @paylert.user = current_user
         if @paylert.save
+          puts "======================="
             UserMailer.with(paylert: @paylert, user: current_user).confirmation.deliver_now
          redirect_to profile_path
         else
