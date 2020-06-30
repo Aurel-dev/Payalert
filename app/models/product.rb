@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :paylerts, dependent: :destroy
   monetize :price_cents
   CATEGORIES = ["Jardin", "Maison", "Garage", "Loisirs et détente"]
-  BRANDS = ["Bosch", "Black & Decker", "Inesis", "Pfeiffer.inc", "Willi Waller", "Wilson"]
+  BRANDS = ["Apple", "Bosch", "Black & Decker", "Inesis", "Lenovo", "Pfeiffer.inc", "Willi Waller", "Wilson"]
 
   after_update_commit  :check_price_paylerts
 
@@ -44,7 +44,7 @@ class Product < ApplicationRecord
     if paylert
       paylert.status = "Executée !"
       paylert.save
-      UserMailer.with(paylert: @paylert, user: current_user).execution.deliver_now
+      UserMailer.with(paylert: @paylert, user: paylert.user).execution.deliver_now
     end
   end
 end

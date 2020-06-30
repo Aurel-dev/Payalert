@@ -9,10 +9,8 @@ class PaylertsController < ApplicationController
       @paylert.product_id = params[:product_id]
       @paylert.user = current_user
         if @paylert.save
-            mail = UserMailer.with(paylert: @paylert, user: current_user).confirmation
-            mail.deliver_now
+            UserMailer.with(paylert: @paylert, user: current_user).confirmation.deliver_now
          redirect_to profile_path
-
         else
           redirect_to products_path
         end
