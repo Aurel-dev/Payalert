@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_133804) do
     t.bigint "product_id", null: false
     t.integer "bidding_price"
     t.date "finished_at"
-    t.string "status", default: "En attente d'execution"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_paylerts_on_product_id"

@@ -1,18 +1,22 @@
+<<<<<<< HEAD
 <%= render 'shared/navbar' %>
 
 
 <div >
 <div class ="containers">
-    <div class="carddde">
-    <div class="containerd">  
-    <%= image_tag "SearchDrow.svg" %>
-    
-    </div>
-    <div class="txtde">
-          <h3>Rechercher votre produit</h3>
-       <div class = "searche">
-          <%= form_tag products_path, class: "form-inline",method: :get do %>
+=======
 
+<div>
+  <div class ="containers">
+>>>>>>> 1b274c6ba2dd9d87f57f53b310ddb13c502e134e
+    <div class="carddde">
+      <div class="containerd">  
+        <%= image_tag "SearchDrow.svg" %>
+      </div>
+      <div class="txtde">
+          <h3>Rechercher votre produit</h3>
+        <div class = "searche">
+          <%= form_tag products_path, class: "form-inline",method: :get do %>
             <%= text_field_tag :query,
               params[:query],
               class: "form-control mr-sm-2",
@@ -21,163 +25,147 @@
               <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="C'est parti !">
             <% end %>
               </button>
-            </div>
+        </div>
+      </div>
     </div>
-    
-</div>
-</div>
+  </div>
+
+
 <div class ="container">
-    <div class ="carous-h3">
-      <h3>Categories</h3>
-    </div>
+  <div class ="carous-h3">
+    <h3>Categories</h3>
+  </div>
 </div>
  <div class ="carou">
-            <div class="d-flex flex-row">
-              <div class="margincate" >
-                <div class="col-md-4">
-                  <div class = "categories">    
-                  <div class = "categoriesdiv" >
-                  
-                         <%= image_tag "garden.svg"%>
-                           <p>Garden</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-                      <div class="margincate" >
-                <div class="col-md-4">
-                  <div class = "categories">    
-                  <div class = "categoriesdiv" >
-                  
-                         <%= image_tag "garden.svg"%>
-                           <p>Garden</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-                        <div class="margincate" >
-                <div class="col-md-4">
-                  <div class = "categories">    
-                  <div class = "categoriesdiv" >
-                  
-                         <%= image_tag "garden.svg"%>
-                           <p>Garden</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-                      <div class="margincate" >
-                <div class="col-md-4">
-                  <div class = "categories">    
-                  <div class = "categoriesdiv" >
-                  
-                         <%= image_tag "garden.svg"%>
-                           <p>Garden</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-                      <div class="margincate" >
-                <div class="col-md-4">
-                  <div class = "categories">    
-                  <div class = "categoriesdiv" >
-                  
-                         <%= image_tag "garden.svg"%>
-                           <p>Garden</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-          
+    <div class="d-flex flex-row">
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+             
+             <%= link_to products_path(Catégorie: "Maison") do %>
+              <%= image_tag "garden.svg"%>
+       <% end %>
+              <p>Garden</p>  
+            </div>       
           </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "garden.svg"%>
+              <p>Garden</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "garden.svg"%>
+              <p>Garden</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "garden.svg"%>
+              <p>Garden</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "garden.svg"%>
+              <p>Garden</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
 
 <div class ="container">
     <div class ="carous-h3">
       <h3>Les favories des utilsateurs</h3>
     </div>
-</div>
-<div class ="carou">
-
-            <div class="d-flex flex-row">
-              <div class="margincater" >
-                <div class="col-md-4">
-                  <div class = "NotreAvis">    
-                  <div class = "categoriesdiv" >
-                             <div class = "NotreAvisimg" >
-                                <%= image_tag "cafee.png"%>
-                             
-                             </div>
-                            <!-- Add icon library -->
-                      <%= render 'shared/star' %>
-                           <p>machine a cafée</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-                <div class="d-flex flex-row">
-              <div class="margincater" >
-                <div class="col-md-4">
-                  <div class = "NotreAvis">    
-                  <div class = "categoriesdiv" >
-                             <div class = "NotreAvisimg" >
-                                <%= image_tag "computer.png"%>
-                             </div>
-                          <%= render 'shared/star' %>
-                           <p>Ordinateur </p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-     <div class="d-flex flex-row">
-              <div class="margincater" >
-                <div class="col-md-4">
-                  <div class = "NotreAvis">    
-                  <div class = "categoriesdiv" >
-                             <div class = "NotreAvisimg" >
-                                <%= image_tag "iphone.png"%>
-                             </div>
-                          <%= render 'shared/star' %>
-                         <p>Iphone X</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-
-               <div class="d-flex flex-row">
-              <div class="margincater" >
-                <div class="col-md-4">
-                  <div class = "NotreAvis">    
-                  <div class = "categoriesdiv" >
-                             <div class = "NotreAvisimg" >
-                                <%= image_tag "cap.png"%>
-                             </div>
-                          <%= render 'shared/star' %>
-                           <p>Casquette</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-              </div>
-
-    </div>          
-</div>
-
-
-
-</div>
   </div>
-
-
+  <div class ="carou">
+    <div class="d-flex flex-row">
+      <div class="margincater" >
+        <div class="col-md-4">
+          <div class = "NotreAvis">    
+            <div class = "categoriesdiv" >
+              <div class = "NotreAvisimg" >
+                <%= image_tag "cafee.png"%>
+              </div>
+              <%= render 'shared/star' %>
+              <p>machine a cafée</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="margincater" >
+          <div class="col-md-4">
+            <div class = "NotreAvis">    
+              <div class = "categoriesdiv" >
+                <div class = "NotreAvisimg" >
+                  <%= image_tag "computer.png"%>
+                </div>
+                <%= render 'shared/star' %>
+                <p>Ordinateur </p>  
+              </div>       
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="margincater" >
+            <div class="col-md-4">
+              <div class = "NotreAvis">    
+                <div class = "categoriesdiv" >
+                  <div class = "NotreAvisimg" >
+                    <%= image_tag "iphone.png"%>
+                  </div>
+                  <%= render 'shared/star' %>
+                  <p>Iphone X</p>  
+                </div>       
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="margincater" >
+              <div class="col-md-4">
+                <div class = "NotreAvis">    
+                  <div class = "categoriesdiv" >
+                    <div class = "NotreAvisimg" >
+                      <%= image_tag "cap.png"%>
+                    </div>
+                      <%= render 'shared/star' %>
+                      <p>Casquette</p>  
+                    </div>       
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+</div>
 
 
 
 
 <%= render 'shared/footer' %>
-

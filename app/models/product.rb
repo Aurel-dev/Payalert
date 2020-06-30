@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :paylerts, dependent: :destroy
   monetize :price_cents
   CATEGORIES = ["Jardin", "Maison", "Garage", "Loisirs et détente"]
-  BRANDS = ["Bosch", "Black & Decker", "Inesis", "Pfeiffer.inc", "Willi Waller", "Wilson"]
+  BRANDS = ["Apple", "Bosch", "Black & Decker", "Inesis", "Lenovo", "Pfeiffer.inc", "Willi Waller", "Wilson"]
 
   after_update_commit  :check_price_paylerts
 
