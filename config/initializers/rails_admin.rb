@@ -46,4 +46,10 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  config.model 'Product' do
+    field :name
+    field :id
+    field :price_cents
+    field :price_euros
+  end
 end

@@ -2,21 +2,19 @@ class ProductsController < ApplicationController
     skip_before_action :authenticate_user!, only: [ :home ]
 
 def index 
-  @seller   = nil
-  @category = nil
-  @brand    = nil
-  
+  @products = Product.all
   if params[:query].present?
-    @products = Product.where('name ILIKE? ', "%#{params[:query]}%")
-  elsif params[:product_filter].present?
-    @seller   = params[:product_filter][:seller]
-    @category = params[:product_filter][:category]
-    @brand    = params[:product_filter][:brand]
-    @shop = Shop.find_by(name: @seller)
-
-    @products = Product.where(category_name: @category).where(brand: @brand).where(shop_id:@shop.id)
-  else
-    @products = Product.all
+    @products = @products.where('name ILIKE? ', "%#{params[:query]}%")
+  end
+  if params[:seller].present?
+    shop = Shop.find_by(name: params[:seller])
+    @products = @products.where(shop_id: shop.id)
+  end
+  if params[:category].present?
+    @products = @products.where(category_name: params[:category])
+  end
+  if params[:brand].present?
+    @products = @products.where(brand: params[:brand])
   end
 end
 
