@@ -4,31 +4,31 @@
 
 
     <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex align-items-center"} , method: :get do |f| %>
-    <div class= "espacesearchnormal filter ">
-     <%= f.input :seller, collection: Shop::SHOPS, 
-                          input_html: { name: "seller" }, 
-                          prompt: "Vendeur", 
-                          selected: params[:seller] %>
+      <div class= "espacesearchnormal filter ">
+        <%= f.input :seller, collection: Shop::SHOPS, 
+                             input_html: { name: "seller" }, 
+                             prompt:     "Vendeur", 
+                             selected:   params[:seller] %>
       </div>
-        <div  class= "espacesearchnormal filter">
-      <%= f.input :category,collection: Product::CATEGORIES, 
-                                        input_html: { name: "category" }, 
-                                        prompt: "Catégorie",  
-                                        selected: params[:category] %>
-        </div>
-        <div  class= "espacesearchnormal filter">
-      <%= f.input :brand, class: "espacesearch", 
-                          collection: Product::BRANDS, 
-                          input_html: { name: "brand" },
-                          selected:   params[:brand], 
-                          include_blank: "Marque" %>
-        </div>
-        <div class= "espacesearchbouton">
-      <%= f.submit "Rechercher", class: "recherchesbtn"%>
-        </div>
+      <div  class= "espacesearchnormal filter">
+        <%= f.input :category, collection: Product::CATEGORIES, 
+                               input_html: { name: "category" }, 
+                               prompt:     "Catégorie",  
+                               selected:   params[:category] %>
+      </div>
+      <div  class= "espacesearchnormal filter">
+        <%= f.input :brand, class:         "espacesearch", 
+                            collection:    Product::BRANDS, 
+                            input_html:    { name: "brand" },
+                            selected:      params[:brand], 
+                            include_blank: "Marque" %>
+      </div>
+      <div class= "espacesearchbouton">
+        <%= f.submit "Rechercher", class: "recherchesbtn"%>
+      </div>
     <% end %>
   </div>
- </div>
+</div>
 
 
 <% if @products.length == 0 %>
