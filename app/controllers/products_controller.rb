@@ -12,8 +12,8 @@ def index
     @seller   = params[:product_filter][:seller]
     @category = params[:product_filter][:category]
     @brand    = params[:product_filter][:brand]
-
     @shop = Shop.find_by(name: @seller)
+
     @products = Product.where(category_name: @category).where(brand: @brand).where(shop_id:@shop.id)
   else
     @products = Product.all

@@ -1,6 +1,4 @@
 
-
-
 <div >
 <div class ="containers">
     <div class="carddde">
@@ -25,11 +23,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 
 <div class ="container">
   <div class ="carous-h3">
@@ -101,69 +94,44 @@
       <h3>Les favoris des utilisateurs</h3>
     </div>
   </div>
-  <div class ="carou">
-    <div class="d-flex flex-row">
-      <div class="margincater" >
+
+  <%# modifier ici %>
+  
+  <%# comment faire pour recuperer 4 produits : 
+    - ou on en recupere 4 random
+    - ou je recupere le lien en dur et je renvois
+    - 
+    -
+    -
+   %>
+
+
+
+   
+
+   <div class ="carou">
+      <% @products.sample(4).each do |product| %>
+      <%# sample(4) %>
+      <div class="d-flex flex-row">
+        <div class="margincater" >
         <div class="col-md-4">
           <div class = "NotreAvis">    
             <div class = "categoriesdiv" >
               <div class = "NotreAvisimg" >
-                <%= image_tag "cafee.png"%>
+               <%= link_to( product_path(product)) do %>
+                  <%= image_tag asset_path(product.photo) %>
+              <% end %>
               </div>
               <%= render 'shared/star' %>
-              <p>Machine a café</p>  
+              <p>  <%= product.name %></p>  
             </div>       
           </div>
         </div>
       </div>
-      <div class="d-flex flex-row">
-        <div class="margincater" >
-          <div class="col-md-4">
-            <div class = "NotreAvis">    
-              <div class = "categoriesdiv" >
-                <div class = "NotreAvisimg" >
-                  <%= image_tag "computer.png"%>
-                </div>
-                <%= render 'shared/star' %>
-                <p>Ordinateur </p>  
-              </div>       
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-row">
-          <div class="margincater" >
-            <div class="col-md-4">
-              <div class = "NotreAvis">    
-                <div class = "categoriesdiv" >
-                  <div class = "NotreAvisimg" >
-                    <%= image_tag "iphone.png"%>
-                  </div>
-                  <%= render 'shared/star' %>
-                  <p>Iphone X</p>  
-                </div>       
-              </div>
-            </div>
-          </div>
-          <div class="d-flex flex-row">
-            <div class="margincater" >
-              <div class="col-md-4">
-                <div class = "NotreAvis">    
-                  <div class = "categoriesdiv" >
-                    <div class = "NotreAvisimg" >
-                      <%= image_tag "cap.png"%>
-                    </div>
-                      <%= render 'shared/star' %>
-                      <p>Casquette</p>  
-                    </div>       
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>          
-        </div>
       </div>
-    </div>
-</div>
-
+      <% end %>
+  </div>
 
 <%= render 'shared/footer' %>
+
+

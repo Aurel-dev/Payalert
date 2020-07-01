@@ -5,7 +5,7 @@
                 <h2>Envie de créer votre PayAlert?</h2>
             </div>
             <div class="ml-auto p-2 "> 
-                <%= image_tag "BellAlert.svg" %>
+                 <%= image_tag "bellhide.svg" %>
             </div>
         </div>
     </div>
@@ -27,10 +27,17 @@
                             <%= simple_form_for [@product,@paylert] do |f| %>
                             <div class="d-flex flex-row">
                                 <div class="col">
-                                    <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{min: '0'}, class: "form-controlers" %>
-                                    <%= f.button :submit, label: "Créer la Paylert", class: "btn btn-primary"%>
-                                </div>
+                                <% if !current_user.credit_card_verified? %>
+                                    <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ disabled: :true, min: '0'}, class: "form-controlers" %>
+                                <% else %>
+                                 <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
                                 <% end %>
+                                 <%= f.button :submit, class: "btn btn-primary" %>
+                                    <% if !current_user.credit_card_verified? %>
+                                      <a class="btn btn-primary" href="profile/add_credit_card">Ajouter votre CB</a>
+                                    <% end %>
+                                </div>
+                            <% end %>
                             </div>   
                         </div>
                     </div>
@@ -63,6 +70,6 @@
 <h2> Offre du Vendeur</h2>
 </div>
 
-<%= render 'shared/carddiv' %>
+<%= render 'shared/card-test' %>
 
 <%= render 'shared/footer' %>
