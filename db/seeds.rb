@@ -32,8 +32,9 @@ User.create!(
     admin: true
 )
 
+
 User.create!(
-    email: "m.heyndrickx@hotmail.fr",            
+    email: "Fan.de.FX@gmail.com",            
     password: "1234567",
     admin: true
 )
@@ -62,7 +63,7 @@ decathlon = Shop.create!(
 
 
 Product.create!(
-    name: "Tondeuse Thermique FLYMO",
+    name: "Tondeuse Thermique Rotak 43",
     brand: "Bosch",
     price: 150,
     shop: amazon,
@@ -98,7 +99,7 @@ Product.create!(
 
 
 Product.create!(
-    name: "Tondeuse Thermique FLYMO",
+    name: "Tondeuse Thermique Rotak 43",
     brand: "Bosch",
     price: 140,
     shop: boulanger,
@@ -121,25 +122,25 @@ Product.create!(
 )
 
 Product.create!(
-    name: "Computer",
+    name: "PC Portable Legion Y520 ",
     brand: "Lenovo",
     price: 599,
     shop: boulanger,
-    category_name: "Maison",
-    sub_category_name: "Electro-ménager",
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
     photo: "computer.png",
-    description: "Ordinateur Gamer a petit prix"
+    description: "Un portable 15 pouces essentiellement pensé pour le jeu."
 )
 
 Product.create!(
-    name: "Iphone X",
+    name: "Iphone 11 64 Go",
     brand: "Apple",
     price: 799,
     shop: boulanger,
-    category_name: "Maison",
-    sub_category_name: "Electro-ménager",
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
     photo: "iphone.png",
-    description: "Iphone X a prix réduit"
+    description: "Ecran Retina HD avec technologie IPS Taille de la diagonale : 4.7. Résolution du capteur : 12 mégapixels."
 )
 Product.create!(
     name: "Clubs de golf Limited edition",
@@ -152,7 +153,6 @@ Product.create!(
     description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
     L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
 )
-
 
 
 Product.create!(
@@ -194,14 +194,14 @@ Product.create!(
 
 Product.create!(
 
-    name: "Machine a lavée",
+    name: "Machine a laver",
     brand: "Jura",
     price: 299,
     shop: boulanger,
     category_name: "Maison",
     sub_category_name: "Electro-ménager",
     photo: "cafee.png",
-    description: "Machine a lavée"
+    description: "Machine a laver"
 )
 
 Product.create!(
