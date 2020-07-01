@@ -19,7 +19,7 @@
                     <h2><%= paylert.product.name %></h2>
                     <p><%= paylert.product.description %></p>
                     <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
-                    <h2 class ="cardprice">Prix proposé à <%= paylert.bidding_price %> euros</h2>
+                    <h2 class ="cardprice">Prix proposé à <%= (paylert.bidding_price)/100 %> euros</h2>
                 </div>
                 <div class="card-product-infos">
                   <div class ="m-4">

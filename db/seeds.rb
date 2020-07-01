@@ -141,17 +141,17 @@ Product.create!(
     photo: "iphone.png",
     description: "Iphone X a prix réduit"
 )
-# Product.create!(
-#     name: "Clubs de golf Limited edition",
-#     brand: "Pfeiffer.inc",
-#     price: 4569,
-#     shop: decathlon,
-#     category_name: "Loisirs et détente",
-#     sub_category_name: "Détente",
-#     photo: "Clubs.svg",
-#     description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
-#     L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
-# )
+Product.create!(
+    name: "Clubs de golf Limited edition",
+    brand: "Pfeiffer.inc",
+    price: 4569,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Clubs.svg",
+    description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
+    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
+)
 
 
 
@@ -204,16 +204,16 @@ Product.create!(
     description: "Machine a lavée"
 )
 
-# Product.create!(
-#     name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
-#     brand: "Wilson",
-#     price: 275,
-#     shop: amazon,
-#     category_name: "Loisirs et détente",
-#     sub_category_name: "Détente",
-#     photo: "Club3.svg",
-#     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
-# )
+Product.create!(
+    name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
+    brand: "Wilson",
+    price: 275,
+    shop: amazon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Club3.svg",
+    description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
+)
 
 
 Product.create!(
