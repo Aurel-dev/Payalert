@@ -10,6 +10,7 @@
         </div>
     </div>
 </div>
+    <div class ="bellformalertss">
 <div class ="container">
     <% @paylerts.each do |paylert| %>
     <% if paylert.status == "En attente d'execution" %>
@@ -20,7 +21,7 @@
         <%= image_tag paylert.product.photo %>
       </div>
 		</div>
-		<div class="course-info">
+		<div class="course-info2">
 	  <h2><%= paylert.product.name %></h2>
           <p><%= paylert.product.description %></p>
           <h6 class="status">Statut de votre Paylert</h6><p><%= paylert.status %></p>
@@ -31,5 +32,5 @@
 
     <% end %>
 <% end %>
-
+</div>
 </div>
