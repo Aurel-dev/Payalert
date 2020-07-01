@@ -156,7 +156,7 @@ Product.create!(
 
 
 Product.create!(
-    name: "Kit de Golf 7 Clubs Adulte ",
+    name: "Kit de Golf 7 clubs adulte ",
     brand: "Inesis",
     price: 170,
     shop: decathlon,
