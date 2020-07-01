@@ -13,9 +13,13 @@ class UserMailer < ApplicationMailer
   end
 
   def execution
+    puts "=========== before user ==========="
     @user = params[:user]
+    puts "=========== after user ==========="
     @paylert = params[:paylert]
+    puts "=========== after paylert ==========="
     mail(to: @user.email, subject: "Votre PayAlert a été exécutée")
+    puts "=========== email execute sent ==========="
   end
 
 end
