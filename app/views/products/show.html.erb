@@ -27,7 +27,11 @@
                             <%= simple_form_for [@product,@paylert] do |f| %>
                             <div class="d-flex flex-row">
                                 <div class="col">
-                                 <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
+                                <%# <% if !current_user.credit_card_verified? %>
+                                    <%# <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ disabled: :true, min: '0'}, class: "form-controlers" %>
+                                <%# <% else %>
+                                    <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
+                                <%# <% end %>
 
                                  <%= f.button :submit, 'Créer une Paylert', class: "btn btn-primary" %>
                                     <% if !current_user.credit_card_verified? %>
