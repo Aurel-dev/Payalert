@@ -13,10 +13,10 @@
     </div>
 </div>
 
-
+   <div class ="bellformalertss">
 <% @paylerts.each do |paylert| %>
   <% if paylert.status == "Executée !" %>
-  
+
     <div class="courses-container">
 	<div class="course">
 		<div class="course-preview">
@@ -29,13 +29,12 @@
           <p><%= paylert.product.description %></p>
           <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
           <%= link_to("PayAlert ", product_path(product), class: "btntest") %>
-             
 		</div>
-
+</div>
 <% end %>
 <% end %>
 
-
+</div>
 <%= render 'shared/footer' %>
 
 
