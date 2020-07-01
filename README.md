@@ -8,4 +8,4 @@
 
 - [Link](https://payalert.herokuapp.com/users/sign_in)
 - `fan.de.FX@gmail.com`
-- `Paylert59!`
+- `1234567`
