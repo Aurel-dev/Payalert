@@ -26,7 +26,7 @@
 
 <div class ="container">
   <div class ="carous-h3">
-    <h3>Categories</h3>
+    <h3>Catégories</h3>
   </div>
 </div>
  <div class ="carou">
@@ -37,9 +37,40 @@
             <div class = "categoriesdiv" >
              
              <%= link_to products_path(Catégorie: "Maison") do %>
-              <%= image_tag "garden.svg"%>
+              <%= image_tag "computericons.svg"%>
        <% end %>
-              <p>Garden</p>  
+               <p>Electronique</p>  
+       
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "laundry.svg"%>
+                  <p>Electroménager</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "park.svg"%>
+              <p>Loisir</p>  
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="margincate" >
+        <div class="col-md-4">
+          <div class = "categories">    
+            <div class = "categoriesdiv" >
+              <%= image_tag "tshirt.svg"%>
+              <p>Textiles</p>  
             </div>       
           </div>
         </div>
@@ -49,37 +80,7 @@
           <div class = "categories">    
             <div class = "categoriesdiv" >
               <%= image_tag "garden.svg"%>
-              <p>Garden</p>  
-            </div>       
-          </div>
-        </div>
-      </div>
-      <div class="margincate" >
-        <div class="col-md-4">
-          <div class = "categories">    
-            <div class = "categoriesdiv" >
-              <%= image_tag "garden.svg"%>
-              <p>Garden</p>  
-            </div>       
-          </div>
-        </div>
-      </div>
-      <div class="margincate" >
-        <div class="col-md-4">
-          <div class = "categories">    
-            <div class = "categoriesdiv" >
-              <%= image_tag "garden.svg"%>
-              <p>Garden</p>  
-            </div>       
-          </div>
-        </div>
-      </div>
-      <div class="margincate" >
-        <div class="col-md-4">
-          <div class = "categories">    
-            <div class = "categoriesdiv" >
-              <%= image_tag "garden.svg"%>
-              <p>Garden</p>  
+              <p>Jardin</p>  
             </div>       
           </div>
         </div>
@@ -91,23 +92,9 @@
 
 <div class ="container">
     <div class ="carous-h3">
-      <h3>Les favoris des utilisateurs</h3>
+      <h3>Les meilleurs ventes</h3>
     </div>
   </div>
-
-  <%# modifier ici %>
-  
-  <%# comment faire pour recuperer 4 produits : 
-    - ou on en recupere 4 random
-    - ou je recupere le lien en dur et je renvois
-    - 
-    -
-    -
-   %>
-
-
-
-   
 
    <div class ="carou">
       <% @products.sample(4).each do |product| %>
