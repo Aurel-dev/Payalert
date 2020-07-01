@@ -12,7 +12,7 @@
 </div>
 
     <% @paylerts.each do |paylert| %>
-        <% if paylert.status == "execute"%>
+        <% if paylert.status == "Executée !"%>
             <div class="carde">
                 <div class="card-product">
                     <%= image_tag paylert.product.photo %>
