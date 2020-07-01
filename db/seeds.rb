@@ -62,54 +62,6 @@ decathlon = Shop.create!(
 )
 
 
-<<<<<<< HEAD
-Product.create!(
-    name: "Tondeuse Thermique Rotak 43",
-    brand: "Bosch",
-    price: 150,
-    shop: leroymerlin,
-    category_name: "Jardin",
-    sub_category_name: "Tondeuse",
-    photo: "Tondeuse.svg",
-    description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
-)
-
-Product.create!(
-    name: "Tondeuse filaire BEM351",
-    brand: "Black & Decker",
-    price: 89,
-    shop: leroymerlin,
-    category_name: "Jardin",
-    sub_category_name: "Tondeuse",
-    photo: "Tondeuse2.svg",
-    description: "3 hauteurs de coupe ajustables par essieux avant et arrière : 20, 40 et 60mm."
-)
-
-
-
-Product.create!(
-    name: "Tondeuse robot intelligente Bosch - Indego 350",
-    brand: "Bosch",
-    price: 888.99,
-    shop: leroymerlin,
-    category_name: "Jardin",
-    sub_category_name: "Tondeuse",
-    photo: "Tondeuse4.svg",
-    description: "Efficace et compacte : Permet de tondre jusqu’à trois aires de pelouse différentes d’une superficie totale de maximum 350 m² grâce à la fonction MultiArea."
-)
-
-
-Product.create!(
-    name: "Tondeuse Thermique Rotak 43",
-    brand: "Bosch",
-    price: 140,
-    shop: boulanger,
-    category_name: "Jardin",
-    sub_category_name: "Tondeuse",
-    photo: "Tondeuse.svg",
-    description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
-)
-=======
 # Product.create!(
 #     name: "Tondeuse Thermique Rotak 43",
 #     brand: "Bosch",
@@ -156,7 +108,6 @@ Product.create!(
 #     photo: "Tondeuse.svg",
 #     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
 # )
->>>>>>> f1f912106e74abd370750f93e6e06444bced64fd
 
 
 Product.create!(
@@ -184,54 +135,6 @@ Product.create!(
 )
 
 
-<<<<<<< HEAD
-Product.create!(
-    name: "Ponceuse rotative TACKLIFE",
-    brand: "Black & Decker",
-    price: 50,
-    shop: leroymerlin,
-    category_name: "Garage",
-    sub_category_name: "Bricolage",
-    photo: "Ponceuse.svg",
-    description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
-)
-
-
-Product.create!(
-    name: "Clubs de golf Limited edition",
-    brand: "Pfeiffer.inc",
-    price: 4569,
-    shop: decathlon,
-    category_name: "Loisirs et détente",
-    sub_category_name: "Détente",
-    photo: "Clubs.svg",
-    description: "PFEIFFER Golf propose du matériel de golf d'une qualité exceptionnelle, s'adressant aux joueurs de tous niveaux.
-    L'usine Pfeiffer Golf située à Genève, a atteinte une renommée internationale, faisant l'objet d'une minutie de fabrication dans la plus pure tradition de l'horlogerie Suisse."
-)
-
-
-Product.create!(
-    name: "Kit de Golf 7 clubs adulte ",
-    brand: "Inesis",
-    price: 170,
-    shop: decathlon,
-    category_name: "Loisirs et détente",
-    sub_category_name: "Détente",
-    photo: "clubdegolf.png",
-    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
-)
-
-Product.create!(
-    name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
-    brand: "Wilson",
-    price: 275,
-    shop: decathlon,
-    category_name: "Loisirs et détente",
-    sub_category_name: "Détente",
-    photo: "Club3.svg",
-    description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
-)
-=======
 # Product.create!(
 #     name: "Ponceuse rotative TACKLIFE",
 #     brand: "Black & Decker",
@@ -278,7 +181,6 @@ Product.create!(
 #     photo: "Club3.svg",
 #     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
 # )
->>>>>>> f1f912106e74abd370750f93e6e06444bced64fd
 
 Product.create!(
     name: "Raquette Pure Drive",
@@ -296,13 +198,8 @@ Product.create!(
     name: "Sabre Laser Vader",
     brand: "Apple",
     price: 1999,
-<<<<<<< HEAD
     shop: amazon,
-    category_name: "Loisirs et détente",
-=======
-    shop: cdiscount,
     category_name: "Loisirs",
->>>>>>> f1f912106e74abd370750f93e6e06444bced64fd
     sub_category_name: "Détente",
     photo: "sabre.png",
     description: "Pour votre prochain festival Cosplay"
@@ -425,7 +322,7 @@ Product.create!(
     category_name: "Electro-ménager",
     sub_category_name: "Electro-ménager",
     photo: "Shaker.png",
-    description: "Simple and easy to use this shaker is recommended for beginner’s and experienced bartender."
+    description: "Shaker en inox pour cocktail avec tamis et bouchon doseur."
 )
 
 Product.create!(

@@ -18,7 +18,7 @@ class UserMailer < ApplicationMailer
     puts "=========== after user ==========="
     @paylert = params[:paylert]
     puts "=========== after paylert ==========="
-    mail(to: @user.email, subject: "Votre PayAlert a été exécutée")
+    mail(to: @user.email, subject: "Votre PayAlert a été réalisée")
     puts "=========== email execute sent ==========="
   end
 
