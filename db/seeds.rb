@@ -66,6 +66,53 @@ decathlon = Shop.create!(
 #     name: "Tondeuse Thermique Rotak 43",
 #     brand: "Bosch",
 #     price: 150,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse.svg",
+#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+# )
+
+# Product.create!(
+#     name: "Tondeuse filaire BEM351",
+#     brand: "Black & Decker",
+#     price: 89,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse2.svg",
+#     description: "3 hauteurs de coupe ajustables par essieux avant et arrière : 20, 40 et 60mm."
+# )
+
+
+
+# Product.create!(
+#     name: "Tondeuse robot intelligente Bosch - Indego 350",
+#     brand: "Bosch",
+#     price: 888.99,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse4.svg",
+#     description: "Efficace et compacte : Permet de tondre jusqu’à trois aires de pelouse différentes d’une superficie totale de maximum 350 m² grâce à la fonction MultiArea."
+# )
+
+
+# Product.create!(
+#     name: "Tondeuse Thermique Rotak 43",
+#     brand: "Bosch",
+#     price: 140,
+#     shop: boulanger,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse.svg",
+#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+# )
+
+# Product.create!(
+#     name: "Tondeuse Thermique Rotak 43",
+#     brand: "Bosch",
+#     price: 150,
 #     shop: amazon,
 #     category_name: "Jardin",
 #     sub_category_name: "Tondeuse",
