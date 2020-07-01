@@ -130,7 +130,7 @@ Product.create!(
     shop: boulanger,
     category_name: "Jardin",
     sub_category_name: "Couteau",
-    photo: "Couteau.pnjg",
+    photo: "Couteau.png",
     description: "Couteau de jardin polyvalent, idéal pour désherber, creuser, élager, transplanter."
 )
 
@@ -223,7 +223,7 @@ Product.create!(
     shop: decathlon,
     category_name: "Loisirs et détente",
     sub_category_name: "Détente",
-    photo: "Surfboard.png",
+    photo: "Surboard.png",
     description: "Planche stable ,shape facile d’accès. Shortboard tolérant avec un Volume de 38 L."
 )
 
