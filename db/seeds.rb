@@ -111,6 +111,31 @@ Product.create!(
 
 
 Product.create!(
+    name: "Bonsaï Suisse 25 ans",
+    brand: "Pfeiffer.inc",
+    price: 65,
+    shop: boulanger,
+    category_name: "Jardin",
+    sub_category_name: "Plantes",
+    photo: "Bonsai.png",
+    description: "Demande un entretien très particulier et minutieux."
+)
+
+
+
+Product.create!(
+    name: "Couteau pour jardin",
+    brand: "Willi Waller",
+    price: 15,
+    shop: boulanger,
+    category_name: "Jardin",
+    sub_category_name: "Couteau",
+    photo: "Couteau.pnjg",
+    description: "Couteau de jardin polyvalent, idéal pour désherber, creuser, élager, transplanter."
+)
+
+
+Product.create!(
     name: "Ponceuse rotative TACKLIFE",
     brand: "Black & Decker",
     price: 50,
@@ -121,27 +146,7 @@ Product.create!(
     description: "Cette ponceuse excentrique est conçue pour être raccordée facilement et directement à un aspirateur ou un boîtier microfiltre."
 )
 
-Product.create!(
-    name: "PC Portable Legion Y520 ",
-    brand: "Lenovo",
-    price: 599,
-    shop: boulanger,
-    category_name: "Loisirs et détente",
-    sub_category_name: "Détente",
-    photo: "computer.png",
-    description: "Un portable 15 pouces essentiellement pensé pour le jeu."
-)
 
-Product.create!(
-    name: "Iphone 11 64 Go",
-    brand: "Apple",
-    price: 799,
-    shop: boulanger,
-    category_name: "Loisirs et détente",
-    sub_category_name: "Détente",
-    photo: "iphone.png",
-    description: "Ecran Retina HD avec technologie IPS Taille de la diagonale : 4.7. Résolution du capteur : 12 mégapixels."
-)
 Product.create!(
     name: "Clubs de golf Limited edition",
     brand: "Pfeiffer.inc",
@@ -167,44 +172,6 @@ Product.create!(
 )
 
 Product.create!(
-    name: "Converse bleu ciel ",
-    brand: "Converse",
-    price: 45,
-    shop: amazon,
-    category_name: "Vetements",
-    sub_category_name: "Détente",
-    photo: "Converse.png",
-    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
-)
-
-
-
-Product.create!(
-    name: "casquette de baseball",
-    brand: "discount",
-    price: 45,
-    shop: amazon,
-    category_name: "Vetements",
-    sub_category_name: "Détente",
-    photo: "baseball-cap.png",
-    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
-)
-
-
-
-Product.create!(
-
-    name: "Machine a laver",
-    brand: "Jura",
-    price: 299,
-    shop: boulanger,
-    category_name: "Maison",
-    sub_category_name: "Electro-ménager",
-    photo: "cafee.png",
-    description: "Machine a laver"
-)
-
-Product.create!(
     name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
     brand: "Wilson",
     price: 275,
@@ -215,18 +182,204 @@ Product.create!(
     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
 )
 
+Product.create!(
+    name: "Raquette de tennis Pure Drive",
+    brand: "Wilson",
+    price: 115,
+    shop: amazon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Raquette.png",
+    description: "LA raquette reconnue pour sa parfaite combinaison entre contrôle et puissance."
+)
+
+
+Product.create!(
+    name: "Sabre Laser Vader ",
+    brand: "Apple",
+    price: 1999,
+    shop: cdiscount,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "sabre.png",
+    description: "Pour votre prochain festival Cosplay"
+)
+
+Product.create!(
+    name: "Sac à dos 30L",
+    brand: "Nike",
+    price: 49,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "backpack.png",
+    description: "Grâce à ses bretelles réglables et ses compartiments séparés pour tout ce dont vous avez besoin à l'entraînement et les jours de match,"
+)
+
+Product.create!(
+    name: "Planche de surf Adulte sans housse",
+    brand: "Nike",
+    price: 275,
+    shop: decathlon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Surfboard.png",
+    description: "Planche stable ,shape facile d’accès. Shortboard tolérant avec un Volume de 38 L."
+)
+
+
+Product.create!(
+    name: " Drone Ryze Tello - Blanc ",
+    brand: "Apple",
+    price: 100,
+    shop: amazon,
+    category_name: "Loisirs et détente",
+    sub_category_name: "Détente",
+    photo: "Drone.png",
+    description: "Départ lancé - Flip 360° - Mode Rebond - Enregistrement vidéo automatique - Compatible casque VR et smartphone."
+)
+
+
+Product.create!(
+    name: "Converse bleu ciel ",
+    brand: "Converse",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Converse.png",
+    description: "Disponibles tailles 39 a 46"
+)
+
+
+Product.create!(
+    name: "Casquette de Golf",
+    brand: "Inesis",
+    price: 35,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "baseball-cap.png",
+    description: "Permet une gestion de la transpiration et possède une fermeture reglable sur l'arrière"
+)
+
+
+Product.create!(
+    name: "Converse noir",
+    brand: "Converse",
+    price: 45,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Blackconverse.png",
+    description: "Le kit de golf idéal pour APPRENDRE et PROGRESSER !"
+)
+
+
+Product.create!(
+    name: "Casquette de Golf dédicacée YP",
+    brand: "Pfeiffer.inc",
+    price: 350,
+    shop: decathlon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Cap.png",
+    description: "Combinant mode et fonctionnalité, cette casquette est dédicacée par Yann Pfeiffer himself."
+)
+
+
+Product.create!(
+    name: "Lunettes Vintage homme",
+    brand: "Pfeiffer.inc",
+    price: 520,
+    shop: amazon,
+    category_name: "Vetements",
+    sub_category_name: "Détente",
+    photo: "Sunglasses.png",
+    description: "Leur forme arrondie et leur couleur noire très tendances plairont aussi bien à la gente féminine que masculine."
+)
+
+
 
 Product.create!(
 
-    name: "Cafetiere",
+    name: "Cafetiere Ena 8",
     brand: "Jura",
     price: 299,
     shop: boulanger,
-    category_name: "Maison",
+    category_name: "Electro-ménager",
     sub_category_name: "Electro-ménager",
-    photo: "cafee.png",
-    description: "Cafetiere moderne "
+    photo: "cafetiere.png",
+    description: "La nouvelle machine à café automatique 1 tasse, de tous les superlatifs : compacte, simple, élégante."
 )
+
+
+Product.create!(
+    name: "Shaker",
+    brand: "Jura",
+    price: 20,
+    shop: boulanger,
+    category_name: "Electro-ménager",
+    sub_category_name: "Electro-ménager",
+    photo: "Shaker.png",
+    description: "Simple and easy to use this shaker is recommended for beginner’s and experienced bartender."
+)
+
+Product.create!(
+    name: "PC Portable Legion Y520 ",
+    brand: "Lenovo",
+    price: 599,
+    shop: boulanger,
+    category_name: "High-Tech",
+    sub_category_name: "Détente",
+    photo: "computer.png",
+    description: "Un portable 15 pouces essentiellement pensé pour le jeu."
+)
+
+Product.create!(
+    name: "Iphone 11 - 64 Go",
+    brand: "Apple",
+    price: 799,
+    shop: boulanger,
+    category_name: "High-Tech",
+    sub_category_name: "Détente",
+    photo: "iphone.png",
+    description: "Ecran Retina HD avec technologie IPS Taille de la diagonale : 4.7. Résolution du capteur : 12 mégapixels."
+)
+
+Product.create!(
+    name: "Pc Portable Asus FX 570",
+    brand: "Asus",
+    price: 899,
+    shop: cdiscount,
+    category_name: "High-Tech",
+    sub_category_name: "Détente",
+    photo: "AsusPortable.png",
+    description: "Conçus pour un monde de divertissements avec une incroyable réactivité et une autonomie de batterie exceptionnelle."
+)
+
+Product.create!(
+    name: " TV Toshiba 40L2863DG",
+    brand: "Toshiba",
+    price: 1899,
+    shop: cdiscount,
+    category_name: "High-Tech",
+    sub_category_name: "Détente",
+    photo: "Toshiba 40L.png",
+    description: "Conçus pour un monde de divertissements avec une incroyable réactivité et une autonomie de batterie exceptionnelle."
+)
+
+Product.create!(
+    name: " TV Toshiba 43L3763",
+    brand: "Toshiba",
+    price: 2299,
+    shop: cdiscount,
+    category_name: "High-Tech",
+    sub_category_name: "Détente",
+    photo: "Toshiba 43L.png",
+    description: "Conçus pour un monde de divertissements avec une incroyable réactivité et une autonomie de batterie exceptionnelle."
+)
+
 
 Paylert.create!(
     user_id: User.first.id,
