@@ -40,14 +40,14 @@ User.create!(
 )
 
 
-amazon = Shop.create!(
-    name: "Amazon",
+leroymerlin = Shop.create!(
+    name: "Leroy Merlin",
     user_id: User.first.id,
 )
 
 
-cdiscount = Shop.create!(
-    name: "Cdiscount",
+amazon = Shop.create!(
+    name: "Amazon",
     user_id: User.second.id,
 )
 
@@ -66,7 +66,7 @@ Product.create!(
     name: "Tondeuse Thermique Rotak 43",
     brand: "Bosch",
     price: 150,
-    shop: amazon,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Tondeuse",
     photo: "Tondeuse.svg",
@@ -77,7 +77,7 @@ Product.create!(
     name: "Tondeuse filaire BEM351",
     brand: "Black & Decker",
     price: 89,
-    shop: amazon,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Tondeuse",
     photo: "Tondeuse2.svg",
@@ -90,7 +90,7 @@ Product.create!(
     name: "Tondeuse robot intelligente Bosch - Indego 350",
     brand: "Bosch",
     price: 888.99,
-    shop: boulanger,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Tondeuse",
     photo: "Tondeuse4.svg",
@@ -114,7 +114,7 @@ Product.create!(
     name: "Bonsaï Suisse 25 ans",
     brand: "Pfeiffer.inc",
     price: 65,
-    shop: boulanger,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Plantes",
     photo: "Bonsai.png",
@@ -127,7 +127,7 @@ Product.create!(
     name: "Couteau pour jardin",
     brand: "Willi Waller",
     price: 15,
-    shop: boulanger,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Couteau",
     photo: "Couteau.png",
@@ -139,7 +139,7 @@ Product.create!(
     name: "Ponceuse rotative TACKLIFE",
     brand: "Black & Decker",
     price: 50,
-    shop: cdiscount,
+    shop: leroymerlin,
     category_name: "Garage",
     sub_category_name: "Bricolage",
     photo: "Ponceuse.svg",
@@ -175,7 +175,7 @@ Product.create!(
     name: "Wilson Ensemble Complet pour Débutant, 10 Clubs de Golf ",
     brand: "Wilson",
     price: 275,
-    shop: amazon,
+    shop: decathlon,
     category_name: "Loisirs et détente",
     sub_category_name: "Détente",
     photo: "Club3.svg",
@@ -198,7 +198,7 @@ Product.create!(
     name: "Sabre Laser Vader ",
     brand: "Apple",
     price: 1999,
-    shop: cdiscount,
+    shop: amazon,
     category_name: "Loisirs et détente",
     sub_category_name: "Détente",
     photo: "sabre.png",
@@ -256,7 +256,7 @@ Product.create!(
     name: "Casquette de Golf",
     brand: "Inesis",
     price: 35,
-    shop: amazon,
+    shop: decathlon,
     category_name: "Vetements",
     sub_category_name: "Détente",
     photo: "baseball-cap.png",
@@ -351,7 +351,7 @@ Product.create!(
     name: "Pc Portable Asus FX 570",
     brand: "Asus",
     price: 899,
-    shop: cdiscount,
+    shop: boulanger,
     category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "AsusPortable.png",
@@ -362,7 +362,7 @@ Product.create!(
     name: " TV Toshiba 40L2863DG",
     brand: "Toshiba",
     price: 1899,
-    shop: cdiscount,
+    shop: amazon,
     category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "Toshiba 40L.png",
@@ -373,7 +373,7 @@ Product.create!(
     name: " TV Toshiba 43L3763",
     brand: "Toshiba",
     price: 2299,
-    shop: cdiscount,
+    shop: amazon,
     category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "Toshiba 43L.png",
