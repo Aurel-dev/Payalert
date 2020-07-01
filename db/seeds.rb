@@ -157,7 +157,6 @@ decathlon = Shop.create!(
 # )
 
 
-
 Product.create!(
     name: "Bonsaï Suisse 25 ans",
     brand: "Pfeiffer.inc",
@@ -230,7 +229,6 @@ Product.create!(
 #     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
 # )
 
-
 Product.create!(
     name: "Raquette Pure Drive",
     brand: "Wilson",
@@ -248,7 +246,7 @@ Product.create!(
     brand: "Apple",
     price: 1999,
     shop: amazon,
-    category_name: "Loisirs et détente",
+    category_name: "Loisirs",
     sub_category_name: "Détente",
     photo: "sabre.png",
     description: "Pour votre prochain festival Cosplay"
@@ -305,8 +303,8 @@ Product.create!(
     name: "Casquette de Golf",
     brand: "Inesis",
     price: 35,
-    shop: decathlon,
-    category_name: "Vetements",
+    shop: amazon,
+    category_name: "Textiles",
     sub_category_name: "Détente",
     photo: "baseball-cap.png",
     description: "Permet une gestion de la transpiration et possède une fermeture reglable sur l'arrière"
@@ -371,7 +369,7 @@ Product.create!(
     category_name: "Electro-ménager",
     sub_category_name: "Electro-ménager",
     photo: "Shaker.png",
-    description: "Simple and easy to use this shaker is recommended for beginner’s and experienced bartender."
+    description: "Shaker en inox pour cocktail avec tamis et bouchon doseur."
 )
 
 Product.create!(
@@ -400,8 +398,8 @@ Product.create!(
     name: "Pc Portable Asus FX 570",
     brand: "Asus",
     price: 899,
-    shop: boulanger,
-    category_name: "High-Tech",
+    shop: amazon,
+    category_name: "Electronique",
     sub_category_name: "Détente",
     photo: "AsusPortable.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
@@ -412,7 +410,7 @@ Product.create!(
     brand: "Toshiba",
     price: 1899,
     shop: amazon,
-    category_name: "High-Tech",
+    category_name: "Electronique",
     sub_category_name: "Détente",
     photo: "Toshiba 40L.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
@@ -423,7 +421,7 @@ Product.create!(
     brand: "Toshiba",
     price: 2299,
     shop: amazon,
-    category_name: "High-Tech",
+    category_name: "Electronique",
     sub_category_name: "Détente",
     photo: "Toshiba 43L.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
