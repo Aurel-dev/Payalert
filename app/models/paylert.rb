@@ -12,6 +12,6 @@ class Paylert < ApplicationRecord
   end
   
   def bidding_price=(price)
-    self.bidding_price_cents = price.to_i * 100
+    self.bidding_price_cents = price.to_f * 100
   end
 end

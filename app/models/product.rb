@@ -7,10 +7,17 @@ class Product < ApplicationRecord
 
   after_update_commit  :check_price_paylerts
 
+  def price_euros
+    self.price_cents/100
+  end
+
+  def price_euros=(price)
+    self.price_cents = price.to_f*100
+  end
   private
 
   def check_price_paylerts
-    paylert = Paylert.where(product_id: self.id, status: "En attente d'execution").where("bidding_price >= ?", self.price_cents).first
+    paylert = Paylert.where(product_id: self.id, status: "En attente d'execution").where("bidding_price_cents >= ?", self.price_cents).first
     if paylert
       user = paylert.user
       if (user.stripe_customer_id && user.credit_card_id)
