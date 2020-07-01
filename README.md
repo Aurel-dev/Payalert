@@ -7,5 +7,5 @@
 ### Sign In
 
 - [Link](https://payalert.herokuapp.com/users/sign_in)
-- `tuttu@gmail.com`
-- `1234567`
+- `blaba@gmail.com`
+- `123456`
