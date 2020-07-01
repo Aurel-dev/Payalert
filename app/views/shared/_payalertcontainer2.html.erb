@@ -2,7 +2,7 @@
     <div class ="bellformalert">
         <div class="d-flex bd-highlight mb-3">
             <div class="d-flex justify-content-start">
-                <h2> Votre PayAlerts en cours</h2>
+                <h2> Vos PayAlerts en cours</h2>
             </div>
             <div class="ml-auto p-2 "> 
                  <%= image_tag "BellAlert.svg" %>
@@ -24,7 +24,7 @@
 		<div class="course-info2">
 	  <h2><%= paylert.product.name %></h2>
           <p><%= paylert.product.description %></p>
-          <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
+          <h6 class="status">Statut de votre PayAlert</h6><p><%= paylert.status %></p>
           <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
             <%= link_to 'Supprimer', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"btntest" %></i>
 		</div>
