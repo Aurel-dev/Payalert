@@ -40,14 +40,14 @@ User.create!(
 )
 
 
-amazon = Shop.create!(
-    name: "Amazon",
+leroymerlin = Shop.create!(
+    name: "Leroy Merlin",
     user_id: User.first.id,
 )
 
 
-cdiscount = Shop.create!(
-    name: "Cdiscount",
+amazon = Shop.create!(
+    name: "Amazon",
     user_id: User.second.id,
 )
 
@@ -61,6 +61,53 @@ decathlon = Shop.create!(
     user_id: User.third.id,
 )
 
+
+# Product.create!(
+#     name: "Tondeuse Thermique Rotak 43",
+#     brand: "Bosch",
+#     price: 150,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse.svg",
+#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+# )
+
+# Product.create!(
+#     name: "Tondeuse filaire BEM351",
+#     brand: "Black & Decker",
+#     price: 89,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse2.svg",
+#     description: "3 hauteurs de coupe ajustables par essieux avant et arrière : 20, 40 et 60mm."
+# )
+
+
+
+# Product.create!(
+#     name: "Tondeuse robot intelligente Bosch - Indego 350",
+#     brand: "Bosch",
+#     price: 888.99,
+#     shop: leroymerlin,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse4.svg",
+#     description: "Efficace et compacte : Permet de tondre jusqu’à trois aires de pelouse différentes d’une superficie totale de maximum 350 m² grâce à la fonction MultiArea."
+# )
+
+
+# Product.create!(
+#     name: "Tondeuse Thermique Rotak 43",
+#     brand: "Bosch",
+#     price: 140,
+#     shop: boulanger,
+#     category_name: "Jardin",
+#     sub_category_name: "Tondeuse",
+#     photo: "Tondeuse.svg",
+#     description: "Tondeuse sur coussin d'air ultra légère pour une maniabilité optimale."
+# )
 
 # Product.create!(
 #     name: "Tondeuse Thermique Rotak 43",
@@ -110,11 +157,12 @@ decathlon = Shop.create!(
 # )
 
 
+
 Product.create!(
     name: "Bonsaï Suisse 25 ans",
     brand: "Pfeiffer.inc",
     price: 65,
-    shop: boulanger,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Plantes",
     photo: "Bonsai.png",
@@ -127,7 +175,7 @@ Product.create!(
     name: "Couteau pour jardin",
     brand: "Willi Waller",
     price: 15,
-    shop: boulanger,
+    shop: leroymerlin,
     category_name: "Jardin",
     sub_category_name: "Couteau",
     photo: "Couteau.png",
@@ -182,6 +230,7 @@ Product.create!(
 #     description: "Ensemble complet de golf Wilson de 10 clubs de golf pour homme (main droite) avec sac trépied, idéal pour les débutants et joueurs occasionnels d'une taille de 167 à 186 cm, bois en titane/acier, fers en acier inoxydable 17-4 avec manches 100% graphite."
 # )
 
+
 Product.create!(
     name: "Raquette Pure Drive",
     brand: "Wilson",
@@ -198,8 +247,8 @@ Product.create!(
     name: "Sabre Laser Vader",
     brand: "Apple",
     price: 1999,
-    shop: cdiscount,
-    category_name: "Loisirs",
+    shop: amazon,
+    category_name: "Loisirs et détente",
     sub_category_name: "Détente",
     photo: "sabre.png",
     description: "Pour votre prochain festival Cosplay"
@@ -256,8 +305,8 @@ Product.create!(
     name: "Casquette de Golf",
     brand: "Inesis",
     price: 35,
-    shop: amazon,
-    category_name: "Textiles",
+    shop: decathlon,
+    category_name: "Vetements",
     sub_category_name: "Détente",
     photo: "baseball-cap.png",
     description: "Permet une gestion de la transpiration et possède une fermeture reglable sur l'arrière"
@@ -351,8 +400,8 @@ Product.create!(
     name: "Pc Portable Asus FX 570",
     brand: "Asus",
     price: 899,
-    shop: cdiscount,
-    category_name: "Electronique",
+    shop: boulanger,
+    category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "AsusPortable.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
@@ -362,8 +411,8 @@ Product.create!(
     name: " TV Toshiba 40L2863DG",
     brand: "Toshiba",
     price: 1899,
-    shop: cdiscount,
-    category_name: "Electronique",
+    shop: amazon,
+    category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "Toshiba 40L.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
@@ -373,8 +422,8 @@ Product.create!(
     name: " TV Toshiba 43L3763",
     brand: "Toshiba",
     price: 2299,
-    shop: cdiscount,
-    category_name: "Electronique",
+    shop: amazon,
+    category_name: "High-Tech",
     sub_category_name: "Détente",
     photo: "Toshiba 43L.png",
     description: "Conçus pour un monde de divertissements avec une incroyable réactivité."
