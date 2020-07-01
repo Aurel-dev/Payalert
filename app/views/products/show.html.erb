@@ -2,7 +2,7 @@
     <div class ="bellformalert">
         <div class="d-flex bd-highlight mb-3">
             <div class="d-flex justify-content-start">
-                <h2>Envie de créer votre PayAlert?</h2>
+                <h2>Envie de créer votre PayAlert ?</h2>
             </div>
             <div class="ml-auto p-2 "> 
                  <%= image_tag "bellhide.svg" %>
@@ -12,14 +12,14 @@
 
     
     <div class = whiteform>
-        <h1 class="big_product_show"> Fiche produit de l'annonce sélectionnée</h1>
+        <h1 class="big_product_show"> Détails de votre produit</h1>
             <div class = "productlert">
                 <div class = "showproducts">
                     <div class="row margin-product">
                         <div class="col">
                             <p class="posting_show">Produit</p> <p><%= @product.name %></p>
                             <p class="posting_show">Marque</p> </p><%= @product.brand %></p>
-                            <p class="posting_show">Prix</p> <p><%= @product.price %> euros</p>
+                            <p class="posting_show">Prix</p> <p><%= @product.price %> €</p>
                             <p class="posting_show">Description</p>
                             <p class ="size-description"> <%= @product.description %></p>
                         </div>
@@ -27,14 +27,20 @@
                             <%= simple_form_for [@product,@paylert] do |f| %>
                             <div class="d-flex flex-row">
                                 <div class="col">
+<<<<<<< HEAD
                                 <% if !current_user.credit_card_verified? %>
                                     <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ disabled: :true, min: '0'}, class: "form-controlers" %>
                                 <% else %>
                                     <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
                                 <% end %>
                                     <%= f.button :submit, class: "btn btn-primary" %>
+=======
+                                 <%= f.input :bidding_price, label: "Prix souhaité (cts)", input_html:{ min: '0'}, class: "form-controlers" %>
+
+                                 <%= f.button :submit, 'Créer une Paylert', class: "btn btn-primary" %>
+>>>>>>> e15c72eaabc52a1898dc7890bcb91a37563c9b73
                                     <% if !current_user.credit_card_verified? %>
-                                      <a class="btn btn-primary" href="profile/add_credit_card">Ajouter votre CB</a>
+                                      <a class="btn btn-primary" href="profile/add_credit_card">Ajouter une CB</a>
                                     <% end %>
                                 </div>
                             <% end %>
@@ -67,7 +73,7 @@
      </div>
 
 </div>
-<h2> Offre du Vendeur</h2>
+<h2> Autres offres de ce vendeur</h2>
 </div>
 
 <%= render 'shared/card-test' %>

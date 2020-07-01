@@ -32,8 +32,8 @@ padding-left: 50px;
 }
 
 .recherchesbtn{
-
-background-color: white;
+color: #fff;
+background-color: #5878DB;
     height: 40px;
     width: 120px;
     border: none;
@@ -42,3 +42,7 @@ background-color: white;
     
 }
 
+.recherchesbtn:hover{
+
+    background-color: #3463f1;
+}
