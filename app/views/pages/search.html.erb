@@ -35,10 +35,10 @@
         <div class="col-md-4">
           <div class = "categories">    
             <div class = "categoriesdiv" >
-             
-             <%= link_to products_path(Catégorie: "Maison") do %>
-              <%= image_tag "computericons.svg"%>
-       <% end %>
+                <%= link_to products_path(category: "Electronique") do %>
+                <%= image_tag "computericons.svg"%>
+               <% end %>
+          
                <p>Electronique</p>  
        
             </div>       
@@ -49,7 +49,9 @@
         <div class="col-md-4">
           <div class = "categories">    
             <div class = "categoriesdiv" >
+              <%= link_to products_path(category: "Electro-ménager") do %>
               <%= image_tag "laundry.svg"%>
+               <% end %>
                   <p>Electroménager</p>  
             </div>       
           </div>
@@ -59,7 +61,9 @@
         <div class="col-md-4">
           <div class = "categories">    
             <div class = "categoriesdiv" >
+              <%= link_to products_path(category: "Loisirs") do %>
               <%= image_tag "park.svg"%>
+               <% end %>
               <p>Loisir</p>  
             </div>       
           </div>
@@ -69,7 +73,9 @@
         <div class="col-md-4">
           <div class = "categories">    
             <div class = "categoriesdiv" >
+              <%= link_to products_path(category: "Textiles") do %>
               <%= image_tag "tshirt.svg"%>
+               <% end %>
               <p>Textiles</p>  
             </div>       
           </div>
@@ -79,7 +85,9 @@
         <div class="col-md-4">
           <div class = "categories">    
             <div class = "categoriesdiv" >
+              <%= link_to products_path(category: "Jardin") do %>
               <%= image_tag "garden.svg"%>
+               <% end %>
               <p>Jardin</p>  
             </div>       
           </div>
