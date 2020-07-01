@@ -30,30 +30,25 @@
    <div class = "containerd">
     <div class ="d-flex flex-column bd-highlight mb-3">
      <% @products.each do |product| %>
-       <div>
-          <div class="carde">
-            <div class="card-index">
+      <div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+		
               <div class ="pictureindex">
                <%= image_tag asset_path(product.photo) %>
                 </div>
-                    
-            <div class="card-product-center">
-              <h2><%= product.name %></h2>
-              <p><%= product.description %></p>
-            </div>
-
-            <div class="card-product-infos">
-              <h2  class ="priceindex"><%= product.price %> €</h2>
-            </div>
-
-            <div class="placement-btn">
-              <%= link_to(" produit", product_path(product), class: "btn btn-primary") %>
-            </div>
-          </div>
-        </div>
-       </div>
-     </div>
-    </div>
+		
+		</div>
+		<div class="course-info">
+	  <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
+                  <h2 class ="priceindex"><%= product.price %> €</h2>
+		
+          <%= link_to("PayAlert ", product_path(product), class: "btntest") %>
+             
+		</div>
+	</div>
+</div>
    <% end %>
   </div>
  </div>

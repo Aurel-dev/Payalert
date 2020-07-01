@@ -13,31 +13,29 @@
     </div>
 </div>
 
-<div class ="container">
-    <% @paylerts.each do |paylert| %>
-    <% if paylert.status == "Executée !" %>
-        <div class="courses-container">
-    <div class="course">
-    <div class="course-preview">
-        <div class ="pictureindex">
-            <%= image_tag paylert.product.photo %>
-        </div>
-            </div>
-            <div class="course-info">
-            <h2><%= paylert.product.name %></h2>
-            <p><%= paylert.product.description %></p>
-            <h6 class="status">Statut de votre Payalert</h6><p><%= paylert.status %></p>
-            <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
-            <%# <%= link_to("PayAlert ", product_path(product), class: "btntest") %>  %>
-            <%# lien dessus qui ne marche pas marche pas %>  
-            </div>
-    </div>
-    </div>
+
+   <div class ="bellformalertss">
+<% @paylerts.each do |paylert| %>
+  <% if paylert.status == "Executée !" %>
+
+    <div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+      <div class ="pictureindex">
+        <%= image_tag paylert.product.photo %>
+      </div>
+		</div>
+		<div class="course-info">
+	  <h2><%= paylert.product.name %></h2>
+          <p><%= paylert.product.description %></p>
+          <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
+          <%= link_to("PayAlert ", product_path(product), class: "btntest") %>
+		</div>
 </div>
 <% end %>
 <% end %>
 
-
+</div>
 
 <%= render 'shared/footer' %>
 
