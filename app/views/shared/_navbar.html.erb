@@ -2,7 +2,9 @@
 <div class ="containerd">
 <nav class="navbar navbar-expand-lg navbar-light">
    
-  <a class="navbar-brand" href="/"> <%= image_tag "PayAlert.svg", class: "logo" %></a>
+   <%= link_to(root_path) do %>
+                  <%= image_tag "PayAlert.svg" , class: "logo"%>
+              <% end %>
 
    <div class = "avataryan">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,8 +12,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <span class="navbar-text">
-        <a class="btn btn-outline-primary" href="search">Rechercher</a>
+    
+      <span >
+        <%= link_to("Rechercher",search_path,class: "btn btn-primary") %>
       </span>
       <% if user_signed_in? %>
 
