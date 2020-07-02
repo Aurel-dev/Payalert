@@ -6,6 +6,8 @@ class ProfileController < ApplicationController
 
   def show
     @paylerts = Paylert.where(user_id: current_user.id)
+    @paylerts_pending = Paylert.where(status: "En attente d'execution", user: current_user)
+    @paylerts_executed = Paylert.where(status: "Executée !", user: current_user)
   end
 
   def new
