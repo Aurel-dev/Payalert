@@ -69,31 +69,19 @@
 .card-product .card-product-infos {
   width: 980px;
   text-align: center;
- 
 }
 
 
-  
 .cardprice{
-
 }
 
 .englobe_index{
-  // margin-left: 120px;
-  // margin-right: 120px;
-  // margin-top: 50px;
-  // margin-bottom: 50px;
-  // border-radius: 44px;
-  // background-image:
-  //  linear-gradient(
-  //    to right,
-  //    #6784DE, white
-  //  );
+  min-height: calc(100vh - 72px - 150px);
 }
 
 .pictureindex{
-
 }
+
 .pictureindex img{
 
 max-width: 100%;
@@ -118,12 +106,11 @@ max-height: 90%;
 }
 .card-product-center h2{
   margin-bottom: 20px;
-font-weight: normal;
-font-size: 30px;
+  font-weight: normal;
+  font-size: 30px;
 }
 
 .priceindex{
   font-weight: bold;
- 
   font-size: 20px;
 }

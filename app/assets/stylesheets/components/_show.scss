@@ -178,7 +178,6 @@ padding-left: 50px;
     margin-bottom: 50px;
 }
 
-
 #myTab{
     display: flex;
     justify-content: center;
@@ -203,7 +202,12 @@ padding-left: 50px;
     margin-right: 10px;
 }
 
+
 .vue{
     width: 1em;
     height: 1em;
+
+.tab-content{
+    margin-top: -80px;
+
 }
