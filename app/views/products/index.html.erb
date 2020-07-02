@@ -10,13 +10,13 @@
                              prompt:     "Vendeur", 
                              selected:   params[:seller] %>
       </div>
-      <div  class= "espacesearchnormal filter">
+      <div class= "espacesearchnormal filter">
         <%= f.input :category, collection: Product::CATEGORIES, 
                                input_html: { name: "category" }, 
                                prompt:     "Catégorie",  
                                selected:   params[:category] %>
       </div>
-      <div  class= "espacesearchnormal filter">
+      <div class= "espacesearchnormal filter">
         <%= f.input :brand, class:         "espacesearch", 
                             collection:    Product::BRANDS, 
                             input_html:    { name: "brand" },
@@ -30,9 +30,10 @@
   </div>
 </div>
 
-
 <% if @products.length == 0 %>
   <h2 class="title-center">Aucun produit correspondant à votre recherche !</h2>
+
+  
 
 <% elsif params[:product_filter].present? %>
 
