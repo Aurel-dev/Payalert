@@ -67,7 +67,6 @@ padding-left: 50px;
 
 .adresse-form{
     padding: 20px;
-
     border-top: 1px solid;
     border-color: #5879dbb0;
 }
@@ -141,4 +140,29 @@ padding-right: 50px;
 
 .bravo_text{
     margin-bottom: 50px;
+}
+
+
+#myTab{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#home-tab{
+    width: 500px;
+}
+
+#profile-tab{
+    width: 500px;
+}
+
+.navpaylert{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.clocheprofil{
+    max-width: 35px;
+    margin-right: 10px;
 }

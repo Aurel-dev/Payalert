@@ -4,6 +4,9 @@
     Votre carte a bien été ajoutée !
   </h4>
   <div class="d-flex justify-content-center mt-5">
-    <%= link_to 'Découvrez nos produits', products_path, class: "btn btn-success" %>
+    <%= link_to 'Découvrez nos produits', product_path(params[:id]), class: "btn btn-success" %>
   </div>
 </div>
+
+<%# Message une fois carte ajoutée pour redirection %>
+<%# dans le controller  product > show %>

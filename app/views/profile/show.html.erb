@@ -1,43 +1,19 @@
-<%= render 'shared/payalertcontainer2' %>
-
-<div class ="container">
-    <div class ="bellformalert">
-        <div class="d-flex bd-highlight mb-3">
-            <div class="d-flex justify-content-start">
-                <h2>Vos PayAlerts terminées</h2>
-            </div>
-            <div class="ml-auto p-2 "> 
-                <%= image_tag "bellhide.svg" %>
-            </div>
-        </div>
-    </div>
+<h1 class="navpaylert"> <i class="fas fa-user-tag"></i> Mon Profil </h1>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h2><%= image_tag "bellhide.svg", class: "clocheprofil" %> Payalerts en cours (<%= @paylerts_pending.length %>)</h2></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h2><%= image_tag "BellAlert.svg", class: "clocheprofil" %> Payalerts executées (<%= @paylerts_executed.length %>)</h2></a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <%= render 'shared/payalertencours' %> 
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <%= render 'shared/payalertexecutee' %>
+  </div>
 </div>
 
-    <div class = "container">
-   <div class ="bellformalertss">
-      <% @paylerts.each do |paylert| %>
-      <% if paylert.status == "Executée !" %>
-
-      <div class="courses-container">
-	    <div class="offre">
-		   <div class="offre-preview">
-             <div class ="pictureindex">
-               <%= image_tag paylert.product.photo %>
-             </div>
-		   </div>
-		  <div class="course-info2">
-	        <h2 ><%= paylert.product.name %></h2>
-            <p><%= paylert.product.description %></p>
-            <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
-                <%= link_to 'Supprimer', delete_paylert_path(paylert), method: :delete, data: { confirm: 'Vraiment ?' }, class:"btntest" %></i>
-          <%# <%= link_to("PayAlert ", product_path(product), class: "btntest") %> 
-		 </div>
-       </div>
-       <% end %>
-      <% end %>
-</div>
-</div>
 <%= render 'shared/footer' %>
-
-
-
