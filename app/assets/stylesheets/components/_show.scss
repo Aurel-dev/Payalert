@@ -8,13 +8,43 @@ padding-left: 50px;
 
 }
 
-.showproducts{
-    border: 1px solid #5878DB;
+.showproductsmain{
+    // border: 1px solid #5878DB;
     border-radius: 22px;
+    margin-right: 1em;
     height: 650px;
     width: 650px;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+
+.showproducts1{
+    // border: 1px solid #5878DB;
+    border-radius: 5px;
+    width: 30em;
+    background-color:#8ea6ee5d;
+}
+
+
+.showproducts2{
+    // border: 1px solid #5878DB;
+    border-radius: 0px;
+    width: 30em;
+
+}
+.showproducts3{
+    // border: 1px solid #5878DB;
+    border-radius: 5px;
+    width: 30em;
+    border: 1px solid;
+    border-color: #5878DB;
+
+}
+
+
 .bellformalert{
     margin-bottom: 2em;
     margin-top : 2em;
@@ -53,13 +83,19 @@ padding-left: 50px;
 }
 
 .whiteform h1{
-    padding-top: 50px;
-    margin-left: 160px;
-    margin-bottom: 50px;
+    padding-top: 0.5em;
+    margin-left: 0.1em;
+    margin-bottom: 0.3em;
 
 
 }
+.whiteform h2{
+    padding-top: 0.1em;
+    margin-left: 0.1em;
+ font-size: 30px;
+ color: #5878DB;
 
+}
 .endflex{
     margin-left: 900px;
 
@@ -67,16 +103,12 @@ padding-left: 50px;
 
 .adresse-form{
     padding: 20px;
-    border-top: 1px solid;
-    border-color: #5879dbb0;
+    
+   
 }
 
 .adresse-info2{
     margin-left: 230px;
-}
-
-.adresse-info1{
- 
 }
 
 .containerd-info{
@@ -123,8 +155,12 @@ padding-left: 50px;
 .posting_show{
     color: black;
     font-weight: bolder;
-}
 
+}
+.posting_price{
+    font-size: 30px;
+    font-weight: bold;
+}
 .integer{
     color: black;
     font-weight: bolder;
@@ -141,7 +177,6 @@ padding-left: 50px;
 .bravo_text{
     margin-bottom: 50px;
 }
-
 
 #myTab{
     display: flex;
@@ -165,4 +200,14 @@ padding-left: 50px;
 .clocheprofil{
     max-width: 35px;
     margin-right: 10px;
+}
+
+
+.vue{
+    width: 1em;
+    height: 1em;
+
+.tab-content{
+    margin-top: -80px;
+
 }
