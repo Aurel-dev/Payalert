@@ -6,15 +6,15 @@
     <%= simple_form_for :product_filter, url: products_path, html: {class: "d-flex align-items-center"} , method: :get do |f| %>
       <div class= "espacesearchnormal filter ">
         <%= f.input :seller, collection: Shop::SHOPS, 
-                             input_html: { name: "seller" }, 
-                             prompt:     "Vendeur", 
-                             selected:   params[:seller] %>
+                             input_html:    { name: "seller" }, 
+                             include_blank: "Vendeur", 
+                             selected:      params[:seller] %>
       </div>
       <div class= "espacesearchnormal filter">
         <%= f.input :category, collection: Product::CATEGORIES, 
-                               input_html: { name: "category" }, 
-                               prompt:     "Catégorie",  
-                               selected:   params[:category] %>
+                               input_html:    { name: "category" }, 
+                               include_blank: "Catégorie",  
+                               selected:      params[:category] %>
       </div>
       <div class= "espacesearchnormal filter">
         <%= f.input :brand, class:         "espacesearch", 
