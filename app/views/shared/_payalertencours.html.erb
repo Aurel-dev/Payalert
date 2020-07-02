@@ -25,11 +25,14 @@
                             <%# <h6 class="status">Statut de votre PayAlert</h6><p><%= paylert.status</p> %>
                             <h2 class ="priceindex"><%= paylert.bidding_price  %> €</h2>
                             <%= link_to 'Supprimer', delete_paylert_path(paylert), method: :delete, data: { confirm: "Etes vous sûr ?" }, class:"btntest" %></i>
+                           
                         </div>
+                        
                     </div>
                 </div>
+                
         <% end %>
     </div>
 </div>
 
-<%= render 'shared/footer' %>
+
