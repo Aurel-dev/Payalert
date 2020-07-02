@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<%= render 'shared/navbar' %>
 <html>
   <head>
+  <%= favicon_link_tag %>
     <title>Payalert</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+  <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
     
   </body>
 </html>
+
