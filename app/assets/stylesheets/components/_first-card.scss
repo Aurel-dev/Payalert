@@ -5,10 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
- 
+
 }
 .card{
-    padding-top: 100px;
+    padding-top: 10em;
     border-color: white;
     border-radius: 44px;
     width: 1600px;
@@ -33,17 +33,16 @@
 
 
 .txt{
-    padding-top: 100px;
-    font-size: 18px;
+    padding-top: 2em;
+    font-size: 1em;
     text-align: center;
-    margin-bottom: 50px;
-
+   
 }
 
 
 .txtde{
-    padding-top: 200px;
-    margin-right: 200px;
+    padding-top: 10em;
+    margin-right: 10em;
     margin-bottom: 50px;
 }
 
@@ -57,8 +56,9 @@
 
 
 .txt h4{
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: bold;
 }
 
 .txt p{
@@ -73,3 +73,30 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 1700px) {
+    .card {
+        width: 90%;
+        height: 650px;
+    }
+    
+    .carddde{
+        width: 90%;
+    }
+
+    .txt p{
+        
+        font-size: 0.7em;
+        margin-bottom: 5em;
+    }
+    .txt h4{
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 2em;
+    }
+
+    .txtde h3{
+        font-size: 1.8em;
+        
+        font-weight: bold;
+    }
+  }

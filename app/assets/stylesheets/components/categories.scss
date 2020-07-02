@@ -70,10 +70,49 @@ margin-top: 20px;
 
 .margincater{
 
-    margin-left: 20px;
+    margin-left: 2em;
 }
 
 .checked {
     margin-top: 10px;
     color: orange;
   }
+
+
+  @media only screen and (max-width: 1700px) {
+ 
+        
+    .margincater{
+
+        margin-left: 1em;
+    }
+    .categories{
+
+        height: 190px;
+        width: 170px;
+        margin-bottom: 100px;
+        margin-left: 0.5em;
+    }
+
+
+    .NotreAvis{
+        
+        height: 200px;
+        width: 240px;
+       
+    }
+    .NotreAvisimg{
+       
+            height: 150px;
+            width: 240px;
+        
+    }
+
+    .carous-h3{
+
+        margin-left: 0px;
+    
+    
+    }
+ 
+}
