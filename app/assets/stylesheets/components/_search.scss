@@ -27,7 +27,6 @@
 }
 
 .espacesearch{
-
   margin-left: 120px;
 }
 .espacesearchbtn{
@@ -76,4 +75,16 @@
 .simple_form{
 display: flex;
 flex-direction: row;
+}
+
+#query{
+  width: 400px;
+  height: 60px;
+}
+
+.btn-outline-success{
+  width: 150px;
+  height: 60px;
+  background-color: #5878DB;
+  color: white;
 }
