@@ -12,16 +12,13 @@
 
     
     <div class = whiteform>
-        <h1 class="big_product_show"> Détails de votre produit</h1>
+        <h1 class="big_product_show"><i class="far fa-bookmark"></i> <%= @product.name %></h1>
+         <p class="big_product_show"> <%= @product.brand %></p>
             <div class = "productlert">
                 <div class = "showproducts">
                     <div class="row margin-product">
                         <div class="col">
-                            <p class="posting_show">Produit</p> <p><%= @product.name %></p>
-                            <p class="posting_show">Marque</p> </p><%= @product.brand %></p>
-                            <p class="posting_show">Prix</p> <p><%= @product.price %> €</p>
-                            <p class="posting_show">Description</p>
-                            <p class ="size-description"> <%= @product.description %></p>
+                            <h2 class="posting_show"><%= @product.price %> €</h2>
                         </div>
                         <div class="col">
                             <%= simple_form_for [@product,@paylert] do |f| %>
@@ -32,8 +29,8 @@
                                     <a class="btn btn-primary" href="profile/add_credit_card">Ajouter une CB</a>
                                 <% else %>
                                     <%= f.input :bidding_price, label: "Prix souhaité", input_html:{ min: '0'}, class: "form-controlers" %>
-                                <% end %>
                                     <%= f.button :submit, 'Créer une Payalert', class: "btn btn-primary" %>
+                                <% end %>
                                     <%# <% if !current_user.credit_card_verified? %>
                                       <%# <a class="btn btn-primary" href="profile/add_credit_card">Ajouter une CB</a> %>
                                     <%# <% end %> 
@@ -42,22 +39,20 @@
                             </div>   
                         </div>
                     </div>
-
-            <div class="col">
-                <div class ="adresse-form">
-                <h4 class="address_show">Adresse de livraison</h4>
-                    <div class = "containerd-info">
-                        <div class = "adresse-info1">
-                            <p> 136 rue du Parc</p>
-                            <p> 59200 Tourcoing</p>
-                        </div>
-                        <div class = "adresse-info2">
-                            <p> Pays: France</p>
-                            <p> Tel: 03 20 17 84 15</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row margin-product2">
+              <div class="col2">
+              <center><h4>Description</h4></center>
+                <p class="posting_show"><i class="fas fa-check-square"></i> <%= @product.description %></p>
             </div>
+            </div>
+             <div class="img-shipping">
+               <%= image_tag "shipping.svg", class: "shipping" %>
+             </div>
+                <p> 136 rue du Parc</p>
+                <p> 59200 Tourcoing</p>
+                <p> France</p>
+                <p> 03 20 17 84 15</p>
+             
     </div>
     <div class ="photo-show">
         <p><%= image_tag @product.photo %></p>

@@ -9,11 +9,12 @@ padding-left: 50px;
 }
 
 .showproducts{
-    border: 1px solid #5878DB;
-    border-radius: 22px;
+    // border: 1px solid #5878DB;
+    // border-radius: 22px;
     height: 650px;
-    width: 650px;
+    width: 1550px;
     background-color: white;
+    margin-right: 30px;
 }
 .bellformalert{
     margin-bottom: 2em;
@@ -37,11 +38,11 @@ padding-left: 50px;
 }
 
 .productlert{
-
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    flex-direction: row-reverse;
+    margin-right: 30px
 }
     
 .whiteform{
@@ -52,10 +53,10 @@ padding-left: 50px;
     background-color: white;
 }
 
-.whiteform h1{
+.whiteform h1 p{
     padding-top: 50px;
-    margin-left: 160px;
-    margin-bottom: 50px;
+    margin-left: 80px;
+    margin-bottom: 10px;
 
 
 }
@@ -67,9 +68,6 @@ padding-left: 50px;
 
 .adresse-form{
     padding: 20px;
-
-    border-top: 1px solid;
-    border-color: #5879dbb0;
 }
 
 .adresse-info2{
@@ -89,17 +87,39 @@ padding-left: 50px;
 }
 
 .margin-product{
-padding-left: 50px;
-padding-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #5879db2a;
+    border-radius: 22px;
+    margin-bottom: 10px;
+}
+
+.margin-product2{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    border-radius: 22px;
+    margin-bottom: 10px;
+    background-color: #5879db2a;
+}
+
+.margin-product3{
+    padding-left: 50px;
+    padding-right: 130px;
+    border-radius: 22px;
+    border: 3px solid #5879db2a;
+    display: flex;
+    flex-direction: column;
+    background-color: #5879db2a;
 }
 
 
 .photo-show img {
-    margin-left: 5em;
-    max-height: 60%;
-    max-width: 60%;
+    margin-left: 3em;
+    height: 460px;
+    width: 460px;
 }
 
 .size-description{
@@ -118,6 +138,7 @@ padding-right: 50px;
 }
 
 .big_product_show{
+    padding-top: 20px;
     color: black;
 }
 
@@ -141,4 +162,22 @@ padding-right: 50px;
 
 .bravo_text{
     margin-bottom: 50px;
+}
+
+// .col2{
+//     background-color: white;
+//     width: 400px;
+//     padding: 15px;
+//     border-radius: 22px;
+// }
+
+.shipping{
+    vertical-align: middle;
+    border-style: none;
+    max-height: 50%;
+    max-width: 40%;
+}
+
+.info-livraison{
+    margin-left: 195px
 }
