@@ -1,5 +1,5 @@
 
-<div >
+<div  >
 <div class ="containers">
     <div class="carddde">
       <div class="containerd">  
@@ -24,12 +24,15 @@
     </div>
   </div>
 
-<div class ="container">
-  <div class ="carous-h3">
+
+
+
+<div class ="container cater ">
+  <div class ="carous-h3 cater">
     <h3>Catégories</h3>
   </div>
 </div>
- <div class ="carou">
+ <div class ="containerd cater">
     <div class="d-flex flex-row">
       <div class="margincate" >
         <div class="col-md-4">
@@ -97,16 +100,14 @@
   </div>
 </div>
 
-
-<div class ="container">
-    <div class ="carous-h3">
+<div class ="container cater">
+    <div class ="carous-h3 cater">
       <h3>Les meilleurs ventes</h3>
     </div>
   </div>
 
-   <div class ="carou">
+   <div class ="containerd cater">
       <% @products.sample(4).each do |product| %>
-      <%# sample(4) %>
       <div class="d-flex flex-row">
         <div class="margincater" >
         <div class="col-md-4">
@@ -126,6 +127,7 @@
       </div>
       <% end %>
   </div>
+</div>
 
 <%= render 'shared/footer' %>
 

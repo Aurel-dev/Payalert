@@ -6,6 +6,14 @@
     margin-top: 100px;
     width: 1600px;
     border-radius: 44px;
-    margin-left: 150px;
+
     background-color: white;
 }
+
+@media only screen and (max-width: 1700px) {
+    .global {
+        width: 90%;
+        height: 650px;
+    }
+    
+  }
