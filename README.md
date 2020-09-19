@@ -9,3 +9,6 @@
 - [Link](https://payalert.herokuapp.com/users/sign_in)
 - `fan.de.FX@gmail.com`
 - `1234567`
+
+### Project
+- This app allows users to create a call option on a product with a determined price
