@@ -16,7 +16,7 @@
 - Exemple : Une machine à laver à 120,00€, je mets une option d'achat à 80.00€.
 - Le client enregistre sa carte bancaire afin de pouvoir réaliser l'achat si prix vendeur <= prix client.
 - Le vendeur a un espace administrateur lui permettant d'enregistrer ses produits mais aussi de baisser le prix.
-- Lors d'une éventuelle baisse de prix, le clien est averti par un mail que l'achat a été effectué.
+- Lors d'une éventuelle baisse de prix, le client est averti par un mail que l'achat a été effectué.
 
 ### Website
 https://payalert.herokuapp.com/
