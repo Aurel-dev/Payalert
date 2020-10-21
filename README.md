@@ -11,7 +11,12 @@
 - `1234567`
 
 ### Project
-- This app allows users to create a call option on a product with a determined price
+- Le but de l'application est de proposer une solution d'achat automatique pour le consommateur.
+- L'interface reprend l'idée du fonctionnement du Bon Coin mais avec la possibilité de d'émettre une option d'achat (appelée Paylert) à un prix fixé par le client.
+- Exemple : Une machine à laver à 120,00€, je mets une option d'achat à 80.00€.
+- Le client enregistre sa carte bancaire afin de pouvoir réaliser l'achat si prix vendeur <= prix client.
+- Le vendeur a un espace administrateur lui permettant d'enregistrer ses produits mais aussi de baisser le prix.
+- Lors d'une éventuelle baisse de prix, le clien est averti par un mail que l'achat a été effectué.
 
 ### Website
 https://payalert.herokuapp.com/
